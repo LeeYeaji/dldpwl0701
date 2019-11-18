@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Publisher LEEYEAJI</title>
+        <link rel="shortcut icon" href="../images/favicon.ico">
+        <link rel="stylesheet" type="text/css" href="css/html5reset.css" />
+        <link rel="stylesheet" type="text/css" href="css/common.css" />
+    </head>
+    <body>
+        <div class="MainWrap">
+            <div class="GnbWrap">
+                <div class="logo">
+                    <a href="index.html"><p>LYJ<span>Web publisher</span></p></a>
+                </div>
+                <ul class="GnbList">
+                    <li class="selected"><a href="index.html">HOME</a></li>
+                    <li><a href="html/Web.html">Web Portfolio</a></li>
+                    <li><a href="html/Design.html">Design Portfolio</a></li>
+                    <li><a href="html/About.html">About Me</a></li>
+                </ul>
+            </div>
+            <div class="MainText">
+                <h1>WEB PUBLISHER<br />LEE YEA JI</h1>
+                <p class="h1Sub">PORTFOLIO</p>
+            </div>
+            <div class="MacBookWrap">
+                <img src="images/macbook.png" alt="MacBook" class="MacBookImg">
+                <div class="coding">
+                    <div class="line1">
+                        &lt;!DOCTYPE html&gt;<span>&nbsp;</span>
+                    </div>
+                    <div class="line2">
+                        &lt;html&gt;<span>&nbsp;</span>
+                    </div>
+                    <div class="line3">
+                         &lt;head&gt;<span>&nbsp;</span>
+                    </div>
+                    <div class="line4">
+                          &lt;title&gt;
+                        <p>Welcome!:)</p>
+                        &lt;/title&gt;<span>&nbsp;</span>
+                    </div>
+                    <div class="line5">
+                         &lt;/head&gt;<span>&nbsp;</span>
+                    </div>
+                    <div class="line6">
+                         &lt;body&gt;<span>&nbsp;</span>
+                    </div>
+                    <div class="line7">
+                          &lt;div&gt;
+                        <p>This is Web Publisher LEE YEA JI's Portfolio !</p>
+                        &lt;/div&gt;<span>&nbsp;</span>
+                    </div>
+                    <div class="line8">
+                         &lt;/body&gt;<span>&nbsp;</span>
+                    </div>
+                    <div class="line9">
+                        &lt;/html&gt;<span>&nbsp;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="MainIconWrap" class="layer-0">
+            <ul class="layer-2">
+                <li><img src="images/desktop.png" alt="데스크롭아이콘"></li>
+                <li><img src="images/devices.png" alt="반응형아이콘"></li>
+                <li><img src="images/gamepad.png" alt="게임기아이콘"></li>
+                <li><img src="images/keyboard.png" alt="키보드아이콘"></li>
+                <li><img src="images/light-bulb.png" alt="전구아이콘"></li>
+                <li><img src="images/mouse.png" alt="마우스아이콘"></li>
+                <li><img src="images/smartphone.png" alt="모바일아이콘"></li>
+                <li><img src="images/tablet.png" alt="테블릿아이콘"></li>
+            </ul>
+        </div>
+</body>
+<script type='text/javascript' src='js/jquery-1.12.3.min.js'></script>
+<script type="text/javascript" src='js/common.js'></script>
+<script type="text/javascript" src='js/TweenMax.min.js'></script>
+<script type="text/javascript">
+     var $layer_0 = $('.layer-0'),
+        $layer_2 = $('.layer-2'),
+        $x_axis  = $('#x-axis'),
+        $y_axis  = $('#y-axis'),
+        $container = $('body'),
+        container_w = $container.width(),
+        container_h = $container.height();
+
+    $(window).on('mousemove.parallax', function(event) {
+      var pos_x = event.pageX,
+          pos_y = event.pageY,
+          left  = 0,
+          top   = 0;
+
+      left = container_w / 2 - pos_x;
+      top  = container_h / 2 - pos_y;
+      
+      TweenMax.to(
+        $x_axis, 
+        1, 
+        { 
+          css: { 
+            transform: 'translateX(' + (left * -1) + 'px)' 
+          }, 
+          ease:Expo.easeOut, 
+          overwrite: 'all' 
+        });
+      
+      TweenMax.to(
+        $y_axis, 
+        1, 
+        { 
+          css: { 
+            transform: 'translateY(' + (top * -1) + 'px)' 
+          }, 
+          ease:Expo.easeOut, 
+          overwrite: 'all' 
+        });
+      
+      TweenMax.to(
+        $layer_2, 
+        1, 
+        { 
+          css: { 
+            transform: 'translateX(' + left / 12 + 'px) translateY(' + top / 6 + 'px)' 
+          }, 
+          ease:Expo.easeOut, 
+          overwrite: 'all' 
+        });
+      
+      TweenMax.to(
+        $layer_0,
+        10,
+        {
+          css: {
+            transform: 'rotate(' + left / 200 + 'deg)'
+          },
+          ease: Expo.easeOut,
+          overwrite: 'none'
+        }
+      )
+    });
+</script>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>MelonBIT</title>
+        
+        <link rel="stylesheet" href="../../css/base_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/melonbit_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/add.css" media="screen">
+        <link rel="stylesheet" href="../../css/datepicker3.css" media="screen">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" href="../../css/datatables.css" media="screen">
+        
+        <script src="../../js/jquery-1.12.4.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/melonbit_v2.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+        <script src="../../js/bootstrap-datepicker.js"></script>
+        <script src="../../js/bootstrap-datepicker.kr.js"></script>
+        <script src="../../js/datatables.js"></script>
+    </head>
+    <body>
+            <header>
+                    <div class="navbar navbar-fixed-top" role="navigation">
+                        <div class="container">
+                            <div class="main_logo"><a href="melonbit_v2_01_link.html#"><img src="../../img/v2_images/melonbit_logo_N_black.svg" alt="MelonBIT"></a></div>
+                            <div class="navbar_wrap">
+                                <ul class="main_nav_list">
+                                    <li><a href="melonbit_v2_01_market.html#">KRW마켓</a></li>
+                                    <li><a href="melonbit_v2_01_market2.html#">BTC마켓</a></li>
+                                    <!-- <li><a href="#">ETH마켓</a></li> -->
+                                    <li><a href="melonbit_v2_01_wallet.html#">입출금</a></li>
+                                    <li><a href="melonbit_v2_01_investment1.html#">투자내역</a></li>
+                                </ul>
+                            </div>
+                            <ul class="navbar_left_wrap">
+                                <li class="border-right"><a href="#">로그인</a></li>
+                                <li>아직 회원이 아니신가요? <a href="melonbit_v2_01_join1.html#"> 회원가입</a></li>
+                                <!-- 로그인시 -->
+                                <!-- <li class="dropdown hover">
+                                    <a href="#" class="dropdown-toggle userInfo circlebox" data-toggle="dropdown" role="menu" id="">이예지님<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"><a href="melonbit_v2_01_mypage1.html#">마이페이지</a></li>
+                                        <li class="dropdown-item"><a href="melonbit_v2_01_mypage2.html#">보안설정</a></li>
+                                        <li class="dropdown-item"><a href="#">로그아웃</a></li>
+                                    </ul>
+                                </li> -->
+        
+                                <li class="dropdown hover">
+                                    <a href="#" class="dropdown-toggle mainlang circlebox" data-toggle="dropdown" role="button" id="">한국어<span class="caret"></span></a>
+                                    <ul class="dropdown-menu langbg">
+                                        <li><a href="#">한국어</a></li>
+                                        <li><a href="#">ENGLISH</a></li>
+                                        <li><a href="#">JAPAN</a></li>
+                                        <li><a href="#">CHINA</a></li>
+                                        <li><a href="#">VIETNAM</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="circlebox nav_search_btn"><i class="fas fa-search"></i></a>
+                                    <div class="nav_search_wrap">
+                                        <div class="form-group">
+                                            <input type="text" class="main_search_box" placeholder="코인명/심볼 검색어를 입력하세요"><i class="fas fa-search"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+        
+            <section class="main_section_wrap">
+                    
+            </section>
+            <section class="sub_content_wrap">
+                    <div class="sub_container">
+                        <h2 class="sub_content_title mt50">입출금</h2>
+                        <div class="sub_wallet_left">
+                            <div class="sub_wallet_left_top">
+                                <div class="wallet_my_asset">
+                                    <table>
+                                        <tr><td>총 보유 자산</td><td class="text-right">0 <small> KRW</small></td></tr>
+                                    </table>
+                                </div>
+                                <div class="wallet_search_box_wrap">
+                                    <input type="text" class="wallet_search_box" id="wallet_search_box" placeholder="코인명"><i class="fas fa-search"></i>
+                                </div>
+                                <div class="wallet_my_coin_wrap"><input type="checkbox" id="wallet_my_coin"><label for="wallet_my_coin">보유코인</label></div>
+                            </div>
+                            <div class="sub_wallet_table">
+                                <div id="demo" class="display">
+                                    <table class="sub_wallet_table_display" style="width:100%">
+                                        <thead>
+                                            <tr><th>코인명</th><th>거래가능</th><th>거래중</th><th>합계</th></tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><td>1</td><td>2</td><td>3,230</td><td>3,230</td></tr>
+                                            <tr><td>2</td><td></td><td></td><td></td></tr>
+                                            <tr><td>3</td><td></td><td></td><td></td></tr>
+                                            <tr><td>4</td><td></td><td></td><td></td></tr>
+                                            <tr><td>1</td><td>2</td><td>3,230</td><td>3,230</td></tr>
+                                            <tr><td>2</td><td></td><td></td><td></td></tr>
+                                            <tr><td>3</td><td></td><td></td><td></td></tr>
+                                            <tr><td>4</td><td></td><td></td><td></td></tr>
+                                            <tr><td>1</td><td>2</td><td>3,230</td><td>3,230</td></tr>
+                                            <tr><td>2</td><td></td><td></td><td></td></tr>
+                                            <tr><td>3</td><td></td><td></td><td></td></tr>
+                                            <tr><td>4</td><td></td><td></td><td></td></tr>
+                                            <tr><td>1</td><td>2</td><td>3,230</td><td>3,230</td></tr>
+                                            <tr><td>2</td><td></td><td></td><td></td></tr>
+                                            <tr><td>3</td><td></td><td></td><td></td></tr>
+                                            <tr><td>4</td><td></td><td></td><td></td></tr>
+                                            <tr><td>1</td><td>2</td><td>3,230</td><td>3,230</td></tr>
+                                            <tr><td>2</td><td></td><td></td><td></td></tr>
+                                            <tr><td>3</td><td></td><td></td><td></td></tr>
+                                            <tr><td>4</td><td></td><td></td><td></td></tr>
+                                            <tr><td>1</td><td>2</td><td>3,230</td><td>3,230</td></tr>
+                                            <tr><td>2</td><td></td><td></td><td></td></tr>
+                                            <tr><td>3</td><td></td><td></td><td></td></tr>
+                                            <tr><td>4</td><td></td><td></td><td></td></tr>
+                                        </tbody>
+                                        
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sub_wallet_right">
+                            <div class="sub_wallet_cash_table">
+                                <table>
+                                    <tr><th colspan="2">비트코인 입출금</th></tr>
+                                    <tr><td>보유수량</td><td class="text-right">2,578,000</td></tr>
+                                    <tr><td>출금 가능 수량</td><td class="text-right">0 <small>KRW</small></td></tr>
+                                </table>
+                            </div>
+                            <div class="wallet_tab-container">
+                                <ul class="wallet_tab_item">
+                                    <li class="selected" data-tab="wallet_deposit">KRW 입금</li>
+                                    <li data-tab="wallet_withdrawal">KRW 출금</li>
+                                    <li data-tab="wallet_list">입출금 내역</li>
+                                </ul>
+                                <div class="wallet_tab_content current" id="wallet_deposit">
+                                    <!-- <p>
+                                        · 위 주소로 비트코인을(를) 입금 해주세요. <br>
+                                        · 신규 가입하신 회원님께서는 주소 생성하기 버튼을 클릭하셔야 고유 비트코인주소가 발급됩니다.
+                                    </p>
+                                    <div class="user_wallet_address_box">
+                                        <table>
+                                            <tr><th>등록계좌</th><th>신한은행 110-123456-123456 서준영</th></tr>
+                                            <tr><td>예금주</td><td>(주)멜론비트</td></tr>
+                                            <tr><td>계좌정보</td><td>우리은행 123-456-123456</td></tr>
+                                            <tr><td>입금 예정액</td><td>300,000<small>KRW</small></td></tr>
+                                        </table>
+                                    </div>
+                                    <div class="mt10"><input type="checkbox" id="wallet_agree"><label for="wallet_agree">이용 약관에 동의합니다.</label></div>
+                                    <button class="btn_blue wallet_deposit_btn mt10" data-toggle="modal" data-target="#modal-wallet">입금신청</button>
+                                    <p>
+                                        · 타인의 지시나 요청 등에 의해 본인 명의의 계정을 타인에게 대여 시 법적 처벌 대상이 될 수 있습니다. <br>
+                                        · 실명 인증된 계정을 타인에게 대여하는 경우 개인정보 노출 위험에 처할 수 있습니다. <br>
+                                        · 은행 점검시간(매일 23:00~02:00)에는 출금이 불가능합니다. <br>
+                                        · 부정거래가 의심될 경우 출금이 제한될 수 있습니다. <br>
+                                    </p> -->
+                                    <!-- ******** 코인일 경우 입금탭내용 -->
+                                    <p>
+                                        · 위 주소로 비트코인을(를) 입금 해주세요. <br>
+                                        · 신규 가입하신 회원님께서는 주소 생성하기 버튼을 클릭하셔야 고유 비트코인주소가 발급됩니다.
+                                    </p>
+                                    <div class="user_wallet_address_box">
+                                        <div class="coin_wallet_address_left">
+                                            <p>회원님의 비트코인 입금주소 :<br> <span>3FgZDyRjsVE4WGWhCY3QjsFHpCPL5o2FBb</span></p>
+                                            <button class="btn_blue">입금 주소 복사</button>
+                                        </div>
+                                        <div class="coin_wallet_address_right">
+                                            <img src="../../img/v2_images/qrcode.png">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="wallet_tab_content" id="wallet_withdrawal">
+                                    <div class="wallet_form">
+                                        <div class="form-group">
+                                            <label class="wallet_label">출금계좌정보</label>
+                                            <div class="wallet_input text-left">신한은행 110-123456-123456 서준영</div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="wallet_label">출금한도</label>
+                                            <ul class="withdrawal_list"><li>1회 출금한도 : <span>20,000,000 KRW</span></li><li>1일 출금한도 : <span>50,000,000</span> 남음</li></ul>
+                                            <p class="withdrawal_text">보안 등급 상향을 통해 출금 한도를 상향할 수 있습니다.<button class="withdrawal_lv_btn">등급상항하기</button></p>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="wallet_label">출금금액</label>
+                                            <div class="wallet_input_group"><input type="text" class="wallet_inputbox" id="" placeholder="최소출금 가능액 10,000원" autocomplete="off"><button class="join_num_btn wallet_inputBtn">전액</button></div>
+                                        </div>
+                                        <div class="form-group"><label class="wallet_label">출금 수수료</label><div class="wallet_input"><span>0 </span><sub> KRW</sub></div></div>
+                                        <div class="form-group"><label class="wallet_label">실 출금액</label><div class="wallet_input"><span>0 </span><sub> KRW</sub></div></div>
+                                        <div class="form-group"><label class="wallet_label text-blue">출금 후 잔액</label><div class="wallet_input text-blue"><span>0 </span><sub> KRW</sub></div></div>
+                                    </div>
+                                    <div class="wallet_from_bottom">
+                                        <div class="wallet_otp_form"><label>OTP번호</label><input type="text"></div>
+                                        <div class="mt10"><input type="checkbox" id="wallet_agree2"><label for="wallet_agree2">이용 약관에 동의합니다.</label></div>
+                                        <button class="btn_blue wallet_deposit_btn mt10" data-toggle="modal" data-target="#modal-wallet">입금신청</button>
+                                        <p>
+                                            · 타인의 지시나 요청 등에 의해 본인 명의의 계정을 타인에게 대여 시 법적 처벌 대상이 될 수 있습니다. <br>
+                                            · 실명 인증된 계정을 타인에게 대여하는 경우 개인정보 노출 위험에 처할 수 있습니다. <br>
+                                            · 은행 점검시간(매일 23:00~02:00)에는 출금이 불가능합니다. <br>
+                                            · 부정거래가 의심될 경우 출금이 제한될 수 있습니다. <br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="wallet_tab_content" id="wallet_list">
+                                    <div class="wallet_list_notice">
+                                        <i class="fas fa-info-circle"></i> 타 거래소에서 보낸 코인을 전송 받지 못했다면 <a href="#">여기</a> 를 클릭하세요.
+                                    </div>
+                                    <form class="datepicker-form-inline" autocomplete="off">
+                                        <div class="datepicker-group">
+                                            <input type="text" name="s_date" value="2018-08-01" class="datepicker-form date" readonly><span class="datepicker-form-btn"><i class="far fa-calendar-check"></i></span>
+                                        </div>
+                                        <p> ~ </p>
+                                        <div class="datepicker-group">
+                                            <input type="text" name="e_date" value="2018-08-30" class="datepicker-form date" readonly><span class="datepicker-form-btn"><i class="far fa-calendar-check"></i></span>
+                                        </div>
+                                        <button type="submit" class="join_num_btn datepicker-search" style="vertical-align: top;">검색</button>
+                                        <div class="dropdown">
+                                            <a href="#" class="dropdown-toggle datepicker-selectbox" data-toggle="dropdown" role="button">전체<span class="caret"></span></a>
+                                            <ul class="dropdown-menu datepicker-selectbox">
+                                                <li><a href="#">전체</a></li>
+                                                <li><a href="#">전체</a></li>
+                                                <li><a href="#">전체</a></li>
+                                            </ul>
+                                        </div>
+                                    </form>
+                                    <div class="wallet_list_table_wrap">
+                                        <table>
+                                            <colgroup><col width="25%"><col width="20%"><col width="35%"><col width="20%"></colgroup>
+                                            <tr><th>날짜</th><th>구분</th><th>금액</th><th>결과</th></tr>
+                                            <tr><td>2018.08.30.18:39</td><td>출금</td><td class="text-right">100,000</td><td>출금완료</td></tr>
+                                            <tr><td>2018.08.30.18:39</td><td>매수</td><td class="text-right">100,002</td><td>출금완료</td></tr>
+                                            <tr><td>2018.08.30.18:39</td><td>매도</td><td class="text-right">2,100,000</td><td>입금완료</td></tr>
+                                            <tr><td>2018.08.30.18:39</td><td>출금</td><td class="text-right">100,000</td><td>출금완료</td></tr>
+                                            <tr><td>2018.08.30.18:39</td><td>매수</td><td class="text-right">100,002</td><td>출금완료</td></tr>
+                                            <tr><td>2018.08.30.18:39</td><td>매도</td><td class="text-right">2,100,000</td><td>입금완료</td></tr>
+                                            <tr><td>2018.08.30.18:39</td><td>출금</td><td class="text-right">100,000</td><td>출금완료</td></tr>
+                                        </table>
+                                        <div class="wallet_list_table_notice">·  전체 입출금 내역은 <a href="#">거래내역</a> 화면에서 확인 가능합니다.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="modal" id="modal-wallet" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="modal-wallet"> 
+                        <div class="modal-dialog modal-md">
+                            <div class="modal-content">
+                                <div class="modal-header">매수확인<p class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></p></div>
+                                <div class="modal-body">
+                                    <p class="text-center">
+                                        입금 신청이 완료되었습니다.<br>
+                                        신청 금액과 동일한 금액을 아래 계좌로 별도로 이체해 주셔야 입금이 진행됩니다.
+                                    </p>
+                                    <div class="charge-medal-text">
+                                        <table>
+                                            <tr><td>· 예     금     주:</td><td>㈜멜론비트</td></tr>
+                                            <tr><td>· 은     행    명 :</td><td>우리은행 </td></tr>
+                                            <tr><td>· 계   좌   번   호 :</td><td>123-456-78910</td></tr>
+                                            <tr><td>· 입금 신청 금액 :</td><td>300,000 </td></tr>
+                                        </table>
+                                    </div>
+                                    <div class="modal-btn-wrap">
+                                        <button class="modal-btn cancel">취소</button>
+                                        <button class="modal-btn submit">입금</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+        <footer>
+            <div class="footer_nav">
+                <div class="container">
+                    <ul class="footer_nav_list">
+                        <li><a href="#">회사</a></li>
+                        <li><a href="#">고객지원</a></li>
+                        <li><a href="#">내 정보</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">제휴제안</a></li>
+                        <li><a href="#">채용안내</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_info">
+                    <div class="container">
+                        <div class="footer_logo">
+                            <a href="#"><img src="../../img/v2_images/melonbit_logo_N_black.png" alt="MelonBIT"></a>
+                            <ul class="footer_text">
+                                <li>(주)멜론비트 서울시 강남구 역삼로 17길 51 | 대표 김재홍</li>
+                                <li>사업자등록번호 280-88-00958</li>
+                                <li>통신판매업신고 제 2017-서울강남-04260호</li>
+                            </ul>
+                        </div>
+                        <div class="footer_center">
+                            <div class="phone_wrap"><p class="phone_icon"><i class="fab fa-whatsapp"></i></p><p>1644-4698</p><p>help@melonbit.com</p></div>
+                        </div>
+                        <div class="footer_right">
+                            <p>월요일-금요일: 오전9시30분 ~ 오후18시30분(주말 및 공휴일 제외)<br/>고객상담은 전화와 이메일로 진행하며, 방문상담은 진행하지 않습니다.</p>
+                            <ul class="footer_link">
+                                <li><i class="fab fa-facebook-square"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                                <li><img src="../../img/v2_images/oracleG.png" alt="oracleG"></li>
+                                <li><img src="../../img/v2_images/melonpay.png" alt="melonpay"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </body>
+</html>

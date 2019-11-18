@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8" />
+  <title> 다온큐브_현재상영작 </title><!-- 3depth까지만 작성, 동일한 title은 절대 있을수 없습니다 -->
+  <link rel="stylesheet" href="../../css/common.css" />
+  <link rel="stylesheet" href="../../css/mobile.css" /><!-- 링크걸 스타일은 최대 3개 까지만 하세요....  -->
+  <!--[if lt IE 9]>
+	<script type="text/javascript" src="../js/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="../../js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="../../js/common.js"></script><!-- 링크걸 스크립트는 최대 3개 까지만 하세요(합쳐도 되는 파일은 합쳐서 가볍게 사용합시다)....  -->
+ </head>
+
+ <body>
+	<div id="skip">
+		<a href="#content">본문 바로가기</a>
+	</div>
+
+	<div id="pre_wrap">
+		<!-- ===========header================================================================ -->
+		<header id="header">
+			<!-- include문서의 경로는 모두 절대경로로 표시합니다. index와 sub 공통으로 사용하기 쉽도록 -->
+			<div id="topBanner">
+				<div class="area p_r">
+					<p>
+						<a href="buying/reserve.php">
+							<img src="../../images/han/topBannerImg1.jpg" id="random_img" width="970" height="80" alt="상단배너광고">
+						</a>
+					</p>
+					<div class="cancel">
+						<a href="#">
+							<img src="../../images/han/top_banner_close_icon.png" width="30" height="30" alt="배너광고닫기">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="wrap">
+				<h1><a href="../"><img src="../../images/han/logo.png" width="298" height="55" alt="다온큐브"></a></h1>
+				<nav id="nav">
+					<ul id="gnb">
+						<li class="sub1"><a href="html/buying/reserve.php">예매</a>
+							<ul>
+								<li><a href="html/buying/reserve.php">예매안내</a></li>
+								<li><a href="html/buying/reserve.php">날짜별</a></li>
+								<li><a href="html/buying/reserve.php">극장별</a></li>
+								<li><a href="html/buying/reserve.php">영화별</a></li>
+							</ul>
+						</li>
+						<li class="sub2"><a href="http://pbs.duniv.kr/~student0920/daon/html/timetable/timetable.html">상영시간표</a>
+							<ul>
+								<li><a href="http://pbs.duniv.kr/~student0920/daon/html/timetable/timetable.html">영화별시간표</a></li>
+							</ul>
+						</li>
+						<li class="sub3"><a href="present.html">영화소개</a>
+							<ul>
+								<li><a href="present.html">현재상영작</a></li>
+								<li><a href="present.html">개봉예정작</a></li>
+								<li><a href="present.html">박스오피스</a></li>
+								<li><a href="movieStory.html">무비스토리</a></li>
+							</ul>
+						</li>
+						<li class="sub4"><a href="html/room/movieroom.html">영화관</a>
+							<ul>
+								<li><a href="html/room/movieroom.html">DIGITAL관</a></li>
+								<li><a href="html/room/movieroom.html">ADVENTURE관</a></li>
+								<li><a href="html/room/movieroom.html">ONO관</a></li>
+								<li><a href="html/room/movieroom.html">NARA관</a></li>
+							</ul>
+						</li>
+						<li class="sub5"><a href="http://pbs.duniv.kr/~student0920/daon/html/membership/membership.html">멤버십</a>
+							<ul>
+								<li><a href="http://pbs.duniv.kr/~student0920/daon/html/membership/membership.html">멤버십안내</a></li>
+								<li><a href="http://pbs.duniv.kr/~student0920/daon/html/membership/membership.html">이용TIP</a></li>
+								<li><a href="http://pbs.duniv.kr/~student0920/daon/html/membership/membership.html">포인트조회</a></li>
+								<li><a href="http://pbs.duniv.kr/~student0920/daon/html/membership/membership.html">멤버십가입</a></li>
+								<li><a href="http://pbs.duniv.kr/~student0920/daon/html/membership/membership.html">VIP가입</a></li>
+							</ul>
+						</li>
+						<li class="sub6"><a href="html/event/movieEvent.html">이벤트</a>
+							<ul>
+								<li><a href="html/event/movieEvent.html">영화이벤트</a></li>
+								<li><a href="html/event/movieEvent.html">다온이벤트</a></li>
+								<li><a href="html/event/movieEvent.html">제휴이벤트</a></li>
+							</ul>
+						</li>
+						<li class="sub7"><a href="html/customer/faq.html">고객센터</a>
+							<ul>
+								<li><a href="html/customer/faq.html">단체관람안내</a></li>
+								<li><a href="html/customer/faq.html">FAQ</a></li>
+								<li><a href="html/customer/faq.html">분실물안내</a></li>
+								<li><a href="html/customer/faq.html">1:1문의</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div id="panel"></div>
+				</nav>
+  </div>
+		</header>
+		<!-- ===========//header================================================================ -->
+
+		<!-- ===========content================================================================ -->
+		<div id="subNav">
+			<ul>
+				<li><a href="present.html">현재상영작</a></li>
+				<li><a href="#">상영예정작</a></li>
+				<li><a href="#">박스오피스</a></li>
+				<li><a href="movieStory.html">무비스토리</a></li>
+			</ul>
+		</div>
+		
+		<section id="pre_content_wrap">
+			<ul>
+				<li class="pre_mv1 pre_box_mar">
+					<div id="tab_wrap">
+					<ul id="pre_loca">
+						<li><a href="..">홈</a>　> </li>
+						<li><a href="#">　현재상영작</a></li>
+					</ul>
+						<h1>DA:ON 실시간 영화 순위</h1>
+						<ul class="tab" id="tab01"> 
+							<li class="tab_first"><h2><a href="#">조회순</a></h2>
+								<div>
+									<table>
+										<tr>
+										<td>1.</td>
+										<td><img src="../../images/intro/icon_12.png" width="14" height="14" alt=""> 정글북</td>
+										<td>점유율:24.3%</td>
+										</tr>
+										<tr>
+										<td>2.</td>
+										<td><img src="../../images/intro/icon_12.png" width="14" height="14" alt=""> 워크래프트:전쟁의서막</td>
+										<td>점유율:20.7%</td>
+										</tr>
+										<tr>
+										<td>3.</td>
+										<td><img src="../../images/intro/icon_red.png" width="14" height="14" alt=""> 아가씨</td>
+										<td>점유율:18.9%</td>
+										</tr>
+										<tr>
+										<td>4.</td>
+										<td><img src="../../images/intro/icon_15.png" width="14" height="14" alt=""> 컨저링2</td>
+										<td>점유율:24.3%</td>
+										</tr>
+										<tr>
+										<td>5.</td>
+										<td><img src="../../images/intro/icon_15.png" width="14" height="14" alt=""> 곡성</td>
+										<td>점유율:4.8%</td>
+										</tr>
+										<tr>
+										<td>6.</td>
+										<td><img src="../../images/intro/icon_12.png" width="14" height="14" alt=""> 미 비포 유</td>
+										<td>점유율:3.7%</td>
+										</tr>
+										<tr>
+										<td>7.</td>
+										<td><img src="../../images/intro/icon_12.png" width="14" height="14" alt=""> 엑스맨:아포칼립스</td>
+										<td>점유율:3.4%</td>
+										</tr>
+										<tr>
+										<td>8.</td>
+										<td><img src="../../images/intro/icon_all.png" width="14" height="14" alt=""> 앵그리버드</td>
+										<td>점유율:0.9%</td>
+										</tr>
+										<tr>
+										<td>9.</td>
+										<td><img src="../../images/intro/icon_all.png" width="14" height="14" alt=""> 극장판 유희왕</td>
+										<td>점유율:0.7%</td>
+										</tr>
+										<tr>
+										<td>10.</td>
+										<td><img src="../../images/intro/icon_15.png" width="14" height="14" alt=""> 싱 스트리트</td>
+										<td>점유율:0.5%</td>
+										</tr>
+									</table>						 					
+								</div>
+							</li>
+							<li><h2><a href="#">평점순</a></h2>
+								<div>
+									<table>
+										<tr>
+										<td>1.</td>
+										<td><img src="../../images/intro/icon_12.png" width="14" height="14" alt=""> 정글북</td>
+										<td>평점:24.3%</td>
+										</tr>
+										<tr>
+										<td>2.</td>
+										<td><img src="../../images/intro/icon_12.png" width="14" height="14" alt=""> 워크래프트:전쟁의서막</td>
+										<td>평점:20.7%</td>
+										</tr>
+										<tr>
+										<td>3.</td>
+										<td><img src="../../images/intro/icon_red.png" width="14" height="14" alt=""> 아가씨</td>
+										<td>평점:18.9%</td>
+										</tr>
+										<tr>
+										<td>4.</td>
+										<td><img src="../../images/intro/icon_15.png" width="14" height="14" alt=""> 컨저링2</td>
+										<td>평점:24.3%</td>
+										</tr>
+										<tr>
+										<td>5.</td>
+										<td><img src="../../images/intro/icon_15.png" width="14" height="14" alt=""> 곡성</td>
+										<td>평점:4.8%</td>
+										</tr>
+										<tr>
+										<td>6.</td>
+										<td><img src="../../images/intro/icon_12.png" width="14" height="14" alt=""> 미 비포 유</td>
+										<td>평점:3.7%</td>
+										</tr>
+										<tr>
+										<td>7.</td>
+										<td><img src="../../images/intro/icon_12.png" width="14" height="14" alt=""> 엑스맨:아포칼립스</td>
+										<td>평점:3.4%</td>
+										</tr>
+										<tr>
+										<td>8.</td>
+										<td><img src="../../images/intro/icon_all.png" width="14" height="14" alt=""> 앵그리버드</td>
+										<td>평점:0.9%</td>
+										</tr>
+										<tr>
+										<td>9.</td>
+										<td><img src="../../images/intro/icon_all.png" width="14" height="14" alt=""> 극장판 유희왕</td>
+										<td>평점:0.7%</td>
+										</tr>
+										<tr>
+										<td>10.</td>
+										<td><img src="../../images/intro/icon_15.png" width="14" height="14" alt=""> 싱 스트리트</td>
+										<td>평점:0.5%</td>
+										</tr>
+									</table>
+								</div>
+							</li>
+							<li><h2><a href="#">예매순</a></h2>
+								<div>
+											<table>
+												<tr>
+												<td>1.</td>
+												<td><img src="../../images/intro/icon_12.png" width="14" height="14" alt=""> 정글북</td>
+												<td>예매율:24.3%</td>
+												</tr>
+												<tr>
+												<td>2.</td>
+												<td><img src="../../images/intro/icon_12.png" width="14" height="14" alt=""> 워크래프트:전쟁의서막</td>
+												<td>예매율:20.7%</td>
+												</tr>
+												<tr>
+												<td>3.</td>
+												<td><img src="../../images/intro/icon_red.png" width="14" height="14" alt=""> 아가씨</td>
+												<td>예매율:18.9%</td>
+												</tr>
+												<tr>
+												<td>4.</td>
+												<td><img src="../../images/intro/icon_15.png" width="14" height="14" alt=""> 컨저링2</td>
+												<td>예매율:24.3%</td>
+												</tr>
+												<tr>
+												<td>5.</td>
+												<td><img src="../../images/intro/icon_15.png" width="14" height="14" alt=""> 곡성</td>
+												<td>예매율:4.8%</td>
+												</tr>
+												<tr>
+												<td>6.</td>
+												<td><img src="../../images/intro/icon_12.png" width="14" height="14" alt=""> 미 비포 유</td>
+												<td>예매율:3.7%</td>
+												</tr>
+												<tr>
+												<td>7.</td>
+												<td><img src="../../images/intro/icon_12.png" width="14" height="14" alt=""> 엑스맨:아포칼립스</td>
+												<td>예매율:3.4%</td>
+												</tr>
+												<tr>
+												<td>8.</td>
+												<td><img src="../../images/intro/icon_all.png" width="14" height="14" alt=""> 앵그리버드</td>
+												<td>예매율:0.9%</td>
+												</tr>
+												<tr>
+												<td>9.</td>
+												<td><img src="../../images/intro/icon_all.png" width="14" height="14" alt=""> 극장판 유희왕</td>
+												<td>예매율:0.7%</td>
+												</tr>
+												<tr>
+												<td>10.</td>
+												<td><img src="../../images/intro/icon_15.png" width="14" height="14" alt=""> 싱 스트리트</td>
+												<td>예매율:0.5%</td>
+												</tr>
+											</table>
+								</div>
+							</li>
+							<script></script>	
+						</ul>			
+					</div>
+				</li>
+				<li class="pre_mv2 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_12.png" alt="12세이상관람가"/><span> 정글북</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+                     </div>
+                </li>
+				<li class="pre_mv3 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_12.png" alt="12세이상관람가"/><span> 워크래프트</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+                     </div>
+                </li>
+				<li class="pre_mv4 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_red.png" alt="청소년관람불가"/><span> 아가씨</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+					 </div>
+                </li>
+				<li class="pre_mv5 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_15.png" alt="15세이상관람가"/><span> 컨저링2</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+					 </div>
+                </li>
+				<li class="pre_mv6 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_15.png" alt="15세이상관람가"/><span> 곡성(哭聲)</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+                     </div>
+                </li>
+				<li class="pre_mv7 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_12.png" alt="12세이상관람가"/><span> 미 비포 유</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+                     </div>
+                </li>
+				<li class="pre_mv8 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_15.png" alt="15세이상관람가"/><span> 싱 스트리트</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+                     </div>
+                </li>
+				<li class="pre_mv9 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_12.png" alt="12세이상관람가"/><span> 정글북</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+					 </div>
+                </li>
+				<li class="pre_mv10 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_12.png" alt="12세이상관람가"/><span> 워크래프트</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+                     </div>
+                </li>
+				<li class="pre_mv11 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_red.png" alt="청소년관람불가"/><span> 아가씨</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+					 </div>
+                </li>
+				<li class="pre_mv12 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_15.png" alt="15세이상관람가"/><span> 컨저링2</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+					 </div>
+                </li>
+				<li class="pre_mv13 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_15.png" alt="15세이상관람가"/><span> 곡성(哭聲)</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+                     </div>
+                </li>
+				<li class="pre_mv14 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_12.png" alt="12세이상관람가"/><span> 미 비포 유</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+                     </div>
+                </li>
+				<li class="pre_mv15 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_15.png" alt="15세이상관람가"/><span> 싱 스트리트</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+                     </div>
+                </li>
+				<li class="pre_mv16 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_12.png" alt="12세이상관람가"/><span> 정글북</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+					 </div>
+                </li>
+				<li class="pre_mv17 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_12.png" alt="12세이상관람가"/><span> 워크래프트</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+                     </div>
+                </li>
+				<li class="pre_mv18 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_red.png" alt="청소년관람불가"/><span> 아가씨</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+					 </div>
+                </li>
+				<li class="pre_mv19 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_15.png" alt="15세이상관람가"/><span> 컨저링2</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+					 </div>
+                </li>
+				<li class="pre_mv20 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_15.png" alt="15세이상관람가"/><span> 곡성(哭聲)</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+                     </div>
+                </li>
+				<li class="pre_mv21 pre_box_mar mo_area">
+                    <div class="pre_box2"> 
+                        <ul class="pre_cen_txt">
+                            <li class="b_r">예매율 13.4%</li>
+                            <li>평점 8.85</li>
+                        </ul>
+                        <ul class="pre_bot_txt b_t">
+                            <li><a href="movieInside.html">상세보기</a></li>
+                            <li><a href="../html/buying/reserve.php">예매하기</a></li>
+                        </ul>
+                     </div>
+                     <div class="pre_info">
+                        <img src="../../images/intro/icon_12.png" alt="12세이상관람가"/><span> 미 비포 유</span>
+						<img src="../../images/intro/slide_in.jpg" class="pre_m_n" width="230" height="128" alt="">
+						<ul>
+							<li><a href="#"><img src="../../images/intro/heart_off.png" width="20" height="18" alt="">보고싶어요</a></li>
+							<li><a href="movieInside.html"><img src="../../images/intro/commend_off.png" width="20" height="18" alt="">코멘트쓰기</a></li>
+						</ul>
+                     </div>
+                </li>
+			</ul>
+		</section>
+		<!-- ===========//content================================================================ -->
+
+		<!-- ==========footer================================================================= -->
+		<footer id="footer">
+			<? include("../footer.html"); ?>
+		</footer>
+		<!-- ==========//footer================================================================= -->
+	</div>
+ </body>
+</html>

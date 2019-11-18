@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>MelonBIT</title>
+        
+        <link rel="stylesheet" href="../../css/base_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/melonbit_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/add.css" media="screen">
+        <link rel="stylesheet" href="../../css/datepicker3.css" media="screen">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        
+        <script src="../../js/jquery-1.12.4.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/melonbit_v2.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+        <script src="../../js/bootstrap-datepicker.js"></script>
+        <script src="../../js/bootstrap-datepicker.kr.js"></script>
+    </head>
+    <body>
+            <header>
+                    <div class="navbar navbar-fixed-top" role="navigation">
+                        <div class="container">
+                            <div class="main_logo"><a href="melonbit_v2_01_link.html#"><img src="../../img/v2_images/melonbit_logo_N_black.svg" alt="MelonBIT"></a></div>
+                            <div class="navbar_wrap">
+                                <ul class="main_nav_list">
+                                    <li><a href="melonbit_v2_01_market.html#">KRW마켓</a></li>
+                                    <li><a href="melonbit_v2_01_market2.html#">BTC마켓</a></li>
+                                    <!-- <li><a href="#">ETH마켓</a></li> -->
+                                    <li><a href="melonbit_v2_01_wallet.html#">입출금</a></li>
+                                    <li><a href="melonbit_v2_01_investment1.html#">투자내역</a></li>
+                                </ul>
+                            </div>
+                            <ul class="navbar_left_wrap">
+                                <li class="border-right"><a href="#">로그인</a></li>
+                                <li>아직 회원이 아니신가요? <a href="melonbit_v2_01_join1.html#"> 회원가입</a></li>
+                                <!-- 로그인시 -->
+                                <!-- <li class="dropdown hover">
+                                    <a href="#" class="dropdown-toggle userInfo circlebox" data-toggle="dropdown" role="menu" id="">이예지님<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"><a href="melonbit_v2_01_mypage1.html#">마이페이지</a></li>
+                                        <li class="dropdown-item"><a href="melonbit_v2_01_mypage2.html#">보안설정</a></li>
+                                        <li class="dropdown-item"><a href="#">로그아웃</a></li>
+                                    </ul>
+                                </li> -->
+        
+                                <li class="dropdown hover">
+                                    <a href="#" class="dropdown-toggle mainlang circlebox" data-toggle="dropdown" role="button" id="">한국어<span class="caret"></span></a>
+                                    <ul class="dropdown-menu langbg">
+                                        <li><a href="#">한국어</a></li>
+                                        <li><a href="#">ENGLISH</a></li>
+                                        <li><a href="#">JAPAN</a></li>
+                                        <li><a href="#">CHINA</a></li>
+                                        <li><a href="#">VIETNAM</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="circlebox nav_search_btn"><i class="fas fa-search"></i></a>
+                                    <div class="nav_search_wrap">
+                                        <div class="form-group">
+                                            <input type="text" class="main_search_box" placeholder="코인명/심볼 검색어를 입력하세요"><i class="fas fa-search"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+        
+            <section class="main_section_wrap">
+                    
+            </section>
+            <section class="sub_content_wrap">
+                    <div class="sub_container">
+                        <div class="sub_side_nav">
+                            <div class="sub_side_nav_header">마이페이지</div>
+                            <ul>
+                                <li>회원정보</li>
+                                <li class="selected">보안인증</li>
+                                <li>접속관리</li>
+                                <li>추천인</li>
+                            </ul>
+                        </div>
+                        <div class="sub_content_section">
+                            <h2 class="sub_content_title">보안인증</h2>
+                            <div class="sub_connect_top">
+                                <div class="connect_title_icon"><img src="../../img/v2_images/checkIcon.png"></div>
+                                <div class="connect_title_text">보안 3등급 계좌등록<br><span>인증한 실명확인 계좌를 통해 KRW 입출금이 가능합니다.<br>
+                                        실명확인 계좌는 본인명의의 1개 계좌만 등록 가능합니다. </span></div>
+                            </div>
+                            <div class="sub_bank_wrap">
+                                <div class="sub_bank_wrap_left">
+                                    <div class="dropdown sub_bank_select">
+                                        <a href="#" class="dropdown-toggle input-group-select" data-toggle="dropdown" role="menu" id="">은행선택<span class="caret"></span></a>
+                                        <ul class="dropdown-menu sub_bank_select_list">
+                                            <li class="dropdown-item"><a href="#">하나은행</a></li>
+                                            <li class="dropdown-item"><a href="#">기업은행</a></li>
+                                            <li class="dropdown-item"><a href="#">신한은행</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="sub_bank_input" placeholder="계좌번호 입력">
+                                    <input type="text" class="sub_bank_input" placeholder="예금주">
+                                    <button class="sub_bank_btn btn_blue">계좌 인증번호 전송</button>
+                                </div>
+                                <div class="sub_bank_wrap_right">
+                                    계좌 인증번호 전송은 일 최대 3회까지 가능합니다.<br>
+                                    멜론비트에 인증된 실명과 계좌주 명의가 일치해야합니다.<br>
+                                    평생계좌는 인증이 불가능하며, 은행점검 시간에는 계좌인증이 불가능합니다.<br>
+                                </div>
+                                <div class="sub_bank_oknum_wrap">
+                                    <div class="sub_bank_wrap_left mt20">
+                                        <div class="sub_bank_form_group">
+                                            <input type="text" class="sub_bank_input wid75" placeholder="인증번호 입력">
+                                            <button class="sub_bank_btn btn_blue wid25">인증하기</button>
+                                        </div>
+                                    </div>
+                                    <div class="sub_bank_wrap_right">
+                                        <span class="text-blue">입력하신 계좌번호로 1원을 송금했습니다.<br>
+                                        입금자명’멜론비트’앞에 적힌 3자리 숫자를 입력해주세요.<br></span>
+                                        신청이 많은 경우, 1원 입금 확인까지 5분 이상 소요될 수 있습니다.<br>
+                                        현재 화면을 벗어나면 인증이 불가능하오니, 입금 확인까지 기다려 주시길 부탁드립니다.<br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub_bank_wrap">
+                                <div class="sub_bank_wrap_left">
+                                    <div class="dropdown sub_bank_select">
+                                        <a href="#" class="dropdown-toggle input-group-select" data-toggle="dropdown" role="menu" id="">은행선택<span class="caret"></span></a>
+                                        <ul class="dropdown-menu sub_bank_select_list">
+                                            <li class="dropdown-item"><a href="#">하나은행</a></li>
+                                            <li class="dropdown-item"><a href="#">기업은행</a></li>
+                                            <li class="dropdown-item"><a href="#">신한은행</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="sub_bank_input" placeholder="계좌번호 입력">
+                                    <input type="text" class="sub_bank_input" placeholder="예금주">
+                                    <div class="backform">
+                                        <div class="filebox bs3-primary mt10">
+                                            <input class="upload-name width70" value="파일선택" disabled="disabled">
+                                            <label for="ex_filename" class="join_num_btn width30">사진 첨부</label> 
+                                            <input type="file" id="ex_filename" class="upload-hidden"> 
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <button class="sub_bank_btn btn_blue">계좌 등록 신청</button>
+                                </div>
+                                <div class="sub_bank_wrap_right">
+                                    계좌 인증 전송은 1~3일 정도 소요됩니다.<br>
+                                    멜론비트에 인증된 실명과 계좌주 명의가 일치해야합니다.<br>
+                                    평생계좌는 인증이 불가능하며, 은행점검 시간에는 계좌인증이 불가능합니다.<br>
+                                    <br>
+                                    <p class="text-blue">
+                                        <b>계좌사진첨부방법</b><br>
+                                        통장 앞면을 아래 사진과 같이 촬영 혹은 스캔하여 사진을 첨부해셔야 합니다.<br>
+                                    </p>
+                                    <div class="ex_bank_img">
+                                        <img src="../../img/v2_images/bankImg.png">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub_bank_wrap success">
+                                <p class="sub_bank_success">실명인증 계좌등록이 완료되었습니다.</p>
+                                <input type="text" class="sub_bank_input success" placeholder="신한은행" readonly>
+                                <input type="text" class="sub_bank_input success" placeholder="110-123456-123456" readonly>
+                                <input type="text" class="sub_bank_input success" placeholder="이예지" readonly>
+                                <button class="sub_bank_btn btn_blue">완료</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+            </section>
+
+        <footer>
+            <div class="footer_nav">
+                <div class="container">
+                    <ul class="footer_nav_list">
+                        <li><a href="#">회사</a></li>
+                        <li><a href="#">고객지원</a></li>
+                        <li><a href="#">내 정보</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">제휴제안</a></li>
+                        <li><a href="#">채용안내</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_info">
+                    <div class="container">
+                        <div class="footer_logo">
+                            <a href="#"><img src="../../img/v2_images/melonbit_logo_N_black.png" alt="MelonBIT"></a>
+                            <ul class="footer_text">
+                                <li>(주)멜론비트 서울시 강남구 역삼로 17길 51 | 대표 김재홍</li>
+                                <li>사업자등록번호 280-88-00958</li>
+                                <li>통신판매업신고 제 2017-서울강남-04260호</li>
+                            </ul>
+                        </div>
+                        <div class="footer_center">
+                            <div class="phone_wrap"><p class="phone_icon"><i class="fab fa-whatsapp"></i></p><p>1644-4698</p><p>help@melonbit.com</p></div>
+                        </div>
+                        <div class="footer_right">
+                            <p>월요일-금요일: 오전9시30분 ~ 오후18시30분(주말 및 공휴일 제외)<br/>고객상담은 전화와 이메일로 진행하며, 방문상담은 진행하지 않습니다.</p>
+                            <ul class="footer_link">
+                                <li><i class="fab fa-facebook-square"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                                <li><img src="../../img/v2_images/oracleG.png" alt="oracleG"></li>
+                                <li><img src="../../img/v2_images/melonpay.png" alt="melonpay"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </body>
+</html>

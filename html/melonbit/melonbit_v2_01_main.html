@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>MelonBIT</title>
+        
+        <link rel="stylesheet" href="../../css/base_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/melonbit_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/add.css" media="screen">
+        <link rel="stylesheet" href="../../css/datepicker3.css" media="screen">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        
+        <script src="../../js/jquery-1.12.4.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/melonbit_v2.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+        <script src="../../js/bootstrap-datepicker.js"></script>
+        <script src="../../js/bootstrap-datepicker.kr.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="main_logo"><a href="melonbit_v2_01_link.html#"><img src="../../img/v2_images/melonbit_logo_N_black.svg" alt="MelonBIT"></a></div>
+                    <div class="navbar_wrap">
+                        <ul class="main_nav_list">
+                            <li><a href="melonbit_v2_01_market.html#">KRW마켓</a></li>
+                            <li><a href="melonbit_v2_01_market2.html#">BTC마켓</a></li>
+                            <!-- <li><a href="#">ETH마켓</a></li> -->
+                            <li><a href="melonbit_v2_01_wallet.html#">입출금</a></li>
+                            <li><a href="melonbit_v2_01_investment1.html#">투자내역</a></li>
+                        </ul>
+                    </div>
+                    <ul class="navbar_left_wrap">
+                        <li class="border-right"><a href="#" data-toggle="modal" data-target="#login_modal">로그인</a></li>
+                        <li>아직 회원이 아니신가요? <a href="melonbit_v2_01_join1.html#"> 회원가입</a></li>
+                        <!-- 로그인시 -->
+                        <!-- <li class="dropdown hover">
+                            <a href="#" class="dropdown-toggle userInfo circlebox" data-toggle="dropdown" role="menu" id="">이예지님<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item"><a href="melonbit_v2_01_mypage1.html#">마이페이지</a></li>
+                                <li class="dropdown-item"><a href="melonbit_v2_01_mypage2.html#">보안설정</a></li>
+                                <li class="dropdown-item"><a href="#">로그아웃</a></li>
+                            </ul>
+                        </li> -->
+
+                        <li class="dropdown hover">
+                            <a href="#" class="dropdown-toggle mainlang circlebox" data-toggle="dropdown" role="button" id="">한국어<span class="caret"></span></a>
+                            <ul class="dropdown-menu langbg">
+                                <li><a href="#">한국어</a></li>
+                                <li><a href="#">ENGLISH</a></li>
+                                <li><a href="#">JAPAN</a></li>
+                                <li><a href="#">CHINA</a></li>
+                                <li><a href="#">VIETNAM</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="circlebox nav_search_btn"><i class="fas fa-search"></i></a>
+                            <div class="nav_search_wrap">
+                                <div class="form-group">
+                                    <input type="text" class="main_search_box" placeholder="코인명/심볼 검색어를 입력하세요"><i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+            <section class="main_section_wrap">
+                    <div class="main_container main_section">
+                        <ul class="main_notice_list">
+                            <li><a href="/notice/detail/29">[공지] 멜론비트 거래소 호가창 개선 안내</a></li>
+                            <li><a href="/notice/detail/29">[이벤트] 멜론비트 거래소 호가창 개선 안내</a></li>
+                            <li><a href="/notice/detail/29">[공지] 멜론비트 거래소 호가창 개선 안내</a></li>
+                        </ul>
+                    </div>
+            </section>
+            <section class="main_information_nav">
+                <div class="main_container position">
+                    <ul class="main_coin_selector">
+                        <li><i class="fas fa-star favor"></i> 관심코인</li>
+                        <li class="current">USDT</li>
+                        <li>BTC</li>
+                        <li>ETH</li>
+                    </ul>
+                    <ul class="layout_select">
+                        <li data-tab="tab-1" class="current"><i class="fa fa-list"></i></li><!--차트형메인 -->
+                        <li data-tab="tab-2" class=""><i class="fa fa-th-large"></i></li><!--카드형메인 -->
+                        <!-- <li data-tab="tab-3" class=""><i class="fas fa-search"></i></li> -->
+                    </ul>
+                </div>
+            </section>
+            <section class="main_information">
+                    <!-- 카드형 메인 -->
+                    <div class="main_container main-tab-content" id="tab-2">
+                        <ul class="deal-minibox">
+                            <li>
+                                <div class="bg"></div>
+                                <div class="clear"></div>
+                                <div class="content-wrapper">
+                                    <div class="header"><p class="big">비트코인<i class="fas fa-star favor"></i></p><p class="icon_24H">24H</p></div>
+                                    <div class="content"><div class="deal-krw text-red">9,075,000<p class="text-red small">BTC/KRW</p></div></div>
+                                    <div class="deal-rate text-red">+ 43.20% ▲ 500,000</div>
+                                    <div class="chart" id="chart-wrap2" style="background: #efefef;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bg"></div>
+                                <div class="clear"></div>
+                                <div class="content-wrapper">
+                                    <div class="header"><p class="big">비트코인<i class="fas fa-star favor"></i></p><p class="icon_24H">24H</p></div>
+                                    <div class="content"><div class="deal-krw text-red">9,075,000<p class="text-red small">BTC/KRW</p></div></div>
+                                    <div class="deal-rate text-red">+ 43.20% ▲ 500,000</div>
+                                    <div class="chart" id="chart-wrap2" style="background: #efefef;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bg"></div>
+                                <div class="clear"></div>
+                                <div class="content-wrapper">
+                                    <div class="header"><p class="big">비트코인<i class="fas fa-star favor"></i></p><p class="icon_24H">24H</p></div>
+                                    <div class="content"><div class="deal-krw text-red">9,075,000<p class="text-red small">BTC/KRW</p></div></div>
+                                    <div class="deal-rate text-red">+ 43.20% ▲ 500,000</div>
+                                    <div class="chart" id="chart-wrap2" style="background: #efefef;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bg"></div>
+                                <div class="clear"></div>
+                                <div class="content-wrapper">
+                                    <div class="header"><p class="big">비트코인<i class="fas fa-star favor"></i></p><p class="icon_24H">24H</p></div>
+                                    <div class="content"><div class="deal-krw text-red">9,075,000<p class="text-red small">BTC/KRW</p></div></div>
+                                    <div class="deal-rate text-red">+ 43.20% ▲ 500,000</div>
+                                    <div class="chart" id="chart-wrap2" style="background: #efefef;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bg"></div>
+                                <div class="clear"></div>
+                                <div class="content-wrapper">
+                                    <div class="header"><p class="big">비트코인<i class="fas fa-star favor"></i></p><p class="icon_24H">24H</p></div>
+                                    <div class="content"><div class="deal-krw text-red">9,075,000<p class="text-red small">BTC/KRW</p></div></div>
+                                    <div class="deal-rate text-red">+ 43.20% ▲ 500,000</div>
+                                    <div class="chart" id="chart-wrap2" style="background: #efefef;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bg"></div>
+                                <div class="clear"></div>
+                                <div class="content-wrapper">
+                                    <div class="header"><p class="big">비트코인<i class="fas fa-star favor"></i></p><p class="icon_24H">24H</p></div>
+                                    <div class="content"><div class="deal-krw text-red">9,075,000<p class="text-red small">BTC/KRW</p></div></div>
+                                    <div class="deal-rate text-red">+ 43.20% ▲ 500,000</div>
+                                    <div class="chart" id="chart-wrap2" style="background: #efefef;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bg"></div>
+                                <div class="clear"></div>
+                                <div class="content-wrapper">
+                                    <div class="header"><p class="big">비트코인<i class="fas fa-star favor"></i></p><p class="icon_24H">24H</p></div>
+                                    <div class="content"><div class="deal-krw text-red">9,075,000<p class="text-red small">BTC/KRW</p></div></div>
+                                    <div class="deal-rate text-red">+ 43.20% ▲ 500,000</div>
+                                    <div class="chart" id="chart-wrap2" style="background: #efefef;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="bg"></div>
+                                <div class="clear"></div>
+                                <div class="content-wrapper">
+                                    <div class="header"><p class="big">비트코인<i class="fas fa-star favor"></i></p><p class="icon_24H">24H</p></div>
+                                    <div class="content"><div class="deal-krw text-red">9,075,000<p class="text-red small">BTC/KRW</p></div></div>
+                                    <div class="deal-rate text-red">+ 43.20% ▲ 500,000</div>
+                                    <div class="chart" id="chart-wrap2" style="background: #efefef;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                    <div class="bg"></div>
+                                    <div class="clear"></div>
+                                    <div class="content-wrapper">
+                                        <div class="header"><p class="big">비트코인<i class="fas fa-star favor"></i></p><p class="icon_24H">24H</p></div>
+                                        <div class="content"><div class="deal-krw text-red">9,075,000<p class="text-red small">BTC/KRW</p></div></div>
+                                        <div class="deal-rate text-red">+ 43.20% ▲ 500,000</div>
+                                        <div class="chart" id="chart-wrap2" style="background: #efefef;"></div>
+                                    </div>
+                                </li>   
+                        </ul>
+                        <div class="clear"></div>
+                    </div>
+                    <!-- 차트형 ㅁㅔ인 -->
+                    <div class="main_container main-tab-content current" id="tab-1">
+                        <table class="main_information_table">
+                            <colgroup>
+                                <col width="12%" />
+                                <col width="12%" />
+                                <col width="12%" />
+                                <col width="18%" />
+                                <col width="18%" />
+                                <col width="18%" />
+                                <col width="10%" />
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>코인</th>
+                                    <th>가격</th>
+                                    <th>전일대비</th>
+                                    <th>24h 고가</th>
+                                    <th>24h 저가</th>
+                                    <th>24h 거래량</th>
+                                    <th>거래</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center"><i class="fas fa-star favor"></i>BTC/USDT</td>
+                                    <td class="text-left lineH_1">3642.99<br/><span class="sub_text">7,123,600 KRW</span></td>
+                                    <td class="text-blue">- 0.73 ▼</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td class="text-center"><i class="fas fa-cart-arrow-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><i class="fas fa-star favor"></i>BTC/USDT</td>
+                                    <td class="text-left lineH_1">3642.99<br/><span class="sub_text">7,123,600 KRW</span></td>
+                                    <td class="text-red">+ 0.73 ▲</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td class="text-center"><i class="fas fa-cart-arrow-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><i class="fas fa-star favor"></i>BTC/USDT</td>
+                                    <td class="text-left lineH_1">3642.99<br/><span class="sub_text">7,123,600 KRW</span></td>
+                                    <td class="text-red">+ 0.73 ▲</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td class="text-center"><i class="fas fa-cart-arrow-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><i class="far fa-star favor"></i>BTC/USDT</td>
+                                    <td class="text-left lineH_1">3642.99<br/><span class="sub_text">7,123,600 KRW</span></td>
+                                    <td class="text-blue">- 0.73 ▼</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td class="text-center"><i class="fas fa-cart-arrow-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><i class="far fa-star favor"></i>BTC/USDT</td>
+                                    <td class="text-left lineH_1">3642.99<br/><span class="sub_text">7,123,600 KRW</span></td>
+                                    <td class="text-blue">- 0.73 ▼</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td class="text-center"><i class="fas fa-cart-arrow-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><i class="far fa-star favor"></i>BTC/USDT</td>
+                                    <td class="text-left lineH_1">3642.99<br/><span class="sub_text">7,123,600 KRW</span></td>
+                                    <td class="text-blue">- 0.73 ▼</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td class="text-center"><i class="fas fa-cart-arrow-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><i class="fas fa-star favor"></i>BTC/USDT</td>
+                                    <td class="text-left lineH_1">3642.99<br/><span class="sub_text">7,123,600 KRW</span></td>
+                                    <td class="text-blue">- 0.73 ▼</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td class="text-center"><i class="fas fa-cart-arrow-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><i class="fas fa-star favor"></i>BTC/USDT</td>
+                                    <td class="text-left lineH_1">3642.99<br/><span class="sub_text">7,123,600 KRW</span></td>
+                                    <td class="text-red">+ 0.73 ▲</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td class="text-center"><i class="fas fa-cart-arrow-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><i class="fas fa-star favor"></i>BTC/USDT</td>
+                                    <td class="text-left lineH_1">3642.99<br/><span class="sub_text">7,123,600 KRW</span></td>
+                                    <td class="text-red">+ 0.73 ▲</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td class="text-center"><i class="fas fa-cart-arrow-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><i class="far fa-star favor"></i>BTC/USDT</td>
+                                    <td class="text-left lineH_1">3642.99<br/><span class="sub_text">7,123,600 KRW</span></td>
+                                    <td class="text-red">+ 0.73 ▲</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td class="text-center"><i class="fas fa-cart-arrow-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><i class="far fa-star favor"></i>BTC/USDT</td>
+                                    <td class="text-left lineH_1">3642.99<br/><span class="sub_text">7,123,600 KRW</span></td>
+                                    <td class="text-red">+ 0.73 ▲</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td class="text-center"><i class="fas fa-cart-arrow-down"></i></td>
+                                </tr>
+                                <tr>
+                                    <td class="text-center"><i class="far fa-star favor"></i>BTC/USDT</td>
+                                    <td class="text-left lineH_1">3642.99<br/><span class="sub_text">7,123,600 KRW</span></td>
+                                    <td class="text-red">+ 0.73 ▲</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td>277,953,93455923</td>
+                                    <td class="text-center"><i class="fas fa-cart-arrow-down"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </section>
+            <section class="main_download_wrap">
+                    <div class="main_container main_download"></div>
+            </section>
+            <div class="modal login_modal" id="login_modal" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="login_modal"> 
+                <div class="modal-dialog modal-buying">
+                    <div class="modal-header">로그인<p class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></p></div>
+                    <div class="modal-content">
+                        <div class="login_form_wrap">
+                            <form method="POST" action="http://demo.melonbit.com/register" class="form-horizontal join_form_group" onsubmit="">
+                                <div class="">
+                                    <input type="text" class="form-control fas" id="username" name="name" value="" placeholder="&#xf0e0; &nbsp;&nbsp;&nbsp;이메일 아이디 입력">
+                                </div>
+                                <div class="">
+                                    <input type="password" class="form-control fas" id="" name="" value="" placeholder="&#xf09c; &nbsp;&nbsp;&nbsp;비밀번호 입력">
+                                </div>
+                                <div class="join_notice">
+                                    <input type="checkbox" class="" id="save_id"><label for="save_id">아이디 저장</label>
+                                    <p class="login_find_pw text-right"><a href="#" data-toggle="modal" data-target="#password_modal">비밀번호를 잊으셨나요?</a></p>
+                                </div>
+                            </form>
+                            <div class="login_btn_wrap">
+                                <button class="btn_blue question_btn">로그인</button>
+                                <div class="text-blue login_join_btn">아직 회원이 아니신가요? <a href="#"> 무료 회원가입하기</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal login_modal" id="password_modal" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="password_modal"> 
+                <div class="modal-dialog modal-buying">
+                    <div class="modal-header">비밀번호 변경<p class="modal-close" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></p></div>
+                    <div class="modal-content">
+                        <div class="login_form_wrap">
+                            <form method="POST" action="http://demo.melonbit.com/register" class="form-horizontal join_form_group" onsubmit="">
+                                <div class="">
+                                    <input type="text" class="form-control fas width70" id="username" name="name" value="" placeholder="&#xf0e0; &nbsp;&nbsp;&nbsp;이메일 아이디 입력">
+                                    <input type="button" class="form-control width30 join_num_btn" value="인증번호 발송">
+                                </div>
+                                <div class=""><input type="text" class="form-control fas" id="" name="" value="" placeholder="&#xf621; &nbsp;&nbsp;&nbsp;인증번호 입력"></div>
+                                <div class="">
+                                    <input type="password" class="form-control fas" id="" name="" value="" placeholder="&#xf09c; &nbsp;&nbsp;&nbsp;변경할 비밀번호 입력">
+                                    
+                                </div>
+                                <div class=""><p class="password_notice password">영문+숫자+특수문자 조합 6자리 이상</p></div>
+                                <div class=""><input type="password" class="form-control fas" id="" name="" value="" placeholder="&#xf09c; &nbsp;&nbsp;&nbsp;변경할 비밀번호 확인"></div>
+                            </form>
+                            <div class="login_btn_wrap">
+                                <button class="btn_blue question_btn">비밀번호 변경</button>
+                                <div class="login_join_btn"><span class="text-blue">아직 회원이 아니신가요? </span><a href="#"> 무료 회원가입하기</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="password_login_btn">로그인하기</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <footer>
+            <div class="footer_nav">
+                <div class="container">
+                    <ul class="footer_nav_list">
+                        <li><a href="#">회사</a></li>
+                        <li><a href="#">고객지원</a></li>
+                        <li><a href="#">내 정보</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">제휴제안</a></li>
+                        <li><a href="#">채용안내</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_info">
+                    <div class="container">
+                        <div class="footer_logo">
+                            <a href="#"><img src="../../img/v2_images/melonbit_logo_N_black.png" alt="MelonBIT"></a>
+                            <ul class="footer_text">
+                                <li>(주)멜론비트 서울시 강남구 역삼로 17길 51 | 대표 김재홍</li>
+                                <li>사업자등록번호 280-88-00958</li>
+                                <li>통신판매업신고 제 2017-서울강남-04260호</li>
+                            </ul>
+                        </div>
+                        <div class="footer_center">
+                            <div class="phone_wrap"><p class="phone_icon"><i class="fab fa-whatsapp"></i></p><p>1644-4698</p><p>help@melonbit.com</p></div>
+                        </div>
+                        <div class="footer_right">
+                            <p>월요일-금요일: 오전9시30분 ~ 오후18시30분(주말 및 공휴일 제외)<br/>고객상담은 전화와 이메일로 진행하며, 방문상담은 진행하지 않습니다.</p>
+                            <ul class="footer_link">
+                                <li><i class="fab fa-facebook-square"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                                <li><img src="../../img/v2_images/oracleG.png" alt="oracleG"></li>
+                                <li><img src="../../img/v2_images/melonpay.png" alt="melonpay"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </body>
+</html>
+<script>
+
+
+</script>    

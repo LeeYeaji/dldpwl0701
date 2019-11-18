@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/* 상단 하단 스타일 */
+
+/* reset */
+div, body, table{padding:0; margin:0;}
+
+/* 전체 */
+#all_wrap{width:100%; height:auto;}
+
+/* 공간잡아주기 */
+#top_menu_wrap{width:100%; height:30px; float:left; background-color:#ade3e5;}
+#top_wrap{width:100%; float:left;}
+#main_menu_wrap{width:100%; float:left;}
+#bottom_wrap{width:100%; height:189px; float:left; border-bottom:solid 1px #cccccc; border-top:solid 1px #cccccc;  background-color:#dddddd;}
+#footer_wrap{width:100%; float:left;}
+
+/* 상단메뉴 */
+.top_menu ul{width:1154px; height:30px; font-size:12px; color:#3a3a3a; font-family:Arial;
+				margin:0 auto; }
+.top_menu ul li{float:right; padding:8px;}
+.top_menu ul li a{text-decoration:none; font-size:12px; color:#3a3a3a; font-family:Arial;}
+.top_menu ul li a:hover{border-bottom:solid 1px #3a3a3a;}
+
+/* 상단로고  */
+#top_wrap #top{width:1154px; height:163px;  margin:0 auto;  position:relative;}
+#top_wrap #top #logo{width:283px; height:118px; position:absolute; top:30px; left:440px;}
+
+/* 사이트링크 */
+
+#top_wrap #top ul{position:absolute; top:100px; left:0px;}
+#top_wrap #top ul li{float:left;}
+
+
+
+/* 메인 메뉴 */
+#main_menu{width:100%; height:34px; border-bottom:solid 1px #3a3a3a; border-top:solid 1px #3a3a3a;}
+
+
+
+/* 폰트 스타일 */
+.font01{color:#3a3a3a; font-size:20px; font-family:Arial; font-weight:bold;
+		padding:10px;}
+.font02{color:#3a3a3a; font-size:45px; font-family:Arial; font-weight:bold;
+		padding:0px;}
+.font03{color:#3a3a3a; font-size:13px; font-family:Arial; font-weight:none;
+		padding-left:10px;}
+.font04{color:#3a3a3a; font-size:33px; font-family:Bodoni BK BT; font-weight:bold;
+		padding-left:10px; line-height:30px;}
+.font05{color:#3a3a3a; font-size:13px; font-family:"돋움"; font-weight:none;
+		padding-left:10px; line-height:20px;}
+.font05 a{color:#3a3a3a; text-decoration:none;}
+.font05 a:hover{border-bottom:solid 1px #3a3a3a;}
+.font06{color:#3a3a3a; font-size:13px; font-family:"돋움"; font-weight:none;
+		padding-left:30px; line-height:20px;}
+.font07{color:#3a3a3a; font-size:20px; font-family:Arial; font-weight:bold;
+		text-align:center; text-indent:-10px; line-height:35px;}
+
+#title{font-size:60px; color:#ade3e5; font-family:Arial; font-weight:bold; line-height:90px; float:left;}
+
+
+
+/* 하단 컨텐츠 - bot */
+
+#bot{width:1154px; height:189px; margin:0 auto;}
+
+#tel{width:392px; height:189px; float:left; position:relative;}
+#store{width:360px; height:189px;float:left; border-left:solid 1px #cccccc; border-right:solid 1px #cccccc; position:relative;}
+#notice{width:400px; height:189px;float:left; position:relative;}
+#tel table{position:absolute; top:20px; left:30px;}
+#store table{position:absolute; top:20px; left:45px;}
+#notice table{position:absolute; top:20px; left:40px;}
+
+
+/* footer */
+
+#footer{width:1154px; height:143px; background-color:white; margin:0 auto; position:relative;}
+
+#foot_logo{width:103px; height:46px; position:absolute; bottom:40px; left:90px;}
+#foot_link{width:280px; height:22px; color:#737373; font-size:13px; font-family:HCR Dotum; 
+			font-weight:bold; position:absolute; bottom:70px; left:220px;}
+#foot_link a{text-decoration:none; color:#737373;}
+#foot_link a:hover{border-bottom:solid 1px #3a3a3a;}
+#foot_add{width:450px; height:56px; color:#737373; font-size:10px; font-family:HCR Dotum; 
+			font-weight:bold; position:absolute; bottom:0px; left:220px;}

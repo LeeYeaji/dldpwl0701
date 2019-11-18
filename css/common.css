@@ -1,0 +1,912 @@
+@charset "utf-8";
+
+.mr4_no{margin-right:0 !important}/*특별성 숫자와 상관없이 최우선 적용*/
+
+body{
+	background-image: url("../images/pattern.jpg");
+}
+
+.MainContent{
+	overflow: hidden;
+	position: relative;
+}
+
+.MainWrap{
+	width: 1180px;
+	margin: 0 auto;
+}
+
+/* Gnb */
+
+.GnbWrap{
+	position: relative;
+	float: left;
+	width: 100%;
+	height: 85px;
+	line-height: 85px;
+	z-index: 999;
+}
+
+.GnbWrap .logo{
+	float: left;
+	font-size: 30px;
+}
+
+.GnbWrap .logo p{
+	font-weight: bold;
+}
+
+.GnbWrap .logo p > span{
+	display: inline-block;
+	padding-left: 15px;
+	font-weight: normal;
+	font-size: 18px;
+	color: #696969;
+}
+
+.GnbWrap .GnbList{
+	float: right;
+}
+
+.GnbWrap .GnbList li{
+	float: left;
+	margin-left: 30px;
+	font-size: 16px;
+}
+
+.GnbWrap .GnbList li.selected a{
+	font-weight: bold;
+}
+
+/* ------------------ */
+
+.MainText{
+	float: left;
+	width: 100%;
+	display: block;
+	margin-top: 20px;
+}
+
+.MainText h1{
+	font-size: 95px;
+	line-height: 110px;
+	text-align: center;
+	color: #ffc700;
+	letter-spacing: -5px;
+	text-shadow: 4px 3px 0px #fff, 9px 8px 5px rgba(0,0,0,0.15);
+}
+
+.MainText .h1Sub{
+	font-size: 95px;
+	line-height: 140px;
+	text-align: center;
+	letter-spacing: -5px;
+	font-weight: lighter;
+}
+
+.MacBookWrap{
+	float: left;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+.MacBookWrap .MacBookImg{
+	width: 820px;
+}
+
+#MainIconWrap{
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	z-index: 100;
+}
+
+#MainIconWrap ul{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#MainIconWrap li{
+	display: block;
+	position: absolute;
+}
+
+#MainIconWrap li img{
+	width: 50px;
+}
+
+
+/*================================================================
+PARALLAX
+================================================================*/
+
+
+/* 모니터 */
+#MainIconWrap li:nth-child(1){
+	top: 40%;
+	left: 5%;
+}
+
+/* 반응형 */
+#MainIconWrap li:nth-child(2){
+	top: 82%;
+	left: 16%;
+}
+
+/* 게임기 */
+#MainIconWrap li:nth-child(3){
+	top: 74%;
+	right: 14%;
+}
+
+/* 키보드 */
+#MainIconWrap li:nth-child(4){
+	top: 54%;
+	left: 19%;
+}
+
+/* 전구 */
+#MainIconWrap li:nth-child(5){
+	top: 24%;
+	left: 22%;
+}
+
+/* 마우스 */
+#MainIconWrap li:nth-child(6){
+	top: 33%;
+	right: 23%;
+}
+
+/* 모바일 */
+#MainIconWrap li:nth-child(7){
+	top: 50%;
+	right: 12%;
+}
+
+/* 타블렛 */
+#MainIconWrap li:nth-child(8){
+	top: 15%;
+	right: 10%;
+}
+
+
+/* MacBook ------------------------------------------ */
+
+.coding{
+	width:700px;
+	height:400px;
+	position: absolute;
+	top: 20px;
+	left: 310px;
+}
+
+.coding div, .coding div span{
+	position: absolute
+}
+.coding div{
+	left:14%;
+	font-family: monospace;
+	font-weight:normal;
+	font-size:10px;
+	color:#666
+}
+
+.coding div span{
+	top:-2px;
+	right:-1px;
+	background: #272822; /* same as background, border */
+	border-left: 2px #666 solid;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.line1 {
+	top:20%;
+	color: #ff0054;
+}
+
+div.line2 {
+	top:27%;
+	color: #ff0054;
+}
+
+div.line3 {
+	top:34%;
+	color: #ff0054;
+}
+
+div.line4 {
+	top:41%;
+	color: #ff0054;
+}
+
+div.line4 p{
+	display:inline-block;
+	color:#fff;
+}
+
+div.line5 {
+	top:48%;
+	color: #ff0054;
+}
+
+div.line6 {
+	top:55%;
+	color: #ff0054;
+}
+
+div.line7 {
+	top:62%;
+	color: #ff0054;
+}
+
+div.line7 p{
+	display:inline-block;
+	color:#fff;
+}
+
+div.line8 {
+	top:69%;
+	color: #ff0054;
+}
+
+div.line9 {
+	top:76%;
+	color: #ff0054;
+}
+
+div.line1 span {   
+	animation: typing 2s steps(15, end), blink-caret 2s step-end;
+	animation-fill-mode: forwards;
+    -webkit-animation: typing 2s steps(15, end), blink-caret 2s step-end;
+	-webkit-animation-fill-mode: forwards;
+    -moz-animation: typing 2s steps(15, end), blink-caret 2s step-end;
+	-moz-animation-fill-mode: forwards;	
+}
+
+div.line2 span {
+    width:100%;border-left: 2px #FEFEFE solid;
+	
+	animation: typing 1s steps(6, end), blink-caret 1s step-end;
+	animation-delay:2s;
+	animation-fill-mode: forwards;
+    -webkit-animation: typing 1s steps(6, end), blink-caret 1s step-end;
+	-webkit-animation-delay:2s;
+	-webkit-animation-fill-mode: forwards;
+    -moz-animation: typing 1s steps(6, end), blink-caret 1s step-end;
+	-moz-animation-delay:2s;
+	-moz-animation-fill-mode: forwards;
+}
+
+div.line3 span {
+    width:100%;border-left: 2px #FEFEFE solid;
+    
+	animation: typing 1s steps(7, end), blink-caret 1s step-end;
+	animation-delay:3s;
+	animation-fill-mode: forwards;
+    -webkit-animation: typing 1s steps(7, end), blink-caret 1s step-end;
+	-webkit-animation-delay:3s;
+	-webkit-animation-fill-mode: forwards;
+    -moz-animation: typing 1s steps(7, end), blink-caret 1s step-end;
+	-moz-animation-delay:3s;
+	-moz-animation-fill-mode: forwards;
+}
+
+div.line4 span {
+    width:100%;border-left: 2px #FEFEFE solid;
+    
+	animation: typing 4.5s steps(30, end), blink-caret 1s step-end;
+	animation-delay:4s;
+	animation-fill-mode: forwards;
+    -webkit-animation: typing 4.5s steps(30, end), blink-caret 1s step-end;
+	-webkit-animation-delay:4s;
+	-webkit-animation-fill-mode: forwards;
+    -moz-animation: typing 4.5s steps(30, end), blink-caret 1s step-end;
+	-moz-animation-delay:4s;
+	-moz-animation-fill-mode: forwards;
+} 
+
+div.line5 span {
+    width:100%;border-left: 2px #FEFEFE solid;
+    
+	animation: typing 1s steps(7, end), blink-caret 1s step-end;
+	animation-delay:8.5s;
+	animation-fill-mode: forwards;
+    -webkit-animation: typing 1s steps(7, end), blink-caret 1s step-end;
+	-webkit-animation-delay:8.5s;
+	-webkit-animation-fill-mode: forwards;
+    -moz-animation: typing 1s steps(7, end), blink-caret 1s step-end;
+	-moz-animation-delay:8.5s;
+	-moz-animation-fill-mode: forwards;
+}
+
+div.line6 span {
+    width:100%;border-left: 2px #FEFEFE solid;
+    
+	animation: typing 1s steps(7, end), blink-caret 1s step-end;
+	animation-delay:9.5s;
+	animation-fill-mode: forwards;
+    -webkit-animation: typing 1s steps(7, end), blink-caret 1s step-end;
+	-webkit-animation-delay:9.5s;
+	-webkit-animation-fill-mode: forwards;
+    -moz-animation: typing 1s steps(7, end), blink-caret 1s step-end;
+	-moz-animation-delay:9.5s;
+	-moz-animation-fill-mode: forwards;
+} 
+
+div.line7 span {
+    width:100%;border-left: 2px #FEFEFE solid;
+    
+	animation: typing 6s steps(45, end), blink-caret 1s step-end;
+	animation-delay:10.5s;
+	animation-fill-mode: forwards;
+    -webkit-animation: typing 6s steps(45, end), blink-caret 1s step-end;
+	-webkit-animation-delay:10.5s;
+	-webkit-animation-fill-mode: forwards;
+    -moz-animation: typing 6s steps(45, end), blink-caret 1s step-end;
+	-moz-animation-delay:10.5s;
+	-moz-animation-fill-mode: forwards;
+} 
+
+div.line8 span {
+    width:100%;border-left: 2px #FEFEFE solid;
+    
+	animation: typing 1s steps(7, end), blink-caret 1s step-end;
+	animation-delay:16.5s;
+	animation-fill-mode: forwards;
+    -webkit-animation: typing 1s steps(7, end), blink-caret 1s step-end;
+	-webkit-animation-delay:16.5s;
+	-webkit-animation-fill-mode: forwards;
+    -moz-animation: typing 1s steps(7, end), blink-caret 1s step-end;
+	-moz-animation-delay:16.5s;
+	-moz-animation-fill-mode: forwards;
+} 
+
+div.line9 span {
+    width:100%;border-left: 2px #FEFEFE solid;
+    
+	animation: typing 1s steps(7, end), blink-caret-perma 1s step-end infinite;
+	animation-delay:17.5s;
+	animation-fill-mode: forwards;
+    -webkit-animation: typing 1s steps(7, end), blink-caret-perma 1s step-end infinite;
+	-webkit-animation-delay:17.5s;
+	-webkit-animation-fill-mode: forwards;
+    -moz-animation: typing 1s steps(7, end), blink-caret-perma 1s step-end infinite;
+	-moz-animation-delay:17.5s;
+	-moz-animation-fill-mode: forwards;
+} 
+
+/* span 태그를 absolute로 텍스트 위에 올리고 가로 너비를 축소해서 텍스트가 보이도록 한다. 배경색을 넣어보면 확인하기 좋다 */
+@keyframes typing {	
+    from { width: 100% }
+    to { width:0 }
+}
+@-webkit-keyframes typing {
+    from { width: 100% }
+    to { width:0 }
+}
+@-moz-keyframes typing {
+    from { width: 100% }
+    to { width:0 }
+}
+
+/* 한자씩 입력된후 오른쪽으로 이동되는 바 */
+@keyframes blink-caret {
+    from{ border-left:1px  solid #fff}
+    to{ border-left:1px solid transparent}/* 처음엔 회색이던 보더가 애니메이션이 끝나 한줄 텍스트가 다 입력되면 투명으로 사라짐 */
+}
+@-webkit-keyframes blink-caret {
+    from{ border-left:1px solid #fff}
+    to{ border-left:1px solid transparent}
+}
+@-moz-keyframes blink-caret {
+    from{ border-left:1px solid #fff}
+    to{ border-left:1px solid transparent}
+}
+
+ 
+ /* 타이핑이 끝나고 마지막에 깜빡이기 효과 */
+@keyframes blink-caret-perma {
+    from, to{ border-left:1px solid #fff}
+    50%{ border-left:1px solid transparent}/* 테두리색상을 투명처리하여 깜빡인듯이 */
+}
+@-webkit-keyframes blink-caret-perma {
+    from, to{ border-left:1px solid #fff}
+    50%{ border-left:1px solid transparent}
+}
+@-moz-keyframes blink-caret-perma {
+    from, to{ border-left:1px solid #fff}
+    50%{ border-left:1px solid transparent}
+}
+
+
+/* //MacBook ------------------------------------------ */
+
+
+
+/* About ======================================= */
+
+.introduceWrap{
+	float: left;
+	width: 100%;
+	height: 1050px;
+	margin-top: 50px;
+	position: relative;
+}
+
+.introLeft{
+	float: left;
+	width: 650px;
+	margin: 0 10px 0 30px;
+}
+
+.introRight{
+	float: left;
+	width: 450px;
+	margin-right: 30px;
+}
+
+
+.introLeft img.flowerIcon{
+	float: left;
+	width: 240px;
+	padding: 0 20px;
+}
+
+.introTextWrap{
+	float: left;
+	width: 400px;
+	margin-top: 20px;
+}
+
+.introTextWrap .introText1{
+	font-size: 24px;
+	color: #696969;
+}
+
+.introTextWrap .introText2{
+	font-size: 56px;
+	letter-spacing: -2px;
+	font-weight: bold;
+	line-height: 52px;
+	color: #ffc700;
+	text-shadow: 3px 3px #fff, 0 0 5px #aaa;
+}
+
+.introLeft table{
+	float: right;
+	width: 455px;
+	margin-top: 30px;
+}
+
+.introLeft table tr{
+	height: 25px;
+}
+
+.introLeft table tr:last-child{
+	height: 125px;
+	line-height: 25px;
+}
+
+.introLeft table tr td:first-child{
+	font-weight: bold;
+}
+
+.introRight img.Photo{
+	width: 100%;
+}
+
+.introBottom{
+	width: 100%;
+	float: left;
+	margin-top: 50px;
+}
+
+.introBottom ul li{
+	width: 24.25%;
+	height: 300px;
+	float: left;
+	margin-right: 1%;
+	overflow: hidden;
+}
+
+.introBottom ul li:last-child{
+	margin-right: 0;
+}
+
+.introBottom ul li > img{
+	width: 100%;
+}
+
+.introduceWrap:after, .skillWrap:after{
+	content: "▼";
+	position: absolute;
+	bottom: 0;
+	left: 49%;
+	font-size: 30px;
+}
+
+.skillWrap, .careerWrap{
+	float: left;
+	width: 100%;
+	text-align: center;
+	position: relative;
+	margin-top: 70px;
+}
+
+.skillWrap{
+	height: 850px;
+}
+
+.careerWrap{
+	height: 800px;
+}
+
+h3{
+	display: inline-block;
+	font-size: 48px;
+	line-height: 100px;
+	border-bottom: 1px solid #000;
+	font-weight: normal;
+}
+
+.skillList{
+	width: 100%;
+	float: left;
+	margin-top: 100px;
+}
+
+
+.skillList li{
+	float: left;
+	width: 280px;
+	margin-right: 20px;
+}
+
+.skillList li:last-child{
+	margin-right: 0;
+}
+
+.skillList li > div{
+	width: 100%;
+	height: 280px;
+	border-radius: 150px;
+	background-color: #fff;
+}
+
+.skillList li > div > img{
+	width: 156px;
+	margin-top: 60px;
+}
+
+.skillList li > p{
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 80px;
+}
+
+.skillList li > span{
+	font-size: 13px;
+}
+
+.careerTable{
+	width: 520px;
+	margin: 90px auto;
+}
+
+.careerTable tr{
+	border-bottom: 1px solid #000;
+}
+
+.careerTable tr:last-child{
+	border-bottom: none;
+}
+
+.careerTable tr td{
+	text-align: left;
+	padding: 20px 0;
+}
+
+.careerTable tr td p{
+	font-size: 16px;
+}
+
+.careerTable tr td span{
+	font-size: 12px;
+}
+
+
+.adoutfooter{
+	width: 100%;
+	float: left;
+	height: 100px;
+	background-color: #ffc700;
+	text-align: center;
+}
+
+.adoutfooter > p{
+	line-height: 100px;
+	font-size: 12px;
+}
+
+/* //About ---------------------------------------- */
+
+
+/* Web ======================================= */
+
+.WebWrap ul.WebList{
+	width: 100%;
+}
+
+.WebWrap ul.WebList > li{
+	float: left;
+	width: 49.25%;
+	height: 500px;
+	cursor: pointer;
+}
+
+.WebWrap ul.WebList > li  > div{
+	width: 578px;
+	height: 360px;
+	border: 1px solid #696969;
+	background-color: #fff;
+	overflow: hidden;
+	position: relative;
+}
+
+.WebWrap ul.WebList > li > div > img{
+	width: 100%;
+	height: 100%;
+}
+
+.WebWrap ul.WebList > li > p{
+	text-align: right;
+	letter-spacing: -1px;
+}
+
+.WebWrap ul.WebList > li > p.portTitle{
+	font-size: 24px;
+	line-height: 50px;
+	font-weight: 500;
+}
+
+.WebWrap ul.WebList > li > p.portSub{
+	color: #696969;
+}
+
+.WebWrap ul.WebList .portMask{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+	top:0;
+	left: -578px;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	transition: all .2s;
+}
+
+.WebWrap ul.WebList .portMask ul.portBtnList{
+	width: 400px;
+	margin: 120px auto;
+}
+
+.WebWrap ul.WebList .portMask ul.portBtnList li{
+	float: left;
+	width: 200px;
+	height: 100%;
+	margin-right: 0!important;
+}
+
+.WebWrap ul.WebList .portMask ul.portBtnList li > a{
+	width: 100%;
+	height: 100%;
+}
+
+.WebWrap ul.WebList .portMask ul.portBtnList li > a > img{
+	width: 70px;
+	margin:15px 65px;
+}
+
+.WebWrap ul.WebList .portMask ul.portBtnList li > a > p{
+	color: #fff;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+.WebWrap ul.WebList .portMask ul.portBtnList.onlyOne li{
+	width: 400px;
+}
+
+.WebWrap ul.WebList .portMask ul.portBtnList.onlyOne li > a > img{
+	width: 70px;
+	margin:15px 150px;
+}
+
+/* //Web ======================================= */
+
+
+/* DAON */
+
+#project2{
+	height: 8500px;
+	width: 100%;
+	background-color: #fff;
+}
+
+h2{width:100%;margin:100px 0 50px 0;}
+
+
+.modal2_header{position:relative;float:left;width:100%;height:960px;background:url("../images/modal2/modal2_01.jpg") no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;background-position: center;}
+.modal2_header h1{margin: 350px auto;width:500px; height:100px;text-align:center;color:#fff;font-weight:normal}
+.modal2_header h1 > p{font-size:25px;color:#fff;}
+.modal2_header h1 > p:last-child{font-size:60px;font-weight:bold;}
+
+.modal2_header ul{margin: -220px auto;width:500px;height:120px;}
+.modal2_header ul li{color:#fff;}
+
+.modal2_sec1, .modal2_sec2, .modal2_sec3{float:left;width:100%;height:auto;text-align:center;}
+.modal2_sec1 .big_p{font-size:25px;font-weight:bold;margin-bottom:10px;}
+.modal2_sec1 > span{font-size:14px;}
+.modal2_sec1 .btn_go{margin:20px auto;width:220px;height:55px;border:3px solid #0d92d7}
+.modal2_sec1 .btn_go a{display:block;width:100%;height:100%;color:#333;line-height:50px;font-weight:bold;}
+.modal2_sec1 .btn_go a:hover{background:#0d92d7;color:#fff;font-weight:bold;line-height:50px;}
+.modal2_sec1 > img{margin-bottom:100px;}
+.modal2_sec1 .marb_20{margin-bottom:20px;}
+.modal2_sec1 ul{width:1323px;height:220px;margin:0 auto;padding-top:60px;}
+.modal2_sec1 ul li{float:left;margin-right:123px;text-align:center}
+.modal2_sec1 ul li > p{margin-top:5px;font-size:18px;}
+.modal2_sec1 .daon_logo{margin-bottom:20px;}
+
+.modal2_sec2 > img, .modal2_sec3 > img{margin-top:50px;}
+
+#scd_pic, .wid_100{
+	width: 100%;
+}
+
+.daon_txt{font-size:20px;font-weight:bold;}
+.line{float:left;width:100%;height:200px;margin-top:200px;overflow:hidden;}
+.num1{background:url("../images/modal2/photo-1457904375453-3e1fc2fc76f4.jpg") no-repeat;background-attachment:fixed;}
+.num2{background:url("../images/modal2/Untitled-1.jpg") no-repeat;background-attachment:fixed;}
+
+
+/*  */
+.modal2_sec2_in{position:relative;float:left;width:100%;height:1500px;}
+.modal2_sec2_in ul{width:100%;height:1500px;}
+.modal2_sec2_in ul li:nth-child(1){position:absolute;left:10%;top:5%;}
+.modal2_sec2_in ul li:nth-child(2){position:absolute;right:8%;top:15%}
+.modal2_sec2_in ul li:nth-child(3){position:absolute;right:10%;top:30%}
+.modal2_sec2_in ul li:nth-child(4){position:absolute;left:50%;top:50%}
+.modal2_sec2_in ul li:nth-child(5){position:absolute;left:10%;bottom:15%}
+.modal2_sec2_in ul li:nth-child(6){position:absolute;left:20%;bottom:10%}
+
+.modal2_sec2_in ul li p{
+	background-color: #fff;
+	border: 1px solid #000;
+	padding: 5px;
+}
+
+/* //DAON */
+
+
+
+/* OST */
+
+#project1{
+	height: 6000px;
+	width: 100%;
+	background-color: #fff;
+}
+
+.modal1_header{position:relative;float:left;width:100%;height:960px;background:url("../images/modal1/modal1_01.jpg") no-repeat;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;background-position: center;}
+.modal1_header h1{margin: 350px auto;width:300px; height:100px;text-align:center;color:#fff;font-weight:normal}
+.modal1_header h1 > p{font-size:25px;color:#fff;}
+.modal1_header h1 > p:last-child{font-size:60px;font-weight:bold;}
+
+.modal1_header ul{margin:-220px auto;width:300px;height:120px;}
+.modal1_header ul li{color:#fff;}
+
+.modal1_sec1, .modal1_sec2, .modal1_sec3{float:left;width:100%;height:auto;text-align:center;}
+.modal1_sec1 .big_p{font-size:25px;font-weight:bold;margin-bottom:10px;}
+.modal1_sec1 > span{font-size:14px;}
+.modal1_sec1 .btn_go{margin:20px auto;width:220px;height:55px;border:3px solid #ade3e5}
+.modal1_sec1 .btn_go a{display:block;width:100%;height:100%;color:#333;line-height:50px;}
+.modal1_sec1 .btn_go a:hover{background:#ade3e5;color:#fff;font-weight:bold;line-height:50px;}
+.modal1_sec1 > img{margin-bottom:100px;}
+.modal1_sec1 .marb_20{margin-bottom:20px;}
+.modal1_sec1 ul{width:1323px;height:220px;margin:0 auto;}
+.modal1_sec1 ul li{float:left;margin-right:123px;text-align:center}
+.modal1_sec1 ul li > p{margin-top:5px;font-size:18px;}
+
+.modal1_sec2 > img, .modal1_sec3 > img{margin-top:50px;}
+
+.line{float:left;width:100%;height:200px;margin-top:200px;overflow:hidden;}
+.num1{background:url("../images/modal1/photo-1453857122308-5e78881d7acc.jpg") no-repeat;background-attachment:fixed;}
+.num2{background:url("../images/modal1/doctype-hi-res.jpg") no-repeat;background-attachment:fixed;}
+.w_60{float:left;width:60%;height:auto;padding-top:100px;text-align:right}
+.w_40{float:left;width:40%;height:auto;padding-top:400px;text-align:left} 
+
+/* //OST */
+
+.GoTopBtn{
+	position: fixed;
+	right: 80px;
+	bottom: 80px;
+	width: 80px;
+	height: 80px;
+	background-color: #fff;
+	border-radius: 40px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 22px;
+	padding-top: 18px;
+	cursor: pointer;
+}
+
+.GoBackBtn{
+	position: fixed;
+	right: 180px;
+	bottom: 80px;
+	width: 80px;
+	height: 80px;
+	background-color: #fff;
+	border-radius: 40px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 22px;
+	padding-top: 18px;
+	cursor: pointer;
+}
+
+.Web_titleWrap{
+	width: 400px;
+	margin: 10px auto;
+	margin-top: 50px;
+}
+
+.Web_titleWrap > img{
+	width: 100%;
+}
+
+.videoWrap{
+	width: 900px;
+	height: 500px;
+	margin: 50px auto;
+}
+
+.Web_comentWrap{
+	width: 900px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.Web_comentWrap p{
+	font-size: 18px;
+}
+
+.Web_comentWrap > img{
+	width: 100%;
+}
+
+.Web_comentWrap p.Extitle{
+	width: 100%;
+	line-height: 150px;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.de_comentWrap{
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+
+}
+
+.de_comentWrap img{
+	width: 100%;
+}

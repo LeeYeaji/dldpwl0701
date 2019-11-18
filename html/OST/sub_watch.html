@@ -1,0 +1,383 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> OST-Watch </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <link href="css/basic.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+ </head>
+
+ <style type="text/css">
+
+ div, body, table{padding:0; margin:0;}
+
+a.site1{display:block; width:38px; height:35px; background-image:url(images/site1_off.gif)}
+a:hover.site1{display:block; width:38px; height:35px; background-image:url(images/site1_on.gif)}
+
+a.site2{display:block; width:35px; height:35px; background-image:url(images/site2_off.gif)}
+a:hover.site2{display:block; width:35px; height:35px; background-image:url(images/site2_on.gif)}
+
+a.site3{display:block; width:35px; height:35px; background-image:url(images/site3_off.gif)}
+a:hover.site3{display:block; width:35px; height:35px; background-image:url(images/site3_on.gif)}
+
+a.site4{display:block; width:37px; height:35px; background-image:url(images/site4_off.gif)}
+a:hover.site4{display:block; width:37px; height:35px; background-image:url(images/site4_on.gif)}
+
+/* 메인 메뉴 롤오버 */
+.main_menu {position:relative; width:1154px;height:35px; margin:0 auto; }
+.main_menu img {border:none;vertical-align:top;}
+.main_menu ul {margin:0px;padding:0px;list-style:none; }
+.main_menu ul li {float:left;}
+
+
+.main_menu a.link1{display:block; width:122px; height:34px; background-image:url(btn/btn_03_off.gif)}
+.main_menu a:hover.link1{display:block; width:122px; height:34px; background-image:url(btn/btn_03_on.gif)}
+
+.main_menu a.link2{display:block; width:109px; height:34px; background-image:url(btn/btn_04_off.gif)}
+.main_menu a:hover.link2{display:block; width:109px; height:34px; background-image:url(btn/btn_04_on.gif)}
+
+.main_menu a.link3{display:block; width:127px; height:34px; background-image:url(btn/btn_05_off.gif)}
+.main_menu a:hover.link3{display:block; width:127px; height:34px; background-image:url(btn/btn_05_on.gif)}
+
+.main_menu a.link4{display:block; width:94px; height:34px; background-image:url(btn/btn_06_off.gif)}
+.main_menu a:hover.link4{display:block; width:94px; height:34px; background-image:url(btn/btn_06_on.gif)}
+
+.main_menu a.link5{display:block; width:144px; height:34px; background-image:url(btn/btn_07_off.gif)}
+.main_menu a:hover.link5{display:block; width:144px; height:34px; background-image:url(btn/btn_07_on.gif)}
+
+.main_menu a.link6{display:block; width:119px; height:34px; background-image:url(btn/btn_08_off.gif)}
+.main_menu a:hover.link6{display:block; width:119px; height:34px; background-image:url(btn/btn_08_on.gif)}
+
+.main_menu a.link7{display:block; width:105px; height:34px; background-image:url(btn/btn_09_off.gif)}
+.main_menu a:hover.link7{display:block; width:105px; height:34px; background-image:url(btn/btn_09_on.gif)}
+
+.main_menu a.link8{display:block; width:133px; height:34px; background-image:url(btn/btn_10_off.gif)}
+.main_menu a:hover.link8{display:block; width:133px; height:34px; background-image:url(btn/btn_10_on.gif)}
+
+.main_menu a.link9{display:block; width:100px; height:34px; background-image:url(btn/btn_11_off.gif)}
+.main_menu a:hover.link9{display:block; width:100px; height:34px; background-image:url(btn/btn_11_on.gif)}
+
+.main_menu a.link10{display:block; width:97px; height:34px; background-image:url(btn/btn_12_off.gif)}
+.main_menu a:hover.link10{display:block; width:97px; height:34px; background-image:url(btn/btn_12_on.gif)}
+
+
+
+/* 공간지정하기 */
+
+#content_wrap{width:100%; float:left;}
+#content{width:1154px;  margin:0 auto;}
+
+#con_top{width:1154px; height:200px; float:left; position:relative; border-bottom:solid 1px #cccccc;}
+#con_mid{width:1154px; height:1097px; float:left;}
+#con_bot{width:1154px; height:110px; float:left;}
+
+
+/* 상단라인 */
+
+#line01{}
+
+/* 타이틀 텍스트 속성 */
+
+#title_img{float:left;}
+#title_posi{position:absolute; top:60px; left:465px;}
+
+
+/* 메인 테이블 속성 */
+#con_mid table{ height:1060px; float:left; margin-top:20px;}
+#con_mid td {width:283px; padding:0; margin:0;}
+#con_mid tr {width:283px; padding:0; margin:0;}
+#con_mid .type1{width:283px; height:401px;}
+#con_mid .type2{width:283px; height:130px;}
+
+.type3{margin-left:8px; margin-right:8px;}
+.type4{margin-right:8px;}
+
+
+/* 폰트 속성 */
+.font8{color:#727272; font-size:15px; font-family:Arial; font-weight:normal;
+		text-align:center;  line-height:-10px;}
+.font9{color:#ade3e5; font-size:18px; font-family:Arial; font-weight:bold;
+		text-align:center; line-height:-10px;}
+
+.font8 a{color:#727272; text-decoration:none;}
+.font8 a:hover{border-bottom:solid 1px #cccccc;}
+.font9 a{color:#ade3e5; text-decoration:none;}
+
+
+/* 하단 리스트 */
+
+#list{width:254px; height:17px; margin:0 auto;}
+#btn_left{width:17px; height:17px; float:left;}
+#list_num{width:220px; height:17px; float:left;
+			color:#3a3a3a; font-size:16px; font-family:Arial; font-weight:normal;
+			text-align:center; letter-spacing:6px;}
+#list_num a{text-decoration:none; color:#3a3a3a;}
+#list_num a:hover{text-decoration:none; color:#cccccc;}
+
+#btn_right{width:17px; height:17px; float:right;}
+
+
+/* 컨텐츠 롤오버 */
+
+a.con1{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_08_1.gif)}
+a:hover.con1{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_08.gif)}
+
+.con2{margin-left:8px; margin-right:8px;}
+a.con2{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_10_1.gif)}
+a:hover.con2{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_10.gif)}
+
+.con3{margin-right:8px;}
+a.con3{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_12_1.gif)}
+a:hover.con3{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_12.gif)}
+
+a.con4{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_14.gif)}
+a:hover.con4{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_14_1.gif)}
+
+a.con5{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_19_1.gif)}
+a:hover.con5{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_19.gif)}
+
+.con6{margin-left:8px; margin-right:8px;}
+a.con6{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_20.gif)}
+a:hover.con6{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_20_1.gif)}
+
+.con7{margin-right:8px;}
+a.con7{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_21_1.gif)}
+a:hover.con7{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_21.gif)}
+
+a.con8{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_22_1.gif)}
+a:hover.con8{display:block; width:283px; height:400px; background-image:url(images/sub1/sub1_22.gif)}
+
+
+
+
+ </style>
+
+ <body>
+  
+ <div id="all_wrap">
+  <div id="top_menu_wrap">
+	
+	<div class="top_menu">
+	<ul>
+	<li><a href="basic_ing.html">LOGIN</a></li>
+	<li><a href="basic_ing.html">JOIN</a></li>
+	<li><a href="basic_ing.html">MY PAGE</a></li>
+	<li><a href="basic_ing.html">SHOPPING BAG</a></li>
+	</ul>
+	</div>
+  
+  </div>
+  <div id="top_wrap">
+
+		<div id="top">
+			<div id="site">
+			<ul>
+			<li><a href="https://www.instagram.com/ost_love/" class="site1"></a></li>
+			<li><a href="http://blog.naver.com/elandost/220605769976" class="site2"></a></li>
+			<li><a href="https://www.facebook.com/www.ost.co.kr/" class="site3"></a></li>
+			</ul>
+			</div>
+
+			<div id="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+		</div>
+  </div>
+
+
+  <div id="main_menu_wrap">
+			<div id="main_menu">
+				  <div class="main_menu">
+						<ul>
+							<li>
+							<a href="sub_neck.html" class="link1"></a>
+							</li>
+							<li>
+							<a href="sub_earring.html" class="link2"></a>
+							</li>
+							<li>
+							<a href="sub_bracelet.html" class="link3"></a>
+							</li>
+							<li>
+							<a href="sub_ring.html" class="link4"></a>
+							</li>
+							<li>
+							<a href="sub_couple.html" class="link5"></a>
+							</li>
+							<li>
+							<a href="sub_pendant.html" class="link6"></a>
+							</li>
+							<li>
+							<a href="sub_watch.html" class="link7"></a>
+							</li>
+							<li>
+							<a href="sub_accessory.html" class="link8"></a>
+							</li>
+							<li>
+							<a href="sub_sale.html" class="link9"></a>
+							</li>
+							<li>
+							<a href="sub_event.html" class="link10"></a>
+							</li>
+						</ul>
+				  </div>
+			</div>
+  </div>
+
+<!-- -->
+
+
+
+  <div id="content_wrap">
+
+	<div id="content">
+
+		<div id="con_top">
+
+			<div id="line01"><img src="images/index_28.gif"></div>
+			<div id="title_posi">
+				<div id="title">Watch</div>
+				<div id="title_img"><img src="images/watch.png"></div>
+			</div>
+		
+		</div>
+		<div id="con_mid">
+
+			<table>
+			<tr class="type1">
+			<td><a href="sub_watch_detail.html" class="con1"></a></td>
+			<td><a href="sub_watch_detail_ing.html" class="con2"></a></td>
+			<td><a href="sub_watch_detail_ing.html" class="con3"></a></td>
+			<td><a href="sub_watch_detail_ing.html" class="con4"></a></td>
+			</tr>
+			<tr class="type2">
+			<td><p class="font8"><a href="sub_watch_detail.html">OTW116101TLP</a></p></a><br /><p class="font9"><a href="sub_watch_detail.html">39,900 won</a></p></td>
+			<td><p class="font8"><a href="sub_watch_detail_ing.html">OTW116101TLP</a></p></a><br /><p class="font9"><a href="sub_watch_detail_ing.html">39,900 won</a></p></td>
+			<td><p class="font8"><a href="sub_watch_detail_ing.html">OTW116101TLP</a></p></a><br /><p class="font9"><a href="sub_watch_detail_ing.html">39,900 won</a></p></td>
+			<td><p class="font8"><a href="sub_watch_detail_ing.html">OTW116101TLP</a></p></a><br /><p class="font9"><a href="sub_watch_detail_ing.html">39,900 won</a></p></td>
+			</tr>
+			<tr class="type1">
+			<td><a href="sub_watch_detail_ing.html" class="con5"></a></td>
+			<td><a href="sub_watch_detail_ing.html" class="con6"></a></td>
+			<td><a href="sub_watch_detail_ing.html" class="con7"></a></td>
+			<td><a href="sub_watch_detail_ing.html" class="con8"></td>
+			</tr>
+			<tr class="type2">
+			<td><p class="font8"><a href="sub_watch_detail.html">OTW116101TLP</a></p></a><br /><p class="font9"><a href="sub_watch_detail.html">39,900 won</a></p></td>
+			<td><p class="font8"><a href="sub_watch_detail_ing.html">OTW116101TLP</a></p></a><br /><p class="font9"><a href="sub_watch_detail_ing.html">39,900 won</a></p></td>
+			<td><p class="font8"><a href="sub_watch_detail_ing.html">OTW116101TLP</a></p></a><br /><p class="font9"><a href="sub_watch_detail_ing.html">39,900 won</a></p></td>
+			<td><p class="font8"><a href="sub_watch_detail_ing.html">OTW116101TLP</a></p></a><br /><p class="font9"><a href="sub_watch_detail_ing.html">39,900 won</a></p></td>
+			</tr>
+			</table>
+		
+		</div>
+		<div id="con_bot">
+		
+			<div id="list">
+				<div id="btn_left"><a href="#"><img src="images/sub1/sub1_28.gif"></a></div>
+				<div id="list_num">
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">7</a>
+				<a href="#">8</a>
+				</div>
+				<div id="btn_right"><a href="#"><img src="images/sub1/sub1_30.gif"></a></div>
+			</div>
+
+		</div>
+
+	</div>
+
+  </div>
+
+
+<!-- -->
+
+  <div id="bottom_wrap">
+
+  <div id="bot">
+	
+			<div id="tel">
+		
+			<table>
+			<tbody><tr>
+			<td colspan="2" class="font01">CUSTOMER CENTER</td>
+			</tr>
+			<tr>
+			<td rowspan="2"><img src="images/icon1.png"></td><td class="font02">1600-0455</td>
+			</tr>
+			<tr>
+			<td class="font03">상담시간:월~금(09:00~18:00)<br>
+				공휴일 휴무</td>
+			</tr>
+			</tbody></table>
+
+		</div>
+		<div id="store">
+
+			<table>
+			<tbody><tr>
+			<td colspan="2" class="font01">OST STORE</td>
+			</tr>
+			<tr>
+			<td rowspan="2"><a href="basic_ing.html"><img src="images/icon2.png"></a></td>
+			<td class="font04">STORE<br>FINDER</td>
+			</tr>
+			<tr>
+			<td class="font03">지역별 가장 가까운 매장을<br>
+				찾으실 수 있습니다.</td>
+			</tr>
+			</tbody></table>
+
+		</div>
+		<div id="notice">
+
+			<table>
+			<tbody><tr>
+			<td colspan="2" class="font01">NOTICE</td>
+			</tr>
+			<tr>
+			<td class="font05">
+			<a href="basic_ing.html">- 더욱 새로워진 OST 마케팅 서포터..</a><br>
+			<a href="basic_ing.html">- OST 서포터즈 4기 모집</a><br>
+			<a href="basic_ing.html">- OST꽃템, 2월 리미티드, 한정수량..</a><br>
+			<a href="basic_ing.html">- 박보람 X OST : '예뻐졌다'..</a><br>
+			<a href="basic_ing.html">- OST 2월 별난스냅 커플시계편 +)..</a><br>
+			</td>
+			<td class="font06">
+			2016.02.14<br>
+			2016.02.14<br>
+			2016.02.14<br>
+			2016.02.14<br>
+			2016.02.14<br>
+			</td>
+			</tr>
+			</tbody></table>
+		
+		</div>
+		</div> 
+  </div>
+
+  <div id="footer_wrap">
+
+		<div id="footer">
+		
+			<div id="foot_logo"><img src="images/foot_logo.jpg"></div>
+			<div id="foot_link"><a href="basic_ing.html">이용약관</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="basic_ing.html">개인정보취급방침</a> &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="basic_ing.html">고객센터</a></div>
+			<div id="foot_add">(주)이랜드월드 패션사업부 : 서울시 금천구 가산동 371-12 이랜드 빌딩<br>
+			사업자등록번호 : 113-85-19030 통신판매업 신고번호 : 금천구청 제 18-1053호 대표이사 : 김광래<br>
+			COPYRIGHTⓒ</div>
+			</div>
+  
+		 </div>
+</div>
+
+ </body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8" />
+  <title> 다온큐브_영화상세페이지 </title><!-- 3depth까지만 작성, 동일한 title은 절대 있을수 없습니다 -->
+  <link rel="stylesheet" href="../../css/common.css" /><!-- 링크걸 스타일은 최대 3개 까지만 하세요....  -->
+  <!--[if lt IE 9]>
+	<script type="text/javascript" src="../js/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="../../js/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="../../js/common.js"></script><!-- 링크걸 스크립트는 최대 3개 까지만 하세요(합쳐도 되는 파일은 합쳐서 가볍게 사용합시다)....  -->
+ </head>
+
+ <body>
+	<div id="skip">
+		<a href="#content">본문 바로가기</a>
+	</div>
+
+	<div id="in_wrap">
+		<!-- ===========header================================================================ -->
+		<header id="header">
+			<!-- include문서의 경로는 모두 절대경로로 표시합니다. index와 sub 공통으로 사용하기 쉽도록 -->
+								<div id="topBanner">
+				<div class="area p_r">
+					<p>
+						<a href="buying/reserve.php">
+							<img src="../../images/han/topBannerImg1.jpg" id="random_img" width="970" height="80" alt="상단배너광고">
+						</a>
+					</p>
+					<div class="cancel">
+						<a href="#">
+							<img src="../../images/han/top_banner_close_icon.png" width="30" height="30" alt="배너광고닫기">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="wrap">
+				<h1><a href="../"><img src="../../images/han/logo.png" width="298" height="55" alt="다온큐브"></a></h1>
+				<nav id="nav">
+					<ul id="gnb">
+						<li class="sub1"><a href="html/buying/reserve.php">예매</a>
+							<ul>
+								<li><a href="html/buying/reserve.php">예매안내</a></li>
+								<li><a href="html/buying/reserve.php">날짜별</a></li>
+								<li><a href="html/buying/reserve.php">극장별</a></li>
+								<li><a href="html/buying/reserve.php">영화별</a></li>
+							</ul>
+						</li>
+						<li class="sub2"><a href="http://pbs.duniv.kr/~student0920/daon/html/timetable/timetable.html">상영시간표</a>
+							<ul>
+								<li><a href="http://pbs.duniv.kr/~student0920/daon/html/timetable/timetable.html">영화별시간표</a></li>
+							</ul>
+						</li>
+						<li class="sub3"><a href="present.html">영화소개</a>
+							<ul>
+								<li><a href="present.html">현재상영작</a></li>
+								<li><a href="present.html">개봉예정작</a></li>
+								<li><a href="present.html">박스오피스</a></li>
+								<li><a href="movieStory.html">무비스토리</a></li>
+							</ul>
+						</li>
+						<li class="sub4"><a href="html/room/movieroom.html">영화관</a>
+							<ul>
+								<li><a href="html/room/movieroom.html">DIGITAL관</a></li>
+								<li><a href="html/room/movieroom.html">ADVENTURE관</a></li>
+								<li><a href="html/room/movieroom.html">ONO관</a></li>
+								<li><a href="html/room/movieroom.html">NARA관</a></li>
+							</ul>
+						</li>
+						<li class="sub5"><a href="http://pbs.duniv.kr/~student0920/daon/html/membership/membership.html">멤버십</a>
+							<ul>
+								<li><a href="http://pbs.duniv.kr/~student0920/daon/html/membership/membership.html">멤버십안내</a></li>
+								<li><a href="http://pbs.duniv.kr/~student0920/daon/html/membership/membership.html">이용TIP</a></li>
+								<li><a href="http://pbs.duniv.kr/~student0920/daon/html/membership/membership.html">포인트조회</a></li>
+								<li><a href="http://pbs.duniv.kr/~student0920/daon/html/membership/membership.html">멤버십가입</a></li>
+								<li><a href="http://pbs.duniv.kr/~student0920/daon/html/membership/membership.html">VIP가입</a></li>
+							</ul>
+						</li>
+						<li class="sub6"><a href="html/event/movieEvent.html">이벤트</a>
+							<ul>
+								<li><a href="html/event/movieEvent.html">영화이벤트</a></li>
+								<li><a href="html/event/movieEvent.html">다온이벤트</a></li>
+								<li><a href="html/event/movieEvent.html">제휴이벤트</a></li>
+							</ul>
+						</li>
+						<li class="sub7"><a href="html/customer/faq.html">고객센터</a>
+							<ul>
+								<li><a href="html/customer/faq.html">단체관람안내</a></li>
+								<li><a href="html/customer/faq.html">FAQ</a></li>
+								<li><a href="html/customer/faq.html">분실물안내</a></li>
+								<li><a href="html/customer/faq.html">1:1문의</a></li>
+							</ul>
+						</li>
+					</ul>
+					<div id="panel"></div>
+				</nav>
+  </div>
+		</header>
+		<!-- ===========//header================================================================ -->
+
+		<!-- ===========content================================================================ -->
+
+			<div id="subNav">
+				<ul>
+					<li><a href="present.html">현재상영작</a></li>
+					<li><a href="#">상영예정작</a></li>
+					<li><a href="#">박스오피스</a></li>
+					<li><a href="movieStory.html">무비스토리</a></li>
+				</ul>
+			</div>
+
+			<div id="in_sub_wrap" class="area p_r">
+					<div class="in_container">
+						<div class="in_slider">
+							<div class="in_btn_box">
+						<!-- 이전 버튼 -->
+								<a href="#left" class="in_prev">
+									<img src="../../images/intro/arrow_w_l.png" width="33" height="61" alt="이전">
+								</a>
+						<!-- 이전 버튼 -->
+								<a href="#right" class="in_next">
+									<img src="../../images/intro/arrow_w_r.png" width="33" height="61" alt="다음">
+								</a>
+							</div>
+						<!-- 메인이미지부분 -->
+							<ul class="in_img_list"> <!-- 메인이미지부분 -->
+								<li><img src="../../images/intro/slide1.jpg" width="1200" height="400" alt=""></li>
+								<li><img src="../../images/intro/slide2.jpg" width="1200" height="400" alt=""></li>
+								<li><img src="../../images/intro/slide3.jpg" width="1200" height="400" alt=""></li>
+								<li><img src="../../images/intro/slide4.jpg" width="1200" height="400" alt=""></li>
+								<li><img src="../../images/intro/slide5.jpg" width="1200" height="400" alt=""></li>
+							</ul>
+
+						</div>	
+					</div>	
+				<div class="in_content1_up p_a f_l">
+					<section id="in_content1">
+					<div class="f_l">
+						<img src="../../images/intro/mv_inside_07.jpg" width="318" height="471" alt="엑스맨:아포칼립스 포스터">
+					</div>
+					<div class="f_l in_mv_title">
+						<table class="in_star">
+							<tr>
+								<td><img src="../../images/intro/star_racting.png" width="228" height="110" alt="별점"></td>
+								<td><span>7.3 점</span></td>
+								<td>예매율<span>2</span>위 23.2%</td>
+							</tr>
+						</table>
+						<h2 class="p_r">
+							<span><img src="../../images/intro/icon_12.png" width="28" height="25" alt="12세연령가">
+							엑스맨:아포칼립스<br/>
+							<span class="p_a">X-Men: Apocalypse, 2016</span></span>
+							<button class="p_a"><a href="../html/buying/reserve.php">예매하기</a></button>
+						</h2>
+						<ul class="in_b_t">
+							<li><strong>등급</strong>　[국내] 12세이상관람가</li>
+							<li><strong>개봉일</strong>　2016.02.25</li>
+							<li><strong>기본정보</strong>　액션/모험/SF 미국(143분)</li>
+							<li><strong>타입</strong>　2D, 3D | 일반, Super 4D | 일반사운드, Atmos |</li>
+						</ul>
+					</div>
+					</section>
+				</div>
+			<section id="in_content2">
+				<h3>줄거리</h3>
+					<p>“강한 자만이 살아남을 것이다” 아포칼립스 
+					 고대부터 신으로 숭배 받아왔던 최초의 돌연변이 아포칼립스가 수천 년간 무덤에 잠들어 있다가 1983년 이집트에서 깨어난다. 
+					타락한 문명에 분노한 아포칼립스는 절망에 잠긴 매그니토를 비롯하여, 스톰, 사일록, 아크엔젤에게 보다 강력한 힘을 주며 자신의 수하 ‘포 호스맨’으로 삼는다. 
+					그리고 인류를 멸망시키고 새로운 세상을 건설하여 강한 자들만의 세상을 만들려고 한다. 
+					</p>
+					<p>“지켜야 한다” 엑스맨 
+					 한편, 프로페서 X는 어린 돌연변이들을 위한 영재학교를 설립해 인간과의 평화로운 공존과 희망을 찾을 수 있도록 가르친다. 
+					아직은 스스로 능력을 통제하지 못하는 진 그레이를 통해 아포칼립스가 초래한 인류의 멸망을 예견하게 된 프로페서 X는 미스틱과 함께 젊은 돌연변이들로 이뤄진 엑스맨을 
+					결성한다. 
+					아포칼립스를 막기 위해 사상 최대의 전쟁에 나서게 된 그들. 도저히 막을 수 없는 적과 싸워야만 하는데… </p>
+					<p>인류의 운명을 건 마지막 전쟁! 당신의 엑스맨은 지금부터 시작이다!</p>
+			</section>
+			<section id="in_content3">
+				<h3>동영상</h3>
+				<div class="in_video">
+					<iframe width="380" height="228" title="메인예고편1차" src="https://www.youtube.com/embed/z2HTPuY2scM" frameborder="0" allowfullscreen></iframe>
+					<p><img src="../../images/intro/mv_inside_21.jpg" width="37" height="24" alt="HD동영상"></p>
+					<h4>메인 예고편 1차</h4>
+				</div>
+				<div class="in_video">
+					<iframe width="380" height="228" title="메인예고편2차" src="https://www.youtube.com/embed/2bcNOkc0SPw" frameborder="0" allowfullscreen></iframe>
+					<p><img src="../../images/intro/mv_inside_21.jpg" width="37" height="24" alt="HD동영상"></p>
+					<h4>메인 예고편 2차</h4>
+				</div>
+				<div class="in_video mr4_no">
+					<iframe width="380" height="228" title="메인예고편3차" src="https://www.youtube.com/embed/bwiuWc0DNHc" frameborder="0" allowfullscreen></iframe>
+					<p><img src="../../images/intro/mv_inside_21.jpg" width="37" height="24" alt="HD동영상"></p>
+					<h4>메인 예고편 3차</h4>
+				</div>
+			</section>
+			<section id="in_content4">
+				<h3>감독 & 출연</h3>
+				<ul>
+					<li>
+						<img src="../../images/intro/mv_inside_25.jpg" width="161" height="201" alt="">
+						<p>브라이언 싱어</p>
+						<span>감독</span>
+					</li>
+					<li>
+						<img src="../../images/intro/mv_inside_27.jpg" width="161" height="201" alt="">
+						<p>제임스 맥어보이</p>
+						<span>주연 | 찰스 자비에役</span>
+					</li>
+					<li>
+						<img src="../../images/intro/mv_inside_29.jpg" width="161" height="201" alt="">
+						<p>마이클 패스벤더</p>
+						<span>주연 | 에릭 랜셔役</span>
+					</li>
+					<li>
+						<img src="../../images/intro/mv_inside_31.jpg" width="161" height="201" alt="">
+						<p>제니퍼 로렌스</p>
+						<span>주연 | 미스틱役</span>
+					</li>
+					<li>
+						<img src="../../images/intro/mv_inside_33.jpg" width="161" height="201" alt="">
+						<p>오스카 아이삭</p>
+						<span>주연 | 아포칼립스役</span>
+					</li>
+					<li class="mr4_no">
+						<img src="../../images/intro/mv_inside_35.jpg" width="161" height="201" alt="">
+						<p>니콜라스 홀트</p>
+						<span>주연 | 행크 맥코이役</span>
+					</li>
+				</ul>
+			</section>
+			<section id="in_content5">
+				<h3>평점 및 영화리뷰</h3>
+				<div id="in_text_wrap" class="p_r">
+					<div class="in_star_area">
+						<p>평점</p>
+						<span class="star-input">
+							<span class="input">
+								<input type="radio" name="star-input" value="1" id="p1">
+								<label for="p1">1</label>
+								<input type="radio" name="star-input" value="2" id="p2">
+								<label for="p2">2</label>
+								<input type="radio" name="star-input" value="3" id="p3">
+								<label for="p3">3</label>
+								<input type="radio" name="star-input" value="4" id="p4">
+								<label for="p4">4</label>
+								<input type="radio" name="star-input" value="5" id="p5">
+								<label for="p5">5</label>
+							</span>
+							<br />
+							<output for="star-input"><b id="a">0</b>점</output>						
+						</span>
+					</div>
+					<div class="in_text_area">
+					<textarea name="in_review" id="in_review" title="영화리뷰" placeholder="멋진영화 잘 감상했습니다." maxlength="99"></textarea>
+					<button class="in_enter p_a">등록하기</button>
+					<p class="in_textarea_rebox">(<span class="in_textarea_re"></span>/100)</p>
+					<table id="in_review_box">
+						<tbody>
+						</tbody>
+					</table>
+					</div>
+				</div>
+			</section>
+		</div>
+		<!-- ===========//content================================================================ -->
+
+		<!-- ==========footer================================================================= -->
+		<footer id="footer">
+			<? include("../footer.html"); ?>
+		</footer>
+		<!-- ==========//footer================================================================= -->
+	</div>
+ </body>
+</html>

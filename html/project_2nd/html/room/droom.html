@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="utf-8" />
+  <title> 다온큐브 </title><!-- 3depth까지만 작성, 동일한 title은 절대 있을수 없습니다 -->
+  <link rel="stylesheet" href="../../css/common.css"/><!-- 링크걸 스타일은 최대 3개 까지만 하세요....  -->
+  <!-- 링크걸 스타일은 최대 3개 까지만 하세요....  -->
+  
+  <!--[if lt IE 9]>
+	<script type="text/javascript" src="../js/html5.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="../../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../../js/common.js"></script><!-- 링크걸 스크립트는 최대 3개 까지만 하세요(합쳐도 되는 파일은 합쳐서 가볍
+  게 사용합시다)....  -->
+
+ </head>
+
+ <body>
+	<div id="skip">
+		<a href="#content">본문 바로가기</a>
+	</div>
+
+	<div id="wrap">
+		<!-- ===========header================================================================ -->
+		<header id="header">
+			<!-- include문서의 경로는 모두 절대경로로 표시합니다. index와 sub 공통으로 사용하기 쉽도록 -->
+			<? include("../header.html"); ?>
+		</header>
+		<!-- ===========//header================================================================ -->
+
+		<!-- ===========content================================================================ -->
+		<section id="md_content">
+			<div class="md_mainimg">
+				<img src="../../images/kang/moviedroom.jpg" width="1900" height="598" alt="강남점 메인이미지">
+			</div><!-- md_mainimg-->
+			<div class="md_roomfind"><!-- 상단영화관-->
+				<ul>
+					<li><a href="movieroom.html">D관</a></li>
+					<li><a href="#">A관</a></li>
+					<li><a href="#">O관</a></li>
+					<li><a href="#">N관</a></li>
+				</ul>
+			</div><!-- md_roomfind-->
+			<div class="md_findarea"><!-- 상단지역 -->
+				<ul>
+					<li><a href="movieroom.html">서울</a></li>
+					<li><a href="#">경기도</a></li>
+					<li><a href="#">경상도</a></li>
+					<li><a href="#">충청도</a></li>
+					<li><a href="#">전라도</a></li>
+					<li><a href="#">강원도</a></li>
+				</ul>
+			</div><!-- md_findarea-->
+			<div class="md_navi"><!-- 상단네비 -->
+				<ul>
+					<li><a href="#md_navifind1">상영시간표</a></li>
+					<li>|</li>
+					<li><a href="#md_navifind2">찾아오는길</a></li>
+					<li>|</li>
+					<li><a href="#md_navifind3">주차안내</a></li>
+					<li>|</li>
+					<li><a href="#md_navifind4">관람료안내</a></li>
+				</ul>
+				<div id="top_mar"></div>
+			</div><!-- md_navi-->
+		
+			<div class="md_time">
+				<h3 id="md_navifind1"><a href="#">상영시간</a></h3>
+				<p><a href="#"><img src="../../images/kang/Untitled-1.jpg" width="50" height="50" alt="큐브"></a></p>
+				
+				<div class="md_timeselect">
+					<ul>
+						<li id="md_date"><a href="#"><img src="../../images/kang/time.jpg" width="46" height="54" alt="달력"></a></li>
+						<li id="md_larrow"><a href="#"><img src="../../images/kang/leftarrow.jpg" width="52" height="54" alt="날짜감소"></a></li>
+						<li id="md_today"><a href="#"></a></li>
+						<li id="md_rarrow"><a href="#"><img src="../../images/kang/rightarrow.jpg" width="52" height="54" alt="날짜증가"></a></li>
+					</ul>
+				</div>
+				<div class="md_timetable">
+						<div class="md_12age"><p><a href="#">12</a></p></div>
+						<div class="md_15age"><p><a href="#">15</a></p></div>
+						<div class="md_18age"><p><a href="#">18</a></p></div>
+					<ul class="md_fristmovie"><!-- 아가씨시간 -->
+						
+						<li><a href="#"><span class="md_timefontsize">&nbsp;아가씨</span></a></li>
+						<li><a href="#">D-1관<br/>디지털</a></li>
+						<li class="md_over1"><a href="#"><span class="md_timefontsize">14:03</span><br/>48/181</a></li>
+						<li class="md_over1"><a href="#"><span class="md_timefontsize">16:30</span><br/>75/181</a></li>
+						<li class="md_over1"><a href="#"><span class="md_timefontsize">19:45</span><br/>90/181</a></li>
+						<li class="md_over1"><a href="#"><span class="md_timefontsize">23:15</span><br/>81/181</a></li>
+					</ul>
+					<ul class="md_secondmovie">
+						<li class="md_hide"><a href="#">아가씨</a></li>
+						<li><a href="#">D-4관<br/>디지털</a></li>
+						<li class="md_over1"><a href="#"><span class="md_timefontsize">15:30</span><br/>48/181</a></li>
+						<li class="md_over1"><a href="#"><span class="md_timefontsize">16:45</span><br/>78/181</a></li>
+						<li class="md_over1"><a href="#"><span class="md_timefontsize">20:30</span><br/>18/181</a></li>
+						<li class="md_over1"><a href="#"><span class="md_timefontsize">22:10</span><br/>28/181</a></li>
+					</ul>
+					<ul class="md_thirdmovie">
+						<li><a href="#"><span class="md_timefontsize">&nbsp;컨저링</span></a></li>
+						<li><a href="#">D-2관<br/>디지털</a></li>
+						<li class="md_over2"><a href="#"><span class="md_timefontsize">15:10</span><br/>48/181</a></li>
+						<li class="md_over2"><a href="#"><span class="md_timefontsize">17:25</span><br/>28/181</a></li>
+						<li class="md_over2"><a href="#"><span class="md_timefontsize">19:45</span><br/>18/181</a></li>
+						<li class="md_over2"><a href="#"><span class="md_timefontsize">21:45</span><br/>98/181</a></li>
+					</ul>
+					<ul class="md_fouthmovie">
+						<li ><a href="#">특별수사</a></li>
+						<li ><a href="#">D-3관<br/>디지털</a></li>
+						<li class="md_over3"><a href="#"><span class="md_timefontsize">15:20</span><br/>68/181</a></li>
+						<li class="md_over3"><a href="#"><span class="md_timefontsize">17:35</span><br/>58/181</a></li>
+						<li class="md_over3"><a href="#"><span class="md_timefontsize">19:55</span><br/>28/181</a></li>
+						<li class="md_over3"><a href="#"><span class="md_timefontsize">21:55</span><br/>81/181</a></li>
+					</ul>
+					<ul class="md_fivemovie">
+						<li class="md_hide"><a href="#">특별수</a></li>
+						<li><a href="#">D-5관<br/>디지털</a></li>
+						<li class="md_over3"><a href="#"><span class="md_timefontsize">15:00</span><br/>02/181</a></li>
+						<li class="md_over3"><a href="#"><span class="md_timefontsize">17:00</span><br/>18/181</a></li>
+						<li class="md_over3"><a href="#"><span class="md_timefontsize">19:00</span><br/>18/181</a></li>
+						<li class="md_over3"><a href="#"><span class="md_timefontsize">21:00</span><br/>18/181</a></li>
+					</ul>
+				</div>
+			</div><!-- md_time-->
+	
+		
+		  <div class="md_findaddress">
+			<h3 id="md_navifind2"><a href="#">찾아오는길</a></h3>
+			<p><a href="#"><img src="../../images/kang/Untitled-1.jpg" width="50" height="50" alt="큐브"></a></p><!-- 찾아오는길 로고 -->
+			<div class="md_address">
+				<p><a href="#">.도로명 주소: 서울특별시 서초구 서초대로77길 3 아라타워 8층</a></p>
+				<p><a href="#">.지번 주소:서울특별시 서초구 서초동 1317-20 아라타워 8층</a></p>
+			</div><!-- md_address -->
+			<div class="intro-section"><!-- 지도 -->  
+				 <div id="map_canvas" class="google_map"></div><!--구글지도-->				
+			</div>
+			<div class="md_transportation">
+				<p><a href="#"><img src="../../images/kang/bus.jpg" width="39" height="50" alt=""><span class="md_span1">버스</span><span class="md_spanimg"><img src="../../images/kang/arrow2.jpg" width="39" height="50" alt="화살표 왼쪽"></span></a></p>
+				<p><a href="#"><img src="../../images/kang/subway.jpg" width="39" height="50" alt="지하철"><span class="md_span2">지하철</span><span class="md_spanimg"><img src="../../images/kang/arrow2.jpg" width="39" height="50" alt="화살표왼쪽"></span></a></p>
+				<div class="md_transportation2"><p><a href="">140번, 144번, 145번, 146번, 360번, 402번, 407번, 408번, 420번, 440번, 441번, 462번, 470번, 471번<br/>3412번, 4412번, 서초03번, 서초 09번 <br/> 9404번, 9408번, 9409번, 9503번, 9711번, 9500번, 9501번, 9510번, 9800번, 9801번, 9802번, 9901번</a></p></div>
+				<div class="md_transportation3"><p><a href="">지하철 2호선 , 신분당선 ‘강남역 -> 지하철 9번(구 5번) 출구 좌측 연결통로 이용</a></p></div>
+			</div>
+			<div class="md_parking">
+					<h3 id="md_navifind3"><a href="">주차안내</a></h3>
+					<p><a href="#"><img src="../../images/kang/Untitled-1.jpg" width="50" height="50" alt="큐브"></a></p><!-- 주차안내 로고 -->
+					<div class="md_parkinginfo">
+						<h4>주차안내</h4>
+						<p>아라타워 건물 內 지하 3층 ~ 지하 6층 주차장 이용 <br/>주차확인<br/>매표소에서 주차 할인권 구매</p>
+						<h4>요금안내</h4>
+						<p>주차 요금은 입차시간을 기준으로 합니다. <br/>
+							영화 관람 시 3시간 → 3,000원(3시간 초과 시 10분당 1,000원 부과, 초과비용 출차 시 정산) <br/>
+							업무 방문 시 30분 무료 (매표소에서 30분 할인권 수령)<br/>
+							건물 내 타 매장과 합산 불가.<br/>
+							입차시 최대 3시간 30분까지 가능(차량 1대에 주차 할인권 2장 이상 사용 불가)<br/>
+							주차 공간이 협소하므로 가급적이면 대중교통을 이용 바랍니다. 지하철 2호선 강남역 출구 9번(구 5번)<br/></p>
+					</div>
+			</div>
+			<div class="md_moviemoney">
+				<h3 id="md_navifind4"><a href="">관람료</a></h3>
+				<p><a href="#"><img src="../../images/kang/Untitled-1.jpg" width="50" height="50" alt="큐브"></a></p><!-- 주차안내 로고 -->
+				<table>
+					<caption>관람료</caption>
+					<thead>
+					<tr>
+						<th scope="col">구분</th>
+						<th scope="col">상영시간</th>
+						<th scope="col">성인</th>
+						<th scope="col">청소년</th>
+						<th scope="col">우대</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<th scope="row" rowspan="3">월요일~목요일</th>
+						<td>조조</td>
+						<td>6000</td>
+						<td>6000</td>
+						<td>5000</td>
+					</tr>
+					<tr>
+						<td>일반(2회~24시이전)</td>
+						<td>9000</td>
+						<td>8000</td>
+						<td>5000</td>
+					</tr>
+					<tr>
+						<td>심야(24시)</td>
+						<td>8000</td>
+						<td>8000</td>
+						<td>5000</td>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="3">금요일~일요일<br/>공휴일</th>
+						<td>조조</td>
+						<td>6000</td>
+						<td>6000</td>
+						<td>5000</td>
+					</tr>
+					<tr>
+					<td>일반(2회~24시이전)</td>
+						<td>10000</td>
+						<td>8000</td>
+						<td>5000</td>
+					</tr>
+					<tr>
+						<td>심야(24시)</td>
+						<td>8000</td>
+						<td>8000</td>
+						<td>5000</td>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="2">월요일~목요일<br/>(3D)</th>
+						<td>조조</td>
+						<td>8000</td>
+						<td>8000</td>
+						<td>6000</td>
+					</tr>
+					<tr>
+					<td>일반(2회차~)</td>
+						<td>11000</td>
+						<td>8000</td>
+						<td>6000</td>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="2">금요일~일요일<br/>공휴일<br/>(3D)</th>
+						<td>조조</td>
+						<td>8000</td>
+						<td>8000</td>
+						<td>6000</td>
+					</tr>
+					<tr>
+					<td>일반(2회차~)</td>
+						<td>12000</td>
+						<td>9000</td>
+						<td>7000</td>
+					</tr>
+				 <tbody>
+				</table><!-- 테이블 -->	
+			</div>
+		  
+		  </div>	
+		
+		</section>
+		<!-- ===========//md_content================================================================ -->
+
+		<!-- ==========footer================================================================= -->
+		<footer id="footer">
+			<? include("../footer.html"); ?>
+		</footer>
+		<!-- ==========//footer================================================================= -->
+	</div>
+ </body>
+</html>

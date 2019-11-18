@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>MelonBIT</title>
+        
+        <link rel="stylesheet" href="../../css/base_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/melonbit_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/add.css" media="screen">
+        <link rel="stylesheet" href="../../css/datepicker3.css" media="screen">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        
+        <script src="../../js/jquery-1.12.4.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/melonbit_v2.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+        <script src="../../js/bootstrap-datepicker.js"></script>
+        <script src="../../js/bootstrap-datepicker.kr.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="main_logo"><a href="melonbit_v2_01_link.html#"><img src="../../img/v2_images/melonbit_logo_N_black.svg" alt="MelonBIT"></a></div>
+                    <div class="navbar_wrap">
+                        <ul class="main_nav_list">
+                            <li><a href="melonbit_v2_01_market.html#">KRW마켓</a></li>
+                            <li><a href="melonbit_v2_01_market2.html#">BTC마켓</a></li>
+                            <!-- <li><a href="#">ETH마켓</a></li> -->
+                            <li><a href="melonbit_v2_01_wallet.html#">입출금</a></li>
+                            <li><a href="melonbit_v2_01_investment1.html#">투자내역</a></li>
+                        </ul>
+                    </div>
+                    <ul class="navbar_left_wrap">
+                        <li class="border-right"><a href="#">로그인</a></li>
+                        <li>아직 회원이 아니신가요? <a href="melonbit_v2_01_join1.html#"> 회원가입</a></li>
+                        <!-- 로그인시 -->
+                        <!-- <li class="dropdown hover">
+                            <a href="#" class="dropdown-toggle userInfo circlebox" data-toggle="dropdown" role="menu" id="">이예지님<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item"><a href="melonbit_v2_01_mypage1.html#">마이페이지</a></li>
+                                <li class="dropdown-item"><a href="melonbit_v2_01_mypage2.html#">보안설정</a></li>
+                                <li class="dropdown-item"><a href="#">로그아웃</a></li>
+                            </ul>
+                        </li> -->
+
+                        <li class="dropdown hover">
+                            <a href="#" class="dropdown-toggle mainlang circlebox" data-toggle="dropdown" role="button" id="">한국어<span class="caret"></span></a>
+                            <ul class="dropdown-menu langbg">
+                                <li><a href="#">한국어</a></li>
+                                <li><a href="#">ENGLISH</a></li>
+                                <li><a href="#">JAPAN</a></li>
+                                <li><a href="#">CHINA</a></li>
+                                <li><a href="#">VIETNAM</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="circlebox nav_search_btn"><i class="fas fa-search"></i></a>
+                            <div class="nav_search_wrap">
+                                <div class="form-group">
+                                    <input type="text" class="main_search_box" placeholder="코인명/심볼 검색어를 입력하세요"><i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+            <section class="main_section_wrap">
+                    
+            </section>
+            <section class="sub_content_wrap">
+                    <div class="sub_container">
+                        <div class="sub_side_nav">
+                            <div class="sub_side_nav_header">약관과 정책</div>
+                            <ul>
+                                <li>이용약관</li>
+                                <li>개인정보 처리방침</li>
+                                <li class="selected">수수료 정책</li>
+                            </ul>
+                        </div>
+                        <div class="sub_content_section">
+                            <h2 class="sub_content_title">수수료 정책</h2>
+                            <div class="sub_connect_top">
+                                <div class="connect_title_icon"><i class="fas fa-dollar-sign"></i></div>
+                                <div class="connect_title_text">회원등급 산정기준<br><span>회원등급은 거래 시작 시점으로부터 직전 30일동안의 거래금액 합계에 따라 결정됩니다.<br><br><span>· 산정 시점: 즉시 (등급 조정 즉시 해당 등급의 거래 수수료율이 적용됩니다.)<br>· 거래 금액: 거래소에서 취급하는 모든 암호화폐 및 원화에 대한  KRW 거래 및 BTC 거래</span></span></div>
+                            </div>
+                            <div class="charge_wrap">
+                                <table class="charge_table">
+                                    <caption>KRW 거래수수료</caption>
+                                    <colgroup><col width="20%"><col width="40%"><col width="20%"><col width="20%"></colgroup>
+                                        <tr><th>레벨(Lv.)</th><th>최근 30일간 거래금액</th><th>Maker</th><th>Taker</th></tr>
+                                        <tr><td>Lv1</td><td class="text-right"><span class="text-blue">2,000,000 </span>원 미만</td><td>0.15%</td><td>0.15%</td></tr>
+                                        <tr><td>Lv2</td><td class="text-right"><span class="text-blue">10,000,000 </span>원 미만</td><td>0.14%</td><td>0.14%</td></tr>
+                                        <tr><td>Lv3</td><td class="text-right"><span class="text-blue">60,000,000 </span>원 미만</td><td>0.13%</td><td>0.13%</td></tr>
+                                        <tr><td>Lv4</td><td class="text-right"><span class="text-blue">100,000,000 </span>원 미만</td><td>0.12%</td><td>0.12%</td></tr>
+                                        <tr><td>Lv5</td><td class="text-right"><span class="text-blue">100,000,000 </span>원 이상</td><td>0.11%</td><td>0.11%</td></tr>
+                                        <tr><td colspan="4" class="text-left borderT">KRW 거래 수수료<br>
+                                                1. 매수 거래수수료 = 체결수량(암호화폐) × 거래 수수료율<br>
+                                                2. 매도 거래수수료 = 체결금액(KRW) × 거래 수수료율</td>
+                                        </tr>
+                                </table>
+                                <table class="charge_table">
+                                    <caption>BTC 거래수수료</caption>
+                                    <colgroup><col width="20%"><col width="40%"><col width="20%"><col width="20%"></colgroup>
+                                        <tr><th>레벨(Lv.)</th><th>최근 30일간 거래금액</th><th>Maker</th><th>Taker</th></tr>
+                                        <tr><td>Lv1</td><td class="text-right"><span class="text-blue">2,000,000 </span>원 미만</td><td>0.15%</td><td>0.15%</td></tr>
+                                        <tr><td>Lv2</td><td class="text-right"><span class="text-blue">10,000,000 </span>원 미만</td><td>0.14%</td><td>0.14%</td></tr>
+                                        <tr><td>Lv3</td><td class="text-right"><span class="text-blue">60,000,000 </span>원 미만</td><td>0.13%</td><td>0.13%</td></tr>
+                                        <tr><td>Lv4</td><td class="text-right"><span class="text-blue">100,000,000 </span>원 미만</td><td>0.12%</td><td>0.12%</td></tr>
+                                        <tr><td>Lv5</td><td class="text-right"><span class="text-blue">100,000,000 </span>원 이상</td><td>0.11%</td><td>0.11%</td></tr>
+                                        <tr><td colspan="4" class="text-left borderT">BTC 거래 수수료<br>
+                                                1. 매수 거래수수료 = 체결수량(암호화폐) × 거래 수수료율<br>
+                                                2. 매도 거래수수료 = 체결금액(KRW) × 거래 수수료율</td>
+                                        </tr>
+                                </table>
+                            </div>
+                            <div class="charge_notice">
+                                    거래수수료 계산방식<br>
+                                <span>
+                                    거래 수수료율은 KRW 거래 수수료와 BTC 거래 수수료가 다르게 적용되며, 거래소에서 취급하는 모든 암호화 화폐 및 원화에 동일한 수수료율이 적용됩니다. <br>
+                                    (소수점 이하의 수수료 부분은 올림 하여 계산됩니다.)     
+                                </span>                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+            </section>
+
+        <footer>
+            <div class="footer_nav">
+                <div class="container">
+                    <ul class="footer_nav_list">
+                        <li><a href="#">회사</a></li>
+                        <li><a href="#">고객지원</a></li>
+                        <li><a href="#">내 정보</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">제휴제안</a></li>
+                        <li><a href="#">채용안내</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_info">
+                    <div class="container">
+                        <div class="footer_logo">
+                            <a href="#"><img src="../../img/v2_images/melonbit_logo_N_black.png" alt="MelonBIT"></a>
+                            <ul class="footer_text">
+                                <li>(주)멜론비트 서울시 강남구 역삼로 17길 51 | 대표 김재홍</li>
+                                <li>사업자등록번호 280-88-00958</li>
+                                <li>통신판매업신고 제 2017-서울강남-04260호</li>
+                            </ul>
+                        </div>
+                        <div class="footer_center">
+                            <div class="phone_wrap"><p class="phone_icon"><i class="fab fa-whatsapp"></i></p><p>1644-4698</p><p>help@melonbit.com</p></div>
+                        </div>
+                        <div class="footer_right">
+                            <p>월요일-금요일: 오전9시30분 ~ 오후18시30분(주말 및 공휴일 제외)<br/>고객상담은 전화와 이메일로 진행하며, 방문상담은 진행하지 않습니다.</p>
+                            <ul class="footer_link">
+                                <li><i class="fab fa-facebook-square"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                                <li><img src="../../img/v2_images/oracleG.png" alt="oracleG"></li>
+                                <li><img src="../../img/v2_images/melonpay.png" alt="melonpay"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>MelonBIT</title>
+        
+        <link rel="stylesheet" href="../../css/base_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/melonbit_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/add.css" media="screen">
+        <link rel="stylesheet" href="../../css/datepicker3.css" media="screen">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        
+        <script src="../../js/jquery-1.12.4.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/melonbit_v2.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+        <script src="../../js/bootstrap-datepicker.js"></script>
+        <script src="../../js/bootstrap-datepicker.kr.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="main_logo"><a href="melonbit_v2_01_link.html#"><img src="../../img/v2_images/melonbit_logo_N_black.svg" alt="MelonBIT"></a></div>
+                    <div class="navbar_wrap">
+                        <ul class="main_nav_list">
+                            <li><a href="melonbit_v2_01_market.html#">KRW마켓</a></li>
+                            <li><a href="melonbit_v2_01_market2.html#">BTC마켓</a></li>
+                            <!-- <li><a href="#">ETH마켓</a></li> -->
+                            <li><a href="melonbit_v2_01_wallet.html#">입출금</a></li>
+                            <li><a href="melonbit_v2_01_investment1.html#">투자내역</a></li>
+                        </ul>
+                    </div>
+                    <ul class="navbar_left_wrap">
+                        <li class="border-right"><a href="#">로그인</a></li>
+                        <li>아직 회원이 아니신가요? <a href="melonbit_v2_01_join1.html#"> 회원가입</a></li>
+                        <!-- 로그인시 -->
+                        <!-- <li class="dropdown hover">
+                            <a href="#" class="dropdown-toggle userInfo circlebox" data-toggle="dropdown" role="menu" id="">이예지님<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item"><a href="melonbit_v2_01_mypage1.html#">마이페이지</a></li>
+                                <li class="dropdown-item"><a href="melonbit_v2_01_mypage2.html#">보안설정</a></li>
+                                <li class="dropdown-item"><a href="#">로그아웃</a></li>
+                            </ul>
+                        </li> -->
+
+                        <li class="dropdown hover">
+                            <a href="#" class="dropdown-toggle mainlang circlebox" data-toggle="dropdown" role="button" id="">한국어<span class="caret"></span></a>
+                            <ul class="dropdown-menu langbg">
+                                <li><a href="#">한국어</a></li>
+                                <li><a href="#">ENGLISH</a></li>
+                                <li><a href="#">JAPAN</a></li>
+                                <li><a href="#">CHINA</a></li>
+                                <li><a href="#">VIETNAM</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="circlebox nav_search_btn"><i class="fas fa-search"></i></a>
+                            <div class="nav_search_wrap">
+                                <div class="form-group">
+                                    <input type="text" class="main_search_box" placeholder="코인명/심볼 검색어를 입력하세요"><i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+            <section class="main_section_wrap">
+                    
+            </section>
+            <section class="sub_content_wrap">
+                    <div class="sub_container">
+                        <div class="sub_side_nav">
+                            <div class="sub_side_nav_header">마이페이지</div>
+                            <ul>
+                                <li>회원정보</li>
+                                <li class="selected">보안인증</li>
+                                <li>접속관리</li>
+                                <li>추천인</li>
+                            </ul>
+                        </div>
+                        <div class="sub_content_section">
+                            <h2 class="sub_content_title">보안인증</h2>
+                            <div class="sub_connect_top">
+                                <div class="connect_title_icon"><i class="far fa-user"></i></div>
+                                <div class="connect_title_text">현재 이예지님은 <span class="text-red big">보안3등급</span> 입니다.<br><span>보안 등급에 따라 KRW 및 암호 화폐 입출금 한도가 결정됩니다.<br>각 인증단계를 완료하는 즉시 보안등급이 상향됩니다.</span></div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="security_card_wrap">
+                                <div class="security_card">
+                                    <div class="security_img"><img src="../../img/v2_images/securityIcon1.png"></div>
+                                    <h3>보안 2등급</h3>
+                                    <div class="security_card_title">휴대폰 본인인증</div>
+                                    <div class="security_card_textaera">이예지 010****1234</div>
+                                    <button class="join_num_btn">휴대폰 번호 변경</button>
+                                </div>
+                                <div class="security_dot_wrap left">
+                                    <div class="security_dot blue"></div>
+                                    <div class="security_dot blue"></div>
+                                </div>
+                                <div class="security_card active">
+                                    <div class="security_img"><img src="../../img/v2_images/securityIcon2.png"></div>
+                                    <h3>보안 3등급</h3>
+                                    <div class="security_card_title">입출금 계좌인증</div>
+                                    <div class="security_card_textaera">신한은행 110-123456-123456</div>
+                                    <button class="join_num_btn">계좌 변경</button>
+                                </div>
+                                <div class="security_dot_wrap right">
+                                    <div class="security_dot"></div>
+                                    <div class="security_dot"></div>
+                                </div>
+                                <div class="security_card">
+                                    <div class="security_img"><img src="../../img/v2_images/securityIcon3.png"></div>
+                                    <h3>보안 4등급</h3>
+                                    <div class="security_card_title">구글 OTP등록</div>
+                                    <button class="join_num_btn">인증하기</button>
+                                </div>
+                            </div>
+                            <div class="security_table_wrap">
+                                <div class="security_table_selectbox"></div>
+                                <table class="sub_security_table no1">
+                                    <caption class="sub_table_caption">보안 등급별 이용 목록</caption>
+                                    <colgroup>
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <tr><th>구분</th><th>보안1등급<br>(간편회원)</th><th>보안2등급<br>(휴대폰인증)</th><th>보안3등급<br>(계좌등록)</th><th>보안4등급<br>(OTP등록)</th></tr>
+                                    <tr><td>사이트 접속</td><td>o</td><td>o</td><td>o</td><td>o</td></tr>
+                                    <tr><td>입금</td><td>o</td><td>o</td><td>o</td><td>o</td></tr>
+                                    <tr><td>출금</td><td>o</td><td>o</td><td>o</td><td>o</td></tr>
+                                </table>
+                                <table class="sub_security_table no2">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <tr><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+                                    <tr><td rowspan="3">거래한도</td><td>KRW 1회</td><td>x</td><td>x</td><td>1,000,000</td><td>2,000,000</td></tr>
+                                    <tr><td>KRW 1일</td><td>x</td><td>x</td><td>20,000,000</td><td>40,000,000</td></tr>
+                                    <tr><td>KRW 1달</td><td>x</td><td>x</td><td>50,000,000</td><td>100,000,000</td></tr>
+                                </table>
+                                <table class="sub_security_table no2">
+                                    <colgroup>
+                                        <col width="10%">
+                                        <col width="10%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <tr><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+                                    <tr><td rowspan="3">거래한도</td><td>KRW 1회</td><td>x</td><td>x</td><td>1,000,000</td><td>2,000,000</td></tr>
+                                    <tr><td>KRW 1일</td><td>x</td><td>x</td><td>20,000,000</td><td>40,000,000</td></tr>
+                                    <tr><td>KRW 1달</td><td>x</td><td>x</td><td>50,000,000</td><td>100,000,000</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+            </section>
+
+        <footer>
+            <div class="footer_nav">
+                <div class="container">
+                    <ul class="footer_nav_list">
+                        <li><a href="#">회사</a></li>
+                        <li><a href="#">고객지원</a></li>
+                        <li><a href="#">내 정보</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">제휴제안</a></li>
+                        <li><a href="#">채용안내</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_info">
+                    <div class="container">
+                        <div class="footer_logo">
+                            <a href="#"><img src="../../img/v2_images/melonbit_logo_N_black.png" alt="MelonBIT"></a>
+                            <ul class="footer_text">
+                                <li>(주)멜론비트 서울시 강남구 역삼로 17길 51 | 대표 김재홍</li>
+                                <li>사업자등록번호 280-88-00958</li>
+                                <li>통신판매업신고 제 2017-서울강남-04260호</li>
+                            </ul>
+                        </div>
+                        <div class="footer_center">
+                            <div class="phone_wrap"><p class="phone_icon"><i class="fab fa-whatsapp"></i></p><p>1644-4698</p><p>help@melonbit.com</p></div>
+                        </div>
+                        <div class="footer_right">
+                            <p>월요일-금요일: 오전9시30분 ~ 오후18시30분(주말 및 공휴일 제외)<br/>고객상담은 전화와 이메일로 진행하며, 방문상담은 진행하지 않습니다.</p>
+                            <ul class="footer_link">
+                                <li><i class="fab fa-facebook-square"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                                <li><img src="../../img/v2_images/oracleG.png" alt="oracleG"></li>
+                                <li><img src="../../img/v2_images/melonpay.png" alt="melonpay"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> OST </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <link href="css/reset.css" rel="stylesheet" type="text/css">
+  <link href="css/nextgallery_css.css" rel="stylesheet" type="text/css">
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/swipe.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/nextgallery.js"></script>
+ </head>
+
+<script type="text/javascript">
+//현재이미지와 다음이미지변수 선언하기
+var showImg, nextImg;
+//fadeinout 함수 선언하기
+function fadeInOut(){
+//현재이미지에 변수에 저장
+showImg = $(".fadeShow img:eq(0)");
+//다음이미지에 변수에 저장
+nextImg = $(".fadeShow img:eq(1)");
+//다음이미지에 스타일적용(높이설정)하기
+nextImg.addClass("active");
+//다음이미지변수에 투명도스타일 적용하기
+nextImg.css("opacity","0")
+//애니메이션효과적용하기
+.animate({opacity:1},1000, function() { 			 
+$(".fadeShow").append( showImg );		
+showImg.removeClass("active");  
+//이전이미지에 적용된 스타일 해제하기
+});
+}
+//선언된 함수 호출하기
+//시간변수 선언하기
+var timer = setInterval("fadeInOut()",3000);
+//이미지에 롤오버되면 전환효과 멈추기
+$("div.fadeShow").hover( 
+function() {
+clearInterval(timer)
+}, 
+//이미지에 롤아수되면 다시실행하기	
+function(){
+timer = setInterval("fadeInOut()",2000);
+}
+);
+
+  </script>
+
+ <style type="text/css">
+
+/* reset */
+div, body, table{padding:0; margin:0;}
+
+/* 전체 */
+#all_wrap{width:100%; height:auto;}
+
+/* 공간잡아주기 */
+#top_menu_wrap{width:100%; height:30px; float:left; background-color:#ade3e5;}
+#top_wrap{width:100%; float:left;}
+#main_menu_wrap{width:100%; float:left;}
+#content_wrap{width:100%; float:left;}
+#bottom_wrap{width:100%; height:189px; float:left; border-bottom:solid 1px #cccccc; border-top:solid 1px #cccccc;  background-color:#dddddd;}
+#footer_wrap{width:100%; float:left;}
+
+/* 상단메뉴 */
+.top_menu ul{width:1154px; height:30px; font-size:12px; color:#3a3a3a; font-family:Arial;
+				margin:0 auto; }
+.top_menu ul li{float:right; padding:8px;}
+.top_menu ul li a{text-decoration:none; font-size:12px; color:#3a3a3a; font-family:Arial;}
+.top_menu ul li a:hover{border-bottom:solid 1px #3a3a3a;}
+
+/* 상단로고  */
+#top_wrap #top{width:1154px; height:163px;  margin:0 auto;  position:relative;}
+#top_wrap #top #logo{width:283px; height:118px; position:absolute; top:30px; left:440px;}
+
+/* 사이트링크 */
+
+#top_wrap #top ul{position:absolute; top:100px; left:0px;}
+#top_wrap #top ul li{float:left;}
+
+a.site1{display:block; width:38px; height:35px; background-image:url(images/site1_off.gif)}
+a:hover.site1{display:block; width:38px; height:35px; background-image:url(images/site1_on.gif)}
+
+a.site2{display:block; width:35px; height:35px; background-image:url(images/site2_off.gif)}
+a:hover.site2{display:block; width:35px; height:35px; background-image:url(images/site2_on.gif)}
+
+a.site3{display:block; width:35px; height:35px; background-image:url(images/site3_off.gif)}
+a:hover.site3{display:block; width:35px; height:35px; background-image:url(images/site3_on.gif)}
+
+a.site4{display:block; width:37px; height:35px; background-image:url(images/site4_off.gif)}
+a:hover.site4{display:block; width:37px; height:35px; background-image:url(images/site4_on.gif)}
+
+
+/* 메인 메뉴 */
+#main_menu{width:100%; height:34px; border-bottom:solid 1px #3a3a3a; border-top:solid 1px #3a3a3a;}
+.main_menu {position:relative; width:1154px;height:35px; margin:0 auto; }
+.main_menu img {border:none;vertical-align:top;}
+.main_menu ul {margin:0px;padding:0px;list-style:none; }
+.main_menu ul li {float:left;}
+
+
+.main_menu a.link1{display:block; width:122px; height:34px; background-image:url(btn/btn_03_off.gif)}
+.main_menu a:hover.link1{display:block; width:122px; height:34px; background-image:url(btn/btn_03_on.gif)}
+
+.main_menu a.link2{display:block; width:109px; height:34px; background-image:url(btn/btn_04_off.gif)}
+.main_menu a:hover.link2{display:block; width:109px; height:34px; background-image:url(btn/btn_04_on.gif)}
+
+.main_menu a.link3{display:block; width:127px; height:34px; background-image:url(btn/btn_05_off.gif)}
+.main_menu a:hover.link3{display:block; width:127px; height:34px; background-image:url(btn/btn_05_on.gif)}
+
+.main_menu a.link4{display:block; width:94px; height:34px; background-image:url(btn/btn_06_off.gif)}
+.main_menu a:hover.link4{display:block; width:94px; height:34px; background-image:url(btn/btn_06_on.gif)}
+
+.main_menu a.link5{display:block; width:144px; height:34px; background-image:url(btn/btn_07_off.gif)}
+.main_menu a:hover.link5{display:block; width:144px; height:34px; background-image:url(btn/btn_07_on.gif)}
+
+.main_menu a.link6{display:block; width:119px; height:34px; background-image:url(btn/btn_08_off.gif)}
+.main_menu a:hover.link6{display:block; width:119px; height:34px; background-image:url(btn/btn_08_on.gif)}
+
+.main_menu a.link7{display:block; width:105px; height:34px; background-image:url(btn/btn_09_off.gif)}
+.main_menu a:hover.link7{display:block; width:105px; height:34px; background-image:url(btn/btn_09_on.gif)}
+
+.main_menu a.link8{display:block; width:133px; height:34px; background-image:url(btn/btn_10_off.gif)}
+.main_menu a:hover.link8{display:block; width:133px; height:34px; background-image:url(btn/btn_10_on.gif)}
+
+.main_menu a.link9{display:block; width:100px; height:34px; background-image:url(btn/btn_11_off.gif)}
+.main_menu a:hover.link9{display:block; width:100px; height:34px; background-image:url(btn/btn_11_on.gif)}
+
+.main_menu a.link10{display:block; width:97px; height:34px; background-image:url(btn/btn_12_off.gif)}
+.main_menu a:hover.link10{display:block; width:97px; height:34px; background-image:url(btn/btn_12_on.gif)}
+
+/* 메인 div */
+
+#content_wrap #main{width:1154px; height:700px; margin:0 auto;}
+#content_wrap #main #main_top{width:1154px;height:456px; float:left; margin-bottom:5px;}
+#content_wrap #main #main_bot{width:1154px;height:239px; float:left; margin-bottom:20px; }
+
+#main_1{width:574px;height:455px; float:left; margin-right:8px;}
+#main_2{width:184px;height:221px; float:left; margin-bottom:6px;}
+#main_3{width:380px;height:455px; float:right;}
+#main_4{width:184px;height:228px; float:left;}
+#main_5{width:295px;height:238px; float:left; margin-right:8px;}
+#main_6{width:272px;height:238px; float:left;}
+#main_7{width:572px;height:238px; float:right;}
+
+/* 메인 슬라이드 */
+#visual{ width:574px; height:455px;position:relative; float:left;}
+.touch_bullet{position:absolute;bottom:20px;left:50%;margin-left:-27px;}
+.touch_bullet li{float:left;}
+.touch_left_btn{position:absolute;top:50%;left:20px;margin-top:-25px;}
+.touch_right_btn{position:absolute;top:50%;right:20px;margin-top:-25px;}
+#mySwipe img{width:100%; max-width:100%;}
+
+/* 메인 슬라이드 제이쿼리 */
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > li {
+  float:left;
+  width:100%;
+  position: relative;
+}
+
+
+/* 컨텐츠 */
+#content{width:1154px; height:353px; margin:0 auto;}
+#con1{width:325px; height:333px; border:solid 1px #cccccc; float:left; position:relative;}
+#con2{width:478px; height:333px; border:solid 1px #cccccc; float:left;
+		margin-left:7px; margin-right:7px;}
+#con3{width:325px; height:333px; border:solid 1px #cccccc; float:right;}
+
+
+/* 폰트 스타일 */
+.font01{color:#3a3a3a; font-size:20px; font-family:Arial; font-weight:bold;
+		padding:10px;}
+.font02{color:#3a3a3a; font-size:45px; font-family:Arial; font-weight:bold;
+		padding:0px;}
+.font03{color:#3a3a3a; font-size:13px; font-family:Arial; font-weight:none;
+		padding-left:10px;}
+.font04{color:#3a3a3a; font-size:33px; font-family:Bodoni BK BT; font-weight:bold;
+		padding-left:10px; line-height:30px;}
+.font05{color:#3a3a3a; font-size:13px; font-family:"돋움"; font-weight:none;
+		padding-left:10px; line-height:20px;}
+.font05 a{color:#3a3a3a; text-decoration:none;}
+.font05 a:hover{border-bottom:solid 1px #3a3a3a;}
+.font06{color:#3a3a3a; font-size:13px; font-family:"돋움"; font-weight:none;
+		padding-left:30px; line-height:20px;}
+.font07{color:#3a3a3a; font-size:20px; font-family:Arial; font-weight:bold;
+		text-align:center; text-indent:-10px; line-height:35px;}
+
+
+/* 배너 */
+#bannar{width:1154px; height:218px; margin:0 auto;}
+#ban1{width:377px; height:230px; float:left;  margin-top:20px; margin-bottom:20px;}
+#ban2{width:377px; height:230px; float:left; margin-left:10px; margin-right:10px;  margin-top:20px; margin-bottom:20px;}
+#ban3{width:377px; height:230px; float:left;  margin-top:20px; margin-bottom:20px;}
+
+/* 하단 컨텐츠 - bot */
+
+#bot{width:1154px; height:189px; margin:0 auto;}
+
+#tel{width:392px; height:189px; float:left; position:relative;}
+#store{width:360px; height:189px;float:left; border-left:solid 1px #cccccc; border-right:solid 1px #cccccc; position:relative;}
+#notice{width:400px; height:189px;float:left; position:relative;}
+#tel table{position:absolute; top:20px; left:30px;}
+#store table{position:absolute; top:20px; left:45px;}
+#notice table{position:absolute; top:20px; left:40px;}
+
+
+/* footer */
+
+#footer{width:1154px; height:143px; background-color:white; margin:0 auto; position:relative;}
+
+#foot_logo{width:103px; height:46px; position:absolute; bottom:40px; left:90px;}
+#foot_link{width:400px; height:22px; color:#737373; font-size:13px; font-family:HCR Dotum; 
+			font-weight:bold; position:absolute; bottom:70px; left:220px;}
+#foot_link a{text-decoration:none; color:#737373;}
+#foot_link a:hover{border-bottom:solid 1px #3a3a3a;}
+#foot_add{width:450px; height:56px; color:#737373; font-size:10px; font-family:HCR Dotum; 
+			font-weight:bold; position:absolute; bottom:0px; left:220px;}
+
+
+/* 메인 컨텐츠 정렬 */
+#con1 table{margin-top:20px; margin-left:55px;}
+#con1 table td{width:130px; height:130px;}
+#con3 table{margin-top:20px; margin-left:60px;}
+#con3 table td{width:130px; height:130px;}
+
+/* main_7 슬라이드 */
+.fadeShow { 
+width:573px; 
+height:239px;       
+}
+.fadeShow img{position:absolute;}
+.fadeShow .active{
+z-index:1;
+}
+
+
+ </style>
+
+ <body>
+  
+  <div id="all_wrap">
+  <div id="top_menu_wrap">
+	
+	<div class="top_menu">
+	<ul>
+	<li><a href="basic_ing.html">LOGIN</a></li>
+	<li><a href="basic_ing.html">JOIN</a></li>
+	<li><a href="basic_ing.html">MY PAGE</a></li>
+	<li><a href="basic_ing.html">SHOPPING BAG</a></li>
+	</ul>
+	</div>
+  
+  </div>
+  <div id="top_wrap">
+
+		<div id="top">
+			<div id="site">
+			<ul>
+			<li><a href="https://www.instagram.com/ost_love/" class="site1"></a></li>
+			<li><a href="http://blog.naver.com/elandost/220605769976" class="site2"></a></li>
+			<li><a href="https://www.facebook.com/www.ost.co.kr/" class="site3"></a></li>
+			</ul>
+			</div>
+
+			<div id="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+		</div>
+  </div>
+
+
+  <div id="main_menu_wrap">
+			<div id="main_menu">
+				  <div class="main_menu">
+						<ul>
+							<li>
+							<a href="sub_neck.html" class="link1"></a>
+							</li>
+							<li>
+							<a href="sub_earring.html" class="link2"></a>
+							</li>
+							<li>
+							<a href="sub_bracelet.html" class="link3"></a>
+							</li>
+							<li>
+							<a href="sub_ring.html" class="link4"></a>
+							</li>
+							<li>
+							<a href="sub_couple.html" class="link5"></a>
+							</li>
+							<li>
+							<a href="sub_pendant.html" class="link6"></a>
+							</li>
+							<li>
+							<a href="sub_watch.html" class="link7"></a>
+							</li>
+							<li>
+							<a href="sub_accessory.html" class="link8"></a>
+							</li>
+							<li>
+							<a href="sub_sale.html" class="link9"></a>
+							</li>
+							<li>
+							<a href="sub_event.html" class="link10"></a>
+							</li>
+						</ul>
+				  </div>
+			</div>
+  </div>
+  <div id="content_wrap">
+
+  <div id="main">
+
+		<div id="main_top">
+
+		<div id="main_1">
+			<div id="visual">
+				 <div id="mySwipe" class="swipe" style="visibility: visible;">
+					<ul class="touch_banner swipe-wrap" style="width: 1722px;"> <!-- 메인이미지부분 -->
+					<li><a href="sub_watch_detail_ing.html"><img src="images/main1.jpg" alt="" /></a></li>
+					<li><a href="basic_ing.html"><img src="images/main2.jpg" alt="" /></a></li>
+					<li><a href="basic_ing.html"><img src="images/main3.jpg" alt="" /></a></li>
+					</ul>
+					   
+						<ul class="touch_bullet"> <!-- 하단의 클릭메뉴 위치 표시 -->
+						 <li><img src="images/visual_bullet_on.png" class="active" alt=""></li>
+						 <li><img src="images/visual_bullet_off.png" alt="" class=""></li>
+						 <li><img src="images/visual_bullet_off.png" alt="" class=""></li>
+					  </ul>
+					  
+					<p class="touch_left_btn"> <!-- 이전 버튼 -->
+					<a href="#">
+					<img src="images/left_btn.png" alt="이전 배너">
+					</a>
+					</p>
+
+					<p class="touch_right_btn"> <!-- 이전 버튼 -->
+					<a href="#">
+					<img src="images/right_btn.png" alt="다음 배너">
+					</a>
+					</p>
+				</div>
+			  </div>
+		</div>
+		<div id="main_2"><img src="images/index_15.gif"></div>
+		<div id="main_3"><a href="sub_watch_detail_ing.html"><img src="images/index_17.gif"></a></div>
+		<div id="main_4"><img src="images/index_20.gif"></div>
+		</div>
+		<div id="main_bot">
+		<div id="main_5"><a href="sub_watch_detail_ing.html"><img src="images/index_23.gif"></a></div>
+		<div id="main_6"><a href="sub_watch_detail_ing.html"><img src="images/index_25.gif"></a></div>
+		<div id="main_7">
+
+		<div class="fadeShow">
+		<img src="images/index_26.gif" width="573" height="239"  class="active"  alt="image1" /> 
+		<img src="images/sub1.jpg" width="573" height="239"   alt="image2" /> 
+		<img src="images/sub2.jpg" width="573" height="239"   alt="image3" /> 
+		<img src="images/sub3.jpg" width="573" height="239"   alt="image4" /> 
+		<img src="images/sub4.jpg" width="573" height="239"  alt="image5" /> 
+
+		</div>
+		
+		</div>
+		</div>
+
+		<div id="content">
+
+			<div id="line01"><img src="images/index_28.gif"></div>
+
+			<div id="con1">
+			<div class="font07">Category</div>
+				
+				<table>
+				<tr>
+				<td><a href="sub_neck.html"><img src="images/category1.gif"></a></td>
+				<td><a href="sub_bracelet.html"><img src="images/category2.gif"></a></td>
+				</tr>
+				<tr>
+				<td><a href="sub_earring.html"><img src="images/category3.gif"></a></td>
+				<td><a href="sub_ring.html"><img src="images/category4.gif"></a></td>
+				</tr>
+				</table>
+
+			</div>
+			<div id="con2">
+			<div class="font07">New Arrival</div>
+				<div id="all">
+				<div id="slidercont"><!--슬라이드부모div-->
+            	<div id="slider"><!--사진이 들어갈 div-->
+                	<div id="film"><!--실제사진이 들어갈 div-->
+                    <a href="sub_watch_detail_ing.html"><img src="images/best1.jpg" width="475" height="265" alt="01"></a>
+					<a href="sub_watch_detail_ing.html"><img src="images/best2.jpg" width="475" height="265" alt="02"></a>
+					<a href="sub_watch_detail_ing.html"><img src="images/best3.jpg" width="475" height="265" alt="03"></a>
+					<a href="sub_watch_detail_ing.html"><img src="images/best4.jpg" width="475" height="265" alt="04"></a>
+					<a href="sub_watch_detail_ing.html"><img src="images/best5.jpg" width="475" height="265" alt="05"></a>
+					</div>
+                </div>
+
+				<div id="slidernavi">
+                <!--dot메뉴에 스크립트 적용-->
+              	
+                    <div id="dot1" onClick="goFrame(this)" onMouseOver="overdot(this)" onMouseOut="outdot(this)">                    
+					<img src="images/dot1.png" width="16" height="16" alt="01"><img src="images/dot2.png" width="16" height="16" alt="02">
+                                        
+                    </div>
+                                                            
+                	<div id="dot2" onClick="goFrame(this)" onMouseOver="overdot(this)" onMouseOut="outdot(this)"><img src="images/dot1.png" width="16" height="16" alt="01">
+					<img src="images/dot2.png" width="16" height="16" alt="02"></div>
+                	<div id="dot3" onClick="goFrame(this)" onMouseOver="overdot(this)" onMouseOut="outdot(this)"><img src="images/dot1.png" width="16" height="16" alt="01">
+					<img src="images/dot2.png" width="16" height="16" alt="02"></div>
+                	<div id="dot4" onClick="goFrame(this)" onMouseOver="overdot(this)" onMouseOut="outdot(this)"><img src="images/dot1.png" width="16" height="16" alt="01">
+					<img src="images/dot2.png" width="16" height="16" alt="02"></div>
+                	<div id="dot5" onClick="goFrame(this)" onMouseOver="overdot(this)" onMouseOut="outdot(this)"><img src="images/dot1.png" width="16" height="16" alt="01">
+					<img src="images/dot2.png" width="16" height="16" alt="02"></div>
+                </div>
+				</div>
+				</div>
+
+			</div>
+
+			<div id="con3">
+			<div class="font07">Category</div>
+
+				<table>
+				<tr>
+				<td><a href="sub_couple.html"><img src="images/category5.gif"></a></td>
+				<td><a href="sub_watch.html"><img src="images/category6.gif"></a></td>
+				</tr>
+				<tr>
+				<td><a href="sub_pendant.html"><img src="images/category7.gif"></a></td>
+				<td></td>
+				</tr>
+				</table>
+
+			</div>
+		</div>
+
+	<div id="bannar">
+
+		<div id="ban1"><a href="basic_ing.html"><img src="images/index_31.gif"></a></div>
+		<div id="ban2"><a href="basic_ing.html"><img src="images/index_33.gif"></a></div>
+		<div id="ban3"><a href="basic_ing.html"><img src="images/index_35.gif"></a></div>
+	
+  </div>
+  </div>
+  <div id="bottom_wrap">
+
+  <div id="bot">
+	
+			<div id="tel">
+		
+			<table>
+			<tbody><tr>
+			<td colspan="2" class="font01">CUSTOMER CENTER</td>
+			</tr>
+			<tr>
+			<td rowspan="2"><img src="images/icon1.png"></td><td class="font02">1600-0455</td>
+			</tr>
+			<tr>
+			<td class="font03">상담시간:월~금(09:00~18:00)<br>
+				공휴일 휴무</td>
+			</tr>
+			</tbody></table>
+
+		</div>
+		<div id="store">
+
+			<table>
+			<tbody><tr>
+			<td colspan="2" class="font01">OST STORE</td>
+			</tr>
+			<tr>
+			<td rowspan="2"><a href="basic_ing.html"><img src="images/icon2.png"></a></td>
+			<td class="font04">STORE<br>FINDER</td>
+			</tr>
+			<tr>
+			<td class="font03">지역별 가장 가까운 매장을<br>
+				찾으실 수 있습니다.</td>
+			</tr>
+			</tbody></table>
+
+		</div>
+		<div id="notice">
+
+			<table>
+			<tbody><tr>
+			<td colspan="2" class="font01">NOTICE</td>
+			</tr>
+			<tr>
+			<td class="font05">
+			<a href="basic_ing.html">- 더욱 새로워진 OST 마케팅 서포터..</a><br>
+			<a href="basic_ing.html">- OST 서포터즈 4기 모집</a><br>
+			<a href="basic_ing.html">- OST꽃템, 2월 리미티드, 한정수량..</a><br>
+			<a href="basic_ing.html">- 박보람 X OST : '예뻐졌다'..</a><br>
+			<a href="basic_ing.html">- OST 2월 별난스냅 커플시계편 +)..</a><br>
+			</td>
+			<td class="font06">
+			2016.02.14<br>
+			2016.02.14<br>
+			2016.02.14<br>
+			2016.02.14<br>
+			2016.02.14<br>
+			</td>
+			</tr>
+			</tbody></table>
+		
+		</div>
+		</div> 
+  </div>
+
+  <div id="footer_wrap">
+
+		<div id="footer">
+		
+			<div id="foot_logo"><img src="images/foot_logo.jpg"></div>
+			<div id="foot_link"><a href="basic_ing.html">이용약관</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="basic_ing.html">개인정보취급방침</a> &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<a href="basic_ing.html">고객센터</a></div>
+			<div id="foot_add">(주)이랜드월드 패션사업부 : 서울시 금천구 가산동 371-12 이랜드 빌딩<br>
+			사업자등록번호 : 113-85-19030 통신판매업 신고번호 : 금천구청 제 18-1053호 대표이사 : 김광래<br>
+			COPYRIGHTⓒ</div>
+			</div>
+  
+		 </div>
+  </div>
+ </body>
+</html>

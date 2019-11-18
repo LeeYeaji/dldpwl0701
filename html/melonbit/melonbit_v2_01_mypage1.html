@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>MelonBIT</title>
+        
+        <link rel="stylesheet" href="../../css/base_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/melonbit_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/add.css" media="screen">
+        <link rel="stylesheet" href="../../css/datepicker3.css" media="screen">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        
+        <script src="../../js/jquery-1.12.4.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/melonbit_v2.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+        <script src="../../js/bootstrap-datepicker.js"></script>
+        <script src="../../js/bootstrap-datepicker.kr.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="navbar navbar-fixed-top" role="navigation">
+                <div class="container">
+                    <div class="main_logo"><a href="melonbit_v2_01_link.html#"><img src="../../img/v2_images/melonbit_logo_N_black.svg" alt="MelonBIT"></a></div>
+                    <div class="navbar_wrap">
+                        <ul class="main_nav_list">
+                            <li><a href="melonbit_v2_01_market.html#">KRW마켓</a></li>
+                            <li><a href="melonbit_v2_01_market2.html#">BTC마켓</a></li>
+                            <!-- <li><a href="#">ETH마켓</a></li> -->
+                            <li><a href="melonbit_v2_01_wallet.html#">입출금</a></li>
+                            <li><a href="melonbit_v2_01_investment1.html#">투자내역</a></li>
+                        </ul>
+                    </div>
+                    <ul class="navbar_left_wrap">
+                        <li class="border-right"><a href="#">로그인</a></li>
+                        <li>아직 회원이 아니신가요? <a href="melonbit_v2_01_join1.html#"> 회원가입</a></li>
+                        <!-- 로그인시 -->
+                        <!-- <li class="dropdown hover">
+                            <a href="#" class="dropdown-toggle userInfo circlebox" data-toggle="dropdown" role="menu" id="">이예지님<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-item"><a href="melonbit_v2_01_mypage1.html#">마이페이지</a></li>
+                                <li class="dropdown-item"><a href="melonbit_v2_01_mypage2.html#">보안설정</a></li>
+                                <li class="dropdown-item"><a href="#">로그아웃</a></li>
+                            </ul>
+                        </li> -->
+
+                        <li class="dropdown hover">
+                            <a href="#" class="dropdown-toggle mainlang circlebox" data-toggle="dropdown" role="button" id="">한국어<span class="caret"></span></a>
+                            <ul class="dropdown-menu langbg">
+                                <li><a href="#">한국어</a></li>
+                                <li><a href="#">ENGLISH</a></li>
+                                <li><a href="#">JAPAN</a></li>
+                                <li><a href="#">CHINA</a></li>
+                                <li><a href="#">VIETNAM</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="circlebox nav_search_btn"><i class="fas fa-search"></i></a>
+                            <div class="nav_search_wrap">
+                                <div class="form-group">
+                                    <input type="text" class="main_search_box" placeholder="코인명/심볼 검색어를 입력하세요"><i class="fas fa-search"></i>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        
+            <section class="main_section_wrap">
+                    
+            </section>
+            <section class="sub_content_wrap">
+                    <div class="sub_container">
+                        <div class="sub_side_nav">
+                            <div class="sub_side_nav_header">마이페이지</div>
+                            <ul>
+                                <li class="selected">회원정보</li>
+                                <li>보안인증</li>
+                                <li>접속관리</li>
+                                <li>추천인</li>
+                            </ul>
+                        </div>
+                        <div class="sub_content_section">
+                            <h2 class="sub_content_title">회원정보</h2>
+                            <div class="sub_content_userbox_wrap">
+                                <ul class="sub_userbox">
+                                    <li><i class="fas fa-envelope"></i>dldpwl0701@melonbit.com</li>
+                                    <li><i class="fas fa-tag"></i>이예지</li>
+                                    <li><i class="fas fa-mobile-alt"></i>010****1234<button class="moblie_change join_num_btn">변경</button></li>
+                                </ul>
+                            </div>
+                            <ul class="sub_userinfo_list">
+                                <li>
+                                    <div class="userinfo_img"><img src="../../img/v2_images/userinfo1.png"></div>
+                                    <h3>보안 3등급</h3>
+                                    <table>
+                                        <tr>
+                                            <th colspan="2">계좌등록</th>
+                                        </tr>
+                                        <tr><td>사이트 접속</td><td>o</td></tr>
+                                        <tr><td>입금,출근</td><td>o</td></tr>
+                                        <tr><td>거래,출금한도</td><td>o</td></tr>
+                                    </table>
+                                    <button class="join_num_btn">보안등급 상향안내</button>
+                                </li>
+                                <li>
+                                    <div class="userinfo_img"><img src="../../img/v2_images/userinfo2.png"></div>
+                                    <h3>수수료 2레벨</h3>
+                                    <table>
+                                        <caption><i class="fas fa-info-circle"></i> 부가세 포함금액</caption>
+                                        <tr>
+                                            <th></th><th>Maker</th><th>Taker</th>
+                                        </tr>
+                                        <tr><td>KRW마켓</td><td>0.01%</td><td>0.1%</td></tr>
+                                        <tr><td>BTC마켓</td><td>0.1%</td><td>0.1%</td></tr>
+                                        <tr><td>ETH마켓</td><td>0.1%</td><td>0.1%</td></tr>
+                                    </table>
+                                    <button class="join_num_btn">수수료 Lv. 안내</button>
+                                </li>
+                                <li>
+                                    <div class="userinfo_img"><img src="../../img/v2_images/userinfo3.png"></div>
+                                    <h3>OTP</h3>
+                                    <table>
+                                        <tr>
+                                            <th colspan="2"></th>
+                                        </tr>
+                                        <tr><td>적용여부</td><td>적용중</td></tr>
+                                        <tr><td>적용일자</td><td>2018.08.28</td></tr>
+                                        <tr><td>초기화 횟수</td><td>3<button class="btn_lightgray userinfo_more_btn">상세보기</button><button class="btn_lightgray userinfo_more_btn close">닫기</button></td></tr>
+                                    </table>
+                                    <table class="otp_reset_table">
+                                        <tr><th>초기화 일자</th><th>초기화 디바이스</th></tr>
+                                        <tr><td>2018.05.02</td><td>IOS</td></tr>
+                                        <tr><td>2018.05.06</td><td>Android</td></tr>
+                                        <tr><td>2018.05.19</td><td>IOS</td></tr>
+                                        <tr><td>2018.06.11</td><td>IOS</td></tr>
+                                    </table>
+                                    <button class="join_num_btn otp_reset_btn">초기화</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+            </section>
+
+        <footer>
+            <div class="footer_nav">
+                <div class="container">
+                    <ul class="footer_nav_list">
+                        <li><a href="#">회사</a></li>
+                        <li><a href="#">고객지원</a></li>
+                        <li><a href="#">내 정보</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">제휴제안</a></li>
+                        <li><a href="#">채용안내</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_info">
+                    <div class="container">
+                        <div class="footer_logo">
+                            <a href="#"><img src="../../img/v2_images/melonbit_logo_N_black.png" alt="MelonBIT"></a>
+                            <ul class="footer_text">
+                                <li>(주)멜론비트 서울시 강남구 역삼로 17길 51 | 대표 김재홍</li>
+                                <li>사업자등록번호 280-88-00958</li>
+                                <li>통신판매업신고 제 2017-서울강남-04260호</li>
+                            </ul>
+                        </div>
+                        <div class="footer_center">
+                            <div class="phone_wrap"><p class="phone_icon"><i class="fab fa-whatsapp"></i></p><p>1644-4698</p><p>help@melonbit.com</p></div>
+                        </div>
+                        <div class="footer_right">
+                            <p>월요일-금요일: 오전9시30분 ~ 오후18시30분(주말 및 공휴일 제외)<br/>고객상담은 전화와 이메일로 진행하며, 방문상담은 진행하지 않습니다.</p>
+                            <ul class="footer_link">
+                                <li><i class="fab fa-facebook-square"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                                <li><img src="../../img/v2_images/oracleG.png" alt="oracleG"></li>
+                                <li><img src="../../img/v2_images/melonpay.png" alt="melonpay"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </body>
+</html>

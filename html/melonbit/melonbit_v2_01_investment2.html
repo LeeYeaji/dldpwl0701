@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>MelonBIT</title>
+        
+        <link rel="stylesheet" href="../../css/base_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/melonbit_v2.css" media="screen">
+        <link rel="stylesheet" href="../../css/add.css" media="screen">
+        <link rel="stylesheet" href="../../css/datepicker3.css" media="screen">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        
+        <script src="../../js/jquery-1.12.4.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/melonbit_v2.js"></script>
+        <script src="../../js/jquery-ui.min.js"></script>
+        <script src="../../js/bootstrap-datepicker.js"></script>
+        <script src="../../js/bootstrap-datepicker.kr.js"></script>
+    </head>
+    <body>
+            <header>
+                    <div class="navbar navbar-fixed-top" role="navigation">
+                        <div class="container">
+                            <div class="main_logo"><a href="melonbit_v2_01_link.html#"><img src="../../img/v2_images/melonbit_logo_N_black.svg" alt="MelonBIT"></a></div>
+                            <div class="navbar_wrap">
+                                <ul class="main_nav_list">
+                                    <li><a href="melonbit_v2_01_market.html#">KRW마켓</a></li>
+                                    <li><a href="melonbit_v2_01_market2.html#">BTC마켓</a></li>
+                                    <!-- <li><a href="#">ETH마켓</a></li> -->
+                                    <li><a href="melonbit_v2_01_wallet.html#">입출금</a></li>
+                                    <li><a href="melonbit_v2_01_investment1.html#">투자내역</a></li>
+                                </ul>
+                            </div>
+                            <ul class="navbar_left_wrap">
+                                <li class="border-right"><a href="#">로그인</a></li>
+                                <li>아직 회원이 아니신가요? <a href="melonbit_v2_01_join1.html#"> 회원가입</a></li>
+                                <!-- 로그인시 -->
+                                <!-- <li class="dropdown hover">
+                                    <a href="#" class="dropdown-toggle userInfo circlebox" data-toggle="dropdown" role="menu" id="">이예지님<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-item"><a href="melonbit_v2_01_mypage1.html#">마이페이지</a></li>
+                                        <li class="dropdown-item"><a href="melonbit_v2_01_mypage2.html#">보안설정</a></li>
+                                        <li class="dropdown-item"><a href="#">로그아웃</a></li>
+                                    </ul>
+                                </li> -->
+        
+                                <li class="dropdown hover">
+                                    <a href="#" class="dropdown-toggle mainlang circlebox" data-toggle="dropdown" role="button" id="">한국어<span class="caret"></span></a>
+                                    <ul class="dropdown-menu langbg">
+                                        <li><a href="#">한국어</a></li>
+                                        <li><a href="#">ENGLISH</a></li>
+                                        <li><a href="#">JAPAN</a></li>
+                                        <li><a href="#">CHINA</a></li>
+                                        <li><a href="#">VIETNAM</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" class="circlebox nav_search_btn"><i class="fas fa-search"></i></a>
+                                    <div class="nav_search_wrap">
+                                        <div class="form-group">
+                                            <input type="text" class="main_search_box" placeholder="코인명/심볼 검색어를 입력하세요"><i class="fas fa-search"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+        
+            <section class="main_section_wrap">
+                    
+            </section>
+            <section class="sub_content_wrap">
+                    <div class="sub_container">
+                        <div class="sub_side_nav">
+                            <div class="sub_side_nav_header">투자내역</div>
+                            <ul>
+                                <li>보유코인</li>
+                                <li class="selected">거래내역</li>
+                                <li>미체결내역</li>
+                            </ul>
+                        </div>
+                        <div class="sub_content_section">
+                            <h2 class="sub_content_title">거래내역</h2>
+                            <div class="sub_connect_top">
+                                <div class="connect_title_icon"><i class="far fa-list-alt"></i></div>
+                                <div class="connect_title_text">회원객님의 투자내역을 확인가능합니다.<br><span>매수평균가, 평가금액, 평가손익, 수익률은 모두 KRW로 환산한 추정값으로 참고용입니다.</span></div>
+                            </div>
+                            <div class="support_wrap m-none">
+                                    <div class="dropdown minority_list investment">
+                                        <a href="#" class="dropdown-toggle minority" data-toggle="dropdown" role="button">2소수점<span class="caret"></span></a>
+                                        <ul class="dropdown-menu minority">
+                                            <li><a href="#">3소수점</a></li>
+                                            <li><a href="#">4소수점</a></li>
+                                            <li><a href="#">5소수점</a></li>
+                                        </ul>
+                                    </div>
+                                    <form class="datepicker-form-inline investment" autocomplete="off">
+                                        <div class="datepicker-group">
+                                            <input type="text" name="s_date" value="2018-08-01" class="datepicker-form date" readonly><span class="datepicker-form-btn"><i class="far fa-calendar-check"></i></span>
+                                        </div>
+                                        <p> ~ </p>
+                                        <div class="datepicker-group">
+                                            <input type="text" name="e_date" value="2018-08-30" class="datepicker-form date" readonly><span class="datepicker-form-btn"><i class="far fa-calendar-check"></i></span>
+                                        </div>
+                                        <button type="submit" class="join_num_btn datepicker-search" style="vertical-align: top;">검색</button>
+                                        <div class="dropdown">
+                                            <a href="#" class="dropdown-toggle datepicker-selectbox" data-toggle="dropdown" role="button">전체<span class="caret"></span></a>
+                                            <ul class="dropdown-menu datepicker-selectbox">
+                                                <li><a href="#">전체</a></li>
+                                                <li><a href="#">전체</a></li>
+                                                <li><a href="#">전체</a></li>
+                                            </ul>
+                                        </div>
+                                    </form>
+                                    <div class="clear"></div>
+                                    <div class="wallet_list_notice">
+                                        <i class="fas fa-info-circle"></i> 타 거래소에서 보낸 코인을 전송 받지 못했다면 <a href="#">여기</a> 를 클릭하세요.
+                                    </div>
+                                    <div class="clear"></div>
+                                    <table class="investment2_coin_table">                                   
+                                        <tr><th>날짜</th><th>코인</th><th>구분</th><th>거래수량</th><th>거래수량</th><th>거래금액</th><th>수수료</th><th>정산금액<small>(수수료반영)</small></th></tr>
+                                        <tr><td class="text-center">2018.09.01 18</td><td class="text-center">KRW</td><td class="text-center">출금</td><td>100000</td><td>15,978</td><td>15,978</td><td>15,978</td><td>15,978</td></tr>
+                                        <tr><td class="text-center">2018.09.01 18</td><td class="text-center">ETH/BTC</td><td class="text-center">매수</td><td>100000</td><td>15,978</td><td>15,978</td><td>15,978</td><td>15,978</td></tr>
+                                        <tr><td class="text-center">2018.09.01 18</td><td class="text-center">KRW</td><td class="text-center">매도</td><td>100000</td><td>15,978</td><td>15,978</td><td>15,978</td><td>15,978</td></tr>
+                                        <tr><td class="text-center">2018.09.01 18</td><td class="text-center">BTC</td><td class="text-center">입금</td><td>100000</td><td>15,978</td><td>15,978</td><td>15,978</td><td>15,978</td></tr>
+                                        <tr><td class="text-center">2018.09.01 18</td><td class="text-center">ORC</td><td class="text-center">출금</td><td>100000</td><td>15,978</td><td>15,978</td><td>15,978</td><td>15,978</td></tr>
+                                        <tr><td class="text-center">2018.09.01 18</td><td class="text-center">ETH/BTC</td><td class="text-center">출금</td><td>100000</td><td>15,978</td><td>15,978</td><td>15,978</td><td>15,978</td></tr>
+                                        <tr><td class="text-center">2018.09.01 18</td><td class="text-center">KRW</td><td class="text-center">출금</td><td>100000</td><td>15,978</td><td>15,978</td><td>15,978</td><td>15,978</td></tr>
+                                        <tr><td class="text-center">2018.09.01 18</td><td class="text-center">KRW</td><td class="text-center">출금</td><td>100000</td><td>15,978</td><td>15,978</td><td>15,978</td><td>15,978</td></tr>
+
+                                    </table>
+                                </div>
+                            
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+            </section>
+
+        <footer>
+            <div class="footer_nav">
+                <div class="container">
+                    <ul class="footer_nav_list">
+                        <li><a href="#">회사</a></li>
+                        <li><a href="#">고객지원</a></li>
+                        <li><a href="#">내 정보</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">이용안내</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">제휴제안</a></li>
+                        <li><a href="#">채용안내</a></li>
+                        <li><a href="#">API</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer_info">
+                    <div class="container">
+                        <div class="footer_logo">
+                            <a href="#"><img src="../../img/v2_images/melonbit_logo_N_black.png" alt="MelonBIT"></a>
+                            <ul class="footer_text">
+                                <li>(주)멜론비트 서울시 강남구 역삼로 17길 51 | 대표 김재홍</li>
+                                <li>사업자등록번호 280-88-00958</li>
+                                <li>통신판매업신고 제 2017-서울강남-04260호</li>
+                            </ul>
+                        </div>
+                        <div class="footer_center">
+                            <div class="phone_wrap"><p class="phone_icon"><i class="fab fa-whatsapp"></i></p><p>1644-4698</p><p>help@melonbit.com</p></div>
+                        </div>
+                        <div class="footer_right">
+                            <p>월요일-금요일: 오전9시30분 ~ 오후18시30분(주말 및 공휴일 제외)<br/>고객상담은 전화와 이메일로 진행하며, 방문상담은 진행하지 않습니다.</p>
+                            <ul class="footer_link">
+                                <li><i class="fab fa-facebook-square"></i></li>
+                                <li><i class="fab fa-twitter"></i></li>
+                                <li><i class="fab fa-instagram"></i></li>
+                                <li><img src="../../img/v2_images/oracleG.png" alt="oracleG"></li>
+                                <li><img src="../../img/v2_images/melonpay.png" alt="melonpay"></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<title>Untitled Document</title>
+</head>
+
+<style>
+/*body {
+	background : url (img.jpg) center center fixed no-repeat;
+}*/
+#index_video { 
+     position: relative;
+     top: 0px;
+     left: 0px;
+     min-width: 100%;
+     min-height: 100%;
+     width: 100%;
+     height: auto;
+     z-index: -1;
+     overflow: hidden;
+}
+#index_bg {position:absolute;top:0;left:0;min-width:100%;color:#fff}
+#index_bg img{position:absolute;left:0;bottom:0;margin:10px;}
+#index_bg .index_text{position:absolute;text-align:center}
+#index_bg .index_text h1{font-size:70px;font-weight:bold}
+
+#index_bg .index_text #index_rebtn{display: inline-block;margin:20px 10px 10px 0;color:#fff;width:300px;height:60px;background:#0d92d7;text-align:center;font-size:15px;line-height:60px;border:none;transition:all 0.5s;cursor:pointer;}
+#index_bg .index_text #index_rebtn a{color:#fff;text-decoration:none}
+#index_bg .index_text #index_rebtn a:after {content:'>>';opacity:0;transition:0.5s;color:#fff;padding-left:5px;line-height:60px}
+#index_bg .index_text #index_rebtn:hover a {color:#fff}
+#index_bg .index_text #index_rebtn:hover a:after {opacity:1;right:0;}
+    
+    #quit_btn{position:absolute;top:0;left:0;width:50px;height:50px;cursor:pointer;margin:20px;}
+    #pause_btn{position:absolute;top:0;right:0;width:50px;height:50px;cursor:pointer;margin:20px;}
+    
+    #skip_btn{position:absolute;bottom:0;left:50%;width:50px;height:50px;cursor:pointer;margin:20px;}
+
+</style>
+
+<script>
+    $(document).ready(function (){
+		var intro_movieSize = $(window).outerHeight();
+        $("#index_Bg").css("height",intro_movieSize);
+		var window_width_half = ($(window).width()-$("#index_bg > .index_text").width())/2;
+		var window_height_half = ($(window).height()-$("#index_bg > .index_text").height())/2;
+		$("#index_bg > .index_text").css({left:window_width_half,top:window_height_half});
+
+
+        $("#pause_btn").on("click", function(){
+            var video = document.getElementById("#index_video");
+            var button = document.getElementById("#pause_btn");
+               if (video.paused) {
+                  video.play();
+               } else {
+                  video.pause();
+               }
+        });
+        
+     /*   $("#video").prop('muted', true);
+
+            $("#quit_btn").click( function (){
+                if( $("#video").prop('muted', true) )
+                {
+                    $("#video").prop('muted', false);
+                }
+                else {
+                $("#video").prop('muted', true);
+                }
+
+            });*/
+
+        
+    });
+    
+</script>
+
+<body>
+
+	<video id="index_video" preload="auto" autoplay="true" loop="loop" volume="0">
+      <source src="../images/index_movie.mp4"> 
+	</video>
+<div id="index_bg">
+
+	<img src="../images/logo.png" width="298" height="55" alt="다온큐브">
+	<div class="index_text">
+		<h1>DA:ON CUBE</h1>
+		<p>좋은 영화인과 좋은 영화의 만남<br />
+		다온의 젊은 에너지를 전달해드립니다.</p>
+		<div id="index_rebtn"><a href="#">예매하기</a></div>
+	</div>
+    <div id="quit_btn"><img src="../images/quit.png" alt="음소거"></div>
+    <div id="pause_btn"><img src="../images/pause.png" alt="일시정지/재생"></div>
+    <div id="skip_btn"><img src="../images/skip_btn.png" alt="스킵"></div>
+	
+	
+</div>
+
+</body>
+</html>

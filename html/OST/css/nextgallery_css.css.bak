@@ -1,0 +1,77 @@
+@charset "utf-8";
+/*초기화 스타일*/
+body {
+	padding:0px;
+	margin:0px;
+}
+
+
+
+#slidercont{
+	position:relative;
+	width:478px;
+	height:265px;
+}
+#slidercont #slider{/*사진이 보이는 영역*/
+	position:absolute;
+	width:478px;
+	height:265px;
+	overflow:hidden;/*넘치는 부분은 안보임*/
+}
+#slidercont #slider #film{/*5장의 사진이 들어있는 div*/
+	position:absolute;
+	width:2390px;/*913px*5*/
+	height:265px;
+	top:0px;/*초기위치값셋팅*/
+	left:0px;/*초기위치값셋팅*/
+}
+#slidercont #slidernavi{/*사진위치표시 div*/
+	position:absolute;
+	width:200px;
+	height:16px;
+	bottom:-10px;
+	left:195px;
+}
+#slidercont #slidernavi div{/*dot이미지가 들어있는 div*/
+	float:left;
+	width:16px;
+	height:16px;
+	padding-right:4px;
+	cursor:pointer;/*마우스 포인터가 손가락모양*/
+}
+#slidercont #slidernavi div img{
+	position:absolute;/*2개의 dot이미지를 겹쳐지도록 설정*/
+}
+#slidercont #slidernavi div img:last-child{
+	opacity:0;/*2번째 회색이미지의 투명도를 0으로 설정*/
+}
+#slidercont #slidernavi div:first-child img:last-child{
+	opacity:1;/*최초 첫번째 dot이미지가 회색으로 보이게 설정*/
+}
+#slidercont #slidernavi div:hover img:last-child{
+	opacity:1;/*dot이미지 div에 마우스가 오버될때 2번째 dot 이미지가 보이도록 설정*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

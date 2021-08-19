@@ -1,18 +1,30 @@
 $(document).ready(function(){
 
-    // 메인화면크기 fix
-    var winWidth = $(window).width();
-    var winHeight = $(window).height();
-
-    // $('.MainContent').css("width",winWidth);
-    // $('.MainContent').css("height",winHeight);
-
-    $("#MainIconWrap").css("width",winWidth-20);
-    $("#MainIconWrap").css("height",winHeight);
-    $(window).on("resize",function(){
-        $("#MainIconWrap").css("width",winWidth-20);
-        $("#MainIconWrap").css("height",winHeight);
+    onlyPCanimation()
+    $( window ).resize( function() {
+        onlyPCanimation();
     });
+
+    function onlyPCanimation(){
+        // 메인화면크기 fix
+        var winWidth = $(window).width();
+        var winHeight = $(window).height();
+
+        if (winWidth < 1180){
+            $("#MainIconWrap").css("display",'none');
+            $('.MacBookWrap').css("display",'none');
+        } else {
+            $("#MainIconWrap").css("display",'block');
+            $('.MacBookWrap').css("display",'block');
+            $("#MainIconWrap").css("width",winWidth-20);
+            $("#MainIconWrap").css("height",winHeight);
+            $(window).on("resize",function(){
+                $("#MainIconWrap").css("width",winWidth-20);
+                $("#MainIconWrap").css("height",winHeight);
+            });
+        }
+    }
+
 
     /* 맨위로 버튼 */
     function GoTopBtn(){

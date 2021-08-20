@@ -485,19 +485,21 @@ div.line9 span {
 .introduceWrap{
 	float: left;
 	width: 100%;
-	margin-top: 50px;
+	margin: 50px 0;
 	position: relative;
 }
 
 .introLeft{
 	float: left;
-	width: 57%;
+	width: 50%;
 }
 
 .introRight{
 	float: left;
-	width: 40%;
-	margin-right: 3%;
+	width: 47%;
+	margin-left: 3%;
+	display: flex;
+	justify-content: center;
 }
 
 
@@ -548,7 +550,6 @@ div.line9 span {
 
 .introRight img.Photo{
 	width: 100%;
-	max-width:472px;
 }
 
 .introBottom{
@@ -573,12 +574,16 @@ div.line9 span {
 	width: 100%;
 }
 
-.introduceWrap:after, .skillWrap:after{
+.careerWrap:before, .skillWrap::before{
 	content: "▼";
 	position: absolute;
-	bottom: -5%;
+	top: -10%;
 	left: 49%;
 	font-size: 30px;
+}
+
+.careerWrap:before{
+	top: -5%;
 }
 
 .skillWrap, .careerWrap{
@@ -1003,6 +1008,7 @@ h2{width:100%;margin:100px 0 50px 0;}
 @media (max-width: 1024px) {
 	.MainWrap{padding:0 3%}
 	.introLeft, .introRight{width:100%;margin:0;}
+	.introRight{margin-top:10%;}
 }
 @media (min-width: 1024px) {
 	

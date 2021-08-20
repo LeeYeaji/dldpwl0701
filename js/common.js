@@ -78,7 +78,7 @@ $(document).ready(function(){
         $('.WebList li').mouseover(function(){
             $(this).children('div').children('.portMask').css('left',0);
             $(this).mouseleave(function(){
-                $(this).children('div').children('.portMask').css('left',-578);
+                $(this).children('div').children('.portMask').css('left',-1000);
             });
         });
     }

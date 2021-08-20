@@ -644,7 +644,7 @@ h3{
 	font-size: 13px;
 }
 
-.careerTable{]
+.careerTable{
 	width: 520px;
 	max-width: 520px;
 	margin: 90px auto;
@@ -662,10 +662,12 @@ h3{
 	text-align: left;
 	padding: 20px 0;
 	vertical-align: top;
+	font-size:16px;
+	word-break:keep-all;
 }
 
 .careerTable tr td p{
-	font-size: 14px;
+	font-size: 16px;
 	display:inline-block;
 }
 
@@ -989,7 +991,7 @@ h2{width:100%;margin:100px 0 50px 0;}
 	.WebWrap ul.WebList > li > p.portTitle{font-size:5vw}
 	.WebWrap ul.WebList > li > p.portSub{font-size:3vw}
 	.Web_comentWrap p{font-size:3vw;}
-	.introLeft table, .careerTable{width:100%;letter-spacing: -.5px;word-break: keep-all;}
+	.introLeft table, .careerTable{width:100%;letter-spacing: -.5px;}
 	.careerTable tr td{padding-left:10px;}
 	.skillList{margin:20% 0;}
 	.skillList li{width:45%;margin-right:5%;}

@@ -933,10 +933,12 @@ h2{width:100%;margin:100px 0 50px 0;}
 }
 
 .Web_titleWrap{
-	width:50%;
+	width:60%;
 	max-width: 400px;
 	margin: 10px auto;
 	margin-top: 50px;
+	text-align: center;
+	line-height: 2.5;
 }
 
 .Web_titleWrap > img{
@@ -984,10 +986,22 @@ h2{width:100%;margin:100px 0 50px 0;}
 	width: 100%;
 }
 
+.sub_content{width:100%;float:left;display:flex;flex-direction:row;align-items:center;padding-bottom:3%;margin-top:3%;border-bottom:1px solid #ccc}
+
+.divLeft{width:50%;float:left;}
+.divLeft img{width:100%;}
+.divRight{width:50%;float:right;}
+.divRight h4{background:url('../images/icon_sun.png') no-repeat;padding-left:40px;background-size:30px 30px;height:30px;font-size:1.5vw;}
+.divRight p{padding:15px 0 0 40px;word-break: keep-all;}
+.divRight p.p_sub_title{color:#888;padding-top:0;}
+.divRight p.link a{color:#0d92d7;text-decoration: underline;background:url('../images/icon_link.png') no-repeat left center;padding-left:25px;background-size:15px 15px;word-break: break-all;}
 
 /* 미디어쿼리 */
 
 @media (max-width: 758px) {
+	.MainWrap{padding:0 3%}
+	.introLeft, .introRight{width:100%;margin:0;}
+	.introRight{margin-top:10%;}
 	.GnbWrap .logo{font-size:5vw}
 	.GnbWrap .logo p > span{font-size: 3vw;}
 	.MainText h1, .MainText .h1Sub {font-size:18vw;line-height:1.3}
@@ -1003,12 +1017,16 @@ h2{width:100%;margin:100px 0 50px 0;}
 	.skillList li:nth-child(2n){margin-right:0;}
 	.skillList li > p{font-size:4vw}
 	.skillList li > span{font-size:3vw;word-break: keep-all;}
-	
+	.divLeft{width:100%;margin-bottom:2%;}
+	.divRight{width:100%;}
+	.sub_content{flex-direction: column;margin-top:10%;padding-bottom:10%;}
+	.divRight h4{font-size:4vw}
 }
-@media (max-width: 1024px) {
-	.MainWrap{padding:0 3%}
+@media (min-width: 758px) and (max-width: 1024px) {
+	/* .MainWrap{padding:0 3%}
 	.introLeft, .introRight{width:100%;margin:0;}
-	.introRight{margin-top:10%;}
+	.introRight{margin-top:10%;} */
+	.divRight h4{font-size:2vw}
 }
 @media (min-width: 1024px) {
 	

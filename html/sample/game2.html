@@ -1,0 +1,1004 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+    <title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/> <!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+    <script src="https://m.hackers.ac/js/jquery-1.12.4.min.js"></script>
+    <script src="https://www.hackers.ac/js/jwplayer-8.4.4/jwplayer.js"></script><!-- jw플레이어 코어 최신버전 -->
+    <script type="text/javascript" src="https://www.hackers.ac/js/pub/pub_video_v5.js"></script><!-- 영상_동현버전 -->
+
+    <link rel="apple-touch-icon" href="/app/assets/images/go.png">
+
+    <style>
+    * { margin: 0; padding: 0; }
+    html,body { width: 100%; height: 100%; }
+    li { list-style-type: none; }
+    header { padding: 0; }
+    header h1, header a, header .btn_menu { display: none; }
+    a:link, a:visited { color: #000; text-decoration: none; }
+    html, body #wraps, .gameview { width: 100%; height: 100%; max-width: 640px; margin: 0 auto; font-size: 1em; overflow:hidden;}
+    #wraps img { width: 100%; height:100%;}
+    .flexslider { display: none; }
+
+    /*메인*/
+	#wraps > div{display:none}
+	#wraps > div.on{display:block;}
+
+    /* 인트로 */
+    .viewIntro{width:100%;height:100%;position:relative;}
+    .viewIntro img{width:100%;height:100%;vertical-align:bottom;}
+    .viewIntro .schoolText{width:50%;height:5%;position:absolute;left:25%;top:12.5%;text-align:center;color:#f8dd8c;font-weight:bold;font-size:1.3em;text-shadow: -1px 0 #642309, 0 1px #642309, 1px 0 #642309, 0 -1px #642309;}
+    .startBtn{width:100%;position:absolute;left:0;bottom:0;}/*animation:introani 1.5s linear infinite alternate;  깜빡이는 애니메이션*/
+    .intro_st{display:block;width:30%;position:absolute;left:0%;bottom:46%;/*animation:introani2 1.5s linear infinite alternate;*/z-index:9;}/*animation:introani2 1.5s linear infinite alternate;z-index:9*/
+    .intro_te{display:block;width:100%;position:absolute;left:0;bottom:0;animation:introani 1.5s linear infinite alternate}
+    @keyframes introani {
+        0%{opacity:0.4}
+        100%{opacity:1}
+    }
+    @keyframes introani2 {
+        0%{bottom:60%}
+        100%{bottom:56%;}
+    }
+
+    /* 인트로 */
+
+    /* 신청단 */
+    .join_box { width: 100%; height: 100%; background-color: #F0F0F0; }
+    .join_box form { padding: 5%; background-color: #F0F0F0; }
+    .join_box form > p { position: relative; height: 50px; padding-bottom: 15px; }
+    .join_box form > p > input { width: 100%; height: 30px; border: none; }
+    .join_box form > p > select { width: 32%; height: 30px; border: none; }
+    .join_box form > p  label { display: block; color: #333; padding: 5px 0; font-size: 0.8em; font-weight: bold; }
+    .join_box form > p > span { width: 45%; float: left; }
+    .join_box form > p > span:nth-child(1) { margin-right: 10%; }
+    .join_box form .check_box2 { font-size: 0.7em; line-height: 24px; }
+    .join_box form > p > span > input { width: 100%; height: 35px; border: none; }
+    .join_box form > p > span > select { width: 32%; height: 35px; border: none; }
+    .join_box form > p.user_level { border-bottom: 1px solid #CCC; margin-bottom: 5px; }
+    .join_box form .check_box2 > p { color: #333; padding: 5px 0; font-size: 1.2em; font-weight: bold; }
+    .check_box2 .leBtn { padding: 5px 15px; border: 1px solid #CCC; margin-left: 15px; }
+    .pop_wrap { display: none; width: 100%; height: 100%; max-width: 640px; position: fixed; left: 50%; transform: translatex(-50%); top: 0; }
+    .pop_form { width: 90%; height: 80%; position: absolute; left: 5%; top: 5%; font-size:12px;line-height:1.8;}
+    .pop_form p { padding: 5%; }
+    .pop_bg { width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
+    .pop_clbtn { display: block; width: 100%; overflow: hidden; }
+    .pop_clbtn a { display: block; width: 8%; float: right; }
+    .pop_form .text_wraps { width:100%;height:100%;background-color: #FFF; }
+    .pop_form p.form_texts { width: 84%; height: 48%; overflow-y: scroll; background-color: #F6F6F6; padding: 5% 3%; margin: 0 auto; word-break: keep-all;}
+    .join_box .submit_btn { display: block; width: 100%; background-color: #F0F0F0; }
+
+
+    /* 신청단 */
+
+
+    /* 영상단 */
+    .video_btn{position: absolute;bottom: 0;left:0;height:11%;width:80%;padding:8% 10%;}
+    .video_btn > input[type='button']{border:none;background:none;width:50%;height: 100%;float:left;font-size:0;text-indent:-9999999px;}
+    .pub_vid_box{position: absolute;left: 0;top:48%;width: 100%;height:31.5%;}
+
+    /* 영상단 */
+
+
+
+    /* 예제 단 */
+
+    .game_ex .game_eximg{display:none;}
+    .count_radius.ready1{width:39%;height:113%;left:54%;top:9%;}
+    .ready_wrap{position:relative;width:100%;height:100%;}
+    .ready_wrap > img{width:100%;height:100%;cursor:pointer;}
+    .ready_img{ position:absolute; top:0%; left:0; /*animation: ex_ani4 2s linear infinite alternate; -webkit-animation: ex_ani4 2s linear infinite alternate; */z-index: 9;}
+    .game_ex { width: 100%; height: 100%; position: relative;display:none; }
+    .game_ex > img { width: 100%; height: 100%;cursor:pointer;}
+    .ex_text { width: 70%; padding: 5%; position: absolute; left: 10%; bottom: 40%; background-color: #FFF; text-align: center; border-radius: 5px; font-weight: bold; opacity: 0; }
+    .ex_text > span { color: #025bfe; }
+    .ex_text .borders { width: 0; height: 0; position: absolute; left: 22%; top: 77%; border-left: 18px solid #FFF; border-right: 18px solid none; border-top: 18px solid transparent; border-bottom: 18px solid transparent; }
+    .ex_character { width: 50%; position: absolute; left: 3.5%; top: 61%; opacity: 0; }
+    .ex_character img { width: 100%; }
+    .skip_btn { display: block; width: 30%; position: absolute; left: 50%; top: 63%; opacity: 0; }
+
+    .game_ex.anist .ex_text { animation: ex_ani1 1.5s linear 0.5s 1 forwards; }
+    .game_ex.anist .ex_character { animation: ex_ani2 1.5s linear 0.5s 1 forwards; -webkit-animation: ex_ani2 1.5s linear 0.5s 1 forwards; }
+    .game_ex.anist .skip_btn { animation: ex_ani3 1.5s linear 2s 1 forwards; }
+
+    @keyframes ex_ani1  {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    @keyframes ex_ani2  {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    @keyframes ex_ani3  {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    @keyframes ex_ani4  {
+        0% { opacity: 0.5; }
+        100% { opacity: 1; }
+    }
+    /* 예제 단 */
+
+    /* 예제 단2 */
+    .game_ex2 { width: 100%; height: 100%; position: relative;background-color:rgba(0,0,0,0.5);z-index:9999;}
+    .game_ex2 > img { width: 100%; height: 100%; }
+    .game_ex2 .count_radius{width:11%;height:7%;left:81%;top:63%;opacity:0;animation: ex_ani3 1.5s linear 2s 1 forwards;}
+    .ex_text2 { width: 70%; padding: 10% 5%; position: absolute; left: 10%; bottom: 40%; background-color: #FFF; text-align: center; border-radius: 5px; font-weight: bold; opacity: 0; }
+    .ex_text2 > span { color: #025bfe; }
+    .ex_text2 .borders { width: 0; height: 0; position: absolute; left: 22%; top: 90%; border-left: 20px solid #FFF; border-right: 20px solid none; border-top: 20px solid transparent; border-bottom: 20px solid transparent; }
+    .ex_character2 { width: 50%; position: absolute; left: 3.5%; top: 61%; opacity: 0; }
+    .ex_character2 img { width: 100%; }
+    .skip_btn2 { display: block; width: 43%; position: absolute; left: 45%; top: 63%; opacity: 0; }
+
+    .game_ex2.anist .ex_text2 { animation: ex_ani1 1.5s linear 0.5s 1 forwards; }
+    .game_ex2.anist .ex_character2 { animation: ex_ani2 1.5s linear 0.5s 1 forwards; }
+    .game_ex2.anist .skip_btn2 { animation: ex_ani3 1.5s linear 2s 1 forwards; }
+    /* 예제 단 2*/
+
+    /* 게임단 */
+    .game_wrap { width: 100%; height: 100%;background-color:#027afe; }
+
+    /* 게임 타이머 */
+    .top_times { width: 100%; position: fixed; top: 0; max-width: 640px; font-weight: bold; color: #fff; text-align: center; }
+    .top_times .game_text { width: 45%; position: absolute; left: 9%; top: 45.5%; ; line-height: 2.2em; font-size: 1.2em; color:#ffc074;}
+
+    .game_times { width: 20%; position: absolute; left: 18%; top: 58%; line-height: 1.5em; font-size: 1.5em; }
+
+    .game_score { width: 25%; position: absolute; left: 59%; top: 55%; line-height: 2.2em; font-size: 1.5em; }
+    .game_score span { padding: 0 10%; }
+    .game_score .score1 { color: #fff; }
+
+    .finish_pop .game_score{font-size:3em;left:30%;top:30%;}
+
+    .top_times .bonus{width:25%;position:absolute;right:10%;top:40%;text-align:center;color:#ff2309;font-weight:bold;;font-size:0.8em;opacity:0;}
+    .top_times .bonus span{display:block;width:100%;height:100%;position:absolute;left:0;top:35%;}
+    /* 게임 타이머 */
+
+    /* 게임 뷰단 */
+    .game_view {display:none;width: 100%; height: 100%; background: url("https://image.hackers.ac/img/event/2019/game/v2/game_bg2.jpg") no-repeat center center; background-size: 100% 100%; }
+
+    /* test */
+    .game_view {display:block;}
+
+
+    .game_ready{width:100%;height:100%;position:fixed;top:0;background-color:rgba(0,0,0,0.5);z-index:999;max-width:640px;display:none;}
+    .ready_text{position:absolute;left:0;top:0;}
+
+    .quiz_wrap { width: 100%; height: 70%; position: absolute; max-width: 640px; top: 43.5%; left: 50%; transform: translatex(-50%); -webkit-transform: translatex(-50%); -moz-transform: translatex(-50%); -ms-transform: translatex(-50%); -o-transform: translatex(-50%); }
+    .game_x { position: absolute; left: 50%; top: 30%; transform: translatex(-50%); z-index: 10; display: none; opacity: 1; }
+    .game_o { position: absolute; left: 50%; top: 30%; transform: translatex(-50%); z-index: 10; display: none; opacity: 1; }
+    .quiz_wrap .quiz { width: 100%; height: 100%;}
+    .quiz_wrap .quiz:after { content: ""; display: block; clear: both; }
+    .quiz_wrap .quiz li {cursor:pointer;
+        width: 25%; height:20%; float:left; position: absolute; border-radius: 10px; background: url("https://image.hackers.ac/img/event/2019/game/v2/tea_back.png") no-repeat center center;
+        background-size: 100% 100%; text-align: center; line-height: 10em; font-size: 0.8em; box-sizing: border-box; border: 6px solid rgba(0, 0, 0, 0);
+    }
+    .quiz_wrap .quiz li img { position: absolute; left: 0; top: 0px; }
+    .quiz_wrap .quiz li:nth-child(1) { left: 2%; top: 0; }
+    .quiz_wrap .quiz li:nth-child(9) { left: 26%; top: 0; }
+    .quiz_wrap .quiz li:nth-child(2) { left: 49%; top: 0; }
+    .quiz_wrap .quiz li:nth-child(10) { left: 73%; top: 0; }
+
+    .quiz_wrap .quiz li:nth-child(11) { left: 2%; top: 18%; }
+    .quiz_wrap .quiz li:nth-child(3) { left: 26%; top: 18%; }
+    .quiz_wrap .quiz li:nth-child(12) { left: 49%; top: 18%; }
+    .quiz_wrap .quiz li:nth-child(4) { left: 73%; top: 18%; }
+
+    .quiz_wrap .quiz li:nth-child(5) { left: 2%; top: 36%; }
+    .quiz_wrap .quiz li:nth-child(13) { left: 26%; top: 36%; }
+    .quiz_wrap .quiz li:nth-child(6) { left: 49%; top: 36%; }
+    .quiz_wrap .quiz li:nth-child(14) { left: 73%; top: 36%; }
+
+    .quiz_wrap .quiz li:nth-child(15) { left: 2%; top: 54%; }
+    .quiz_wrap .quiz li:nth-child(7) { left: 26%; top: 54%; }
+    .quiz_wrap .quiz li:nth-child(16) { left: 49%; top: 54%; }
+    .quiz_wrap .quiz li:nth-child(8) { left: 73%; top: 54%; }
+    .quiz_wrap .quiz li.on:after { content:""; width:89%; height: 89%; border:4px solid #fff; position: absolute; top:1%; left: 1%; border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; -ms-border-radius: 10px; -o-border-radius: 10px; }
+    /* .quiz_wrap .quiz li.hide { display: none; } */
+
+    .border_left { width: 14%; border: 2px dashed #ffec09; position: absolute; left: 35%; top: 32%; z-index: 20; opacity: 0; }
+    .border_right { width: 14%; border: 2px dashed #ffec09; position: absolute; right: 35%; top: 44%; z-index: 20; opacity: 0; }
+    .border_top { width: 0; height: 20%; border: 2px dashed #ffec09; position: absolute; top: 20%; left: 50%; transform: translatex(-50%); opacity: 0; }
+    /* 게임 뷰단 */
+
+    /*점수 혜택단*/
+    .finish_pop{width:100%;height:100%;position:relative;background-color:rgba(0,0,0,0.5);display:none;}
+    .finish_pop .pop_img1{width:80%;position:absolute;left:10%;top:30%;}
+    .finish_pop .pop_img1 > span{display:block;width:100%;position:absolute;left:0%;top:-20%;}
+    .finish_pop .touch_btn{ display:block; width:100%; position:absolute; left:0%;bottom:0%;}
+
+    .count_radius{width:20%;height:21%;position:relative;position:absolute;left:17%;top:70%;z-index:10}
+    .count_radius.cur_right{left:70%;top:73%;height:12%;}
+    .count_radius span{display:block;border-radius:50%;border:3px solid #fff;position:absolute;animation: cursor1 4s linear infinite alternate;}
+    .count_radius .radius1{width:90%;height:90%;opacity:0.5}
+    .count_radius .radius2{width:65%;height:65%;left:13%;top:13%;opacity:0.7}
+    .count_radius .radius3{width:35%;height:35%;left:29%;top:28%;}
+    .count_radius .cursor_left{position:absolute;left:40%;top:42%;animation: cursor2 4s linear infinite alternate;}
+    .count_radius.cur_right .cursor_left{left:40%;}
+
+    /*팝업 랭킹 단*/
+    .result_wrap{width:100%;height:100%;background-color:#fff;}
+    .result_wrap .result_top{position:relative;}
+    .result_wrap .result_top .result_text{width:80%;line-height:3em;;position:absolute;left:15%;top:20%;text-align:center;color:#fff;font-weight:bold;font-size:1.5em;}
+
+
+    .result_btn{display:block;width:100%;position:relative;}
+    .score_text{display:block;width:100%;line-height:2.8em;text-align:center;position:absolute;left:-10%;top:10%;color:#eb0027;font-weight:bold;font-size:4.5em;}
+
+    .result_wrap .result_top .result_text .text_color{color:#fff20a;}
+    .result_table{padding:2% 0;}
+    .result_table > table {width:90%;margin:0 auto;text-align:center;border-radius:10px;background-color:#0257fe;color:#fff;}
+    .result_table > table th{background-color:#0150e6;color:#7ce2ff;}
+    .result_table > table tr{line-height:2.4em;font-weight:bold;}
+    .result_table > table tbody{padding:0 5%:}
+    .result_table > table tr.last_table{outline:3px solid rgba(255,248,19,1);animation: borderani 1s linear infinite alternate;color:#fff813;}
+    .result_table > table tr.last_table td{}
+
+    .pop_clbtn2 { display: block; width: 100%; overflow: hidden; }
+    .pop_clbtn2 a { display: block; width: 10%; float: right; }
+
+    .gift_pop_wrap{width:100%;height:100%;position:fixed;top:0;background-color:rgba(0,0,0,0.5);display:none;max-width:640px;}
+    .gift_pop_wrap .gift_pop{width:80%;padding:10%;}
+    .gift_pop_wrap .gift_pop .gift_box{position:relative;}
+    .gift_pop_wrap .gift_pop .gift_box .gift_btn{display:block;width:90%;position:absolute;left:5%;bottom:6%;}
+
+    /*//팝업 랭킹단*/
+
+    @keyframes borderani{
+        0%{outline:3px solid rgba(255,248,19,0.4)}
+        100%{outline:3px solid rgba(255,248,19,1)}
+    }
+
+    @keyframes cursor1{
+        0%{transform:scale(1);}
+        25%{transform:scale(1.05);}
+        50%{transform:scale(1.1);}
+        75%{transform:scale(1.05);}
+        100%{transform:scale(1);}
+    }
+    @keyframes cursor2{
+        0%{transform:scale(1);}
+        25%{transform:scale(0.95);}
+        50%{transform:scale(0.9);}
+        75%{transform:scale(0.95);}
+        100%{transform:scale(1);}
+    }
+    /*점수 혜택단*/
+
+    /*오답노트*/
+    .my_note_wrap{width:100%;height:100%;position:fixed;top:0;max-width:640px;background-color:rgba(0,0,0,0.5);display:none;}
+    .my_note{width:90%;height:70%;margin:10% auto;}
+    .my_note:after{content:"";display:block;width:100%;height:30px;background-color:#fff;border-radius:0 0 10px 10px;}
+    .my_note .note_title{width:100%;line-height:3.2em;text-align:center;background-color:#1a97fc;color:#fff;font-weight:bold;border-radius:10px 10px 0 0;}
+    .my_note .note_content{width:100%;height:80%;overflow:auto;background-color:#fff;}
+    .my_note .note_content li{padding:4%;margin: 0 auto;border-bottom:1px dashed #efefef;}
+    .my_note .note_content li.pass:before{content:"";display:inline-block;width:17px;height:17px;margin-right:10px;background:url("https://image.hackers.ac/img/event/2019/game/v1/note_ok.png") no-repeat center center;background-size:100% 100%;vertical-align:middle;}
+    .my_note .note_content li.failure:before{content:"";display:inline-block;width:17px;height:17px;margin-right:10px;background:url("https://image.hackers.ac/img/event/2019/game/v1/note_x.png") no-repeat center center;background-size:100% 100%;vertical-align:middle;}
+
+
+    /*//오답노트*/
+    /* 게임단 */
+
+    /* 미디어 쿼리 */
+    @media all and (min-width: 320px) and (max-width: 360px) {
+        html,body #wraps { font-size: 0.91em; }
+        .top_times .game_text { font-size: 0.7em; }
+        .game_times { font-size: 0.95em; }
+        .game_score { font-size: 0.95em; }
+        .finish_pop .game_score{ font-size: 2.95em; }
+        .quiz_wrap .quiz li { line-height: 3.6em; }
+        .result_wrap .result_top .result_text{font-size:0.9em}
+        .score_text{font-size:3.4em;}
+
+    }
+    @media all and (min-width: 361px) and (max-width: 400px) {
+        html,body #wraps  { font-size: 0.98em; }
+        .top_times .game_text { font-size: 0.75em; }
+        .game_times { font-size: 1em; }
+        .game_score { font-size: 1em; }
+        .finish_pop .game_score{ font-size: 3em; }
+        .result_wrap .result_top .result_text{font-size:0.95em}
+        .score_text{font-size:3.5em;}
+    }
+    @media all and (min-width: 401px) and (max-width: 480px) {
+        html,body #wraps { font-size: 1em; }
+        .top_times .game_text { font-size: 0.8em; }
+        .game_times { font-size: 1.1em; }
+        .game_score { font-size: 1.1em; }
+        .finish_pop .game_score{ font-size: 3.1em; }
+        .result_wrap .result_top .result_text{font-size:1em}
+        .score_text{font-size:3.5em;}
+    }
+    @media all and (min-width: 481px) and (max-width: 580px) {
+        .top_times .game_text { font-size: 1em; }
+        .game_times { font-size: 1.3em; }
+        .game_score { font-size: 1.3em; }
+        .finish_pop .game_score{ font-size: 3.3em; }
+        .result_wrap .result_top .result_text{font-size:1.2em}
+        .score_text{font-size:4.15em;}
+    }
+    /* 미디어 쿼리 b*/
+    </style>
+</head>
+<body>
+<!-- 1번  -->
+<!-- 게임 메인 화면 아래 이미지 URL만 변경하면 됨  -->
+<div id="wraps">
+    <div class="viewIntro on">
+        <img src="https://image.hackers.ac/img/event/2019/game/v2/main_intro.gif" alt=""/>
+        <p class="schoolText">연세대학교</p>
+        <a class="startBtn" href="#none" title="">
+            <img src="https://image.hackers.ac/img/event/2019/game/v2/intro_click.png" alt="" />
+            <span class="intro_st"><img src="https://image.hackers.ac/img/event/2019/game/v2/intro_start.gif" alt="" /></span>
+        </a>
+    </div>
+
+
+
+<!-- 2번  -->
+<!-- 게임유저 정보 입력 창  -->
+    <div class="join_box">
+        <div class="join_box_top">
+            <img src="https://image.hackers.ac/img/event/2019/game/v1/form_img.jpg" alt=""/>
+        </div>
+        <form id="regist_form" novalidate>
+            <input type="hidden" name="u" value="<?= $_GET['u'] ?>">
+            <input type="hidden" name="game_idx" value="<?= $idx ?>">
+            <input type="hidden" name="next_url" value="<?= $next_url ?>">
+            <input type="hidden" name="logger" value="<?= $logger ?>">
+            <p>
+                <label for="name">이름</label>
+                <input id="name"  type="text" class="input sname" name="name" maxlength="10" required message="이름을 입력해주세요." />
+            </p>
+            <p>
+                <label for="phone1">연락처</label>
+                <input id="phone1" type="number" name="phone1" style="width:29%;" maxlength="3"> -
+                <input type="number" name="phone2" style="width:29%;" maxlength="4"> -
+                <input type="number" name="phone3" style="width:29%;" maxlength="4">
+            </p>
+            <p>
+                <label for="email1">E_mail</label>
+                <input type="text" name="email1" id="email1" maxlength="25" style="ime-mode:disabled;width:23%;border:1px solid #DDD;height:31px;" required message="이메일 주소를 입력해주세요." /> @
+                <input type="text" name="email3" id="email3" maxlength="25" style="ime-mode:disabled;width:30%;border:1px solid #DDD;height:30px;" required message="이메일 주소를 입력해주세요." />
+                <select name="email2" style="width:33%;height:27px;">
+                    <option value="hanmail.net">다음(hanmail.net)</option>
+                    <option value="naver.com">네이버(naver.com)</option>
+                    <option value="gmail.com">지메일(gmail.com)</option>
+                    <option value="" selected>직접입력</option>
+                </select>
+            </p>
+            <p class="user_level">
+                <span>
+                    <label for="grade">학년</label>
+                    <select id="grade" name="grade" style="width:100%;height:27px;">
+                        <option value="" selected>학년선택</option>
+                        <option value="1학년">1학년</option>
+                        <option value="2학년">2학년</option>
+                        <option value="3학년">3학년</option>
+                        <option value="4학년">4학년</option>
+                    </select>
+                </span>
+                <span>
+                    <label for="category">관심어학 TEST</label>
+                    <select id="category" name="category" style="width:100%;height:27px;">
+                        <? foreach ($category as $code => $name) { ?>
+                        <? if ($code != "00000") { ?>
+                        <option value="<?= $code ?>"><?= $name ?></option>
+                        <? } else { foreach ($name as $code2 => $name2) { ?>
+                        <option value="<?= $code ?>|<?= $code2 ?>"><?= $name2 ?></option>
+                        <? } } } ?>
+                    </select>
+                </span>
+            </p>
+            <div class="check_box2">
+                <p>개인정보 수집 동의 안내</p>
+                <input type="checkbox" id="check_all" class="check_all"  style="vertical-align:middle;"/> <label for="check_all" style="vertical-align: middle">모두 동의합니다.</label><a class="leBtn" href="javascript:" title="">자세히보기 &gt;</a>
+            </div>
+            <img id="regist_submit_btn" src="https://image.hackers.ac/img/event/2019/game/v1/form_btn.gif" style="width:100%;cursor:pointer;">
+            <div class="pop_wrap">
+                <div class="pop_form">
+                    <div class="pop_clbtn"><a href="javascript:" title=""><img src="https://image.hackers.ac/img/event/2019/game/v1/pop_cl.png" alt="" /></a></div>
+                    <div class="text_wraps">
+                        <p><input type="checkbox" id="check_al" class="check_all" style="vertical-align:middle;"/> <label for="check_al" style="vertical-align: middle">모두 동의합니다.</label></p>
+                        <p class="form_texts">
+                            ■ 개인정보 수집동의 안내 <br/><br/>
+                            1. 개인정보 수집/이용 목적<br/>
+                            가. 해커스 토익 보카 검증고시 이벤트 신청에 따른 절차 진행 및 관련 정보 안내<br/>
+                            나. 이벤트 상품의 발송과 해커스어학원을 비롯한 해커스 교육그룹의 새로운 서비스 신상품이나 이벤트, 최신 정보 안내 등 회원님의 취향에 맞는 최적의 서비스를 제공하기 위함<br/>
+                            (해커스 교육그룹 : 챔프스터디 / 해커스패스 / 해커스영어 / 해커스잡 / 해커스유학 / 해커스편입 / 위더스교육/ 위더스독학사 / 해커스중국어 / 해커스톡 등)<br/>
+                            다. 해커스어학원 7월 인기강좌 무료예약 신청 및 안내<br/>
+                            2. 개인정보 수집 항목 : 이름, 휴대폰 번호, 대학교, 이메일<br/>
+                            3. 개인정보의 보유/이용 기간 : 수집한 개인정보는 수집 시로부터 1년 간 이용하며, 내역 관리를 위해 추가 1년을 보관한 후 파기합니다.<br/>
+                            (총 2년 보유) 다만, 보유 및 이용 기간 동안 개인정보 이용 동의에 철회하시는 경우 그 즉시 파기합니다.신청자는 개인정보 수집을 거부할 권리가 있습니다.<br/>
+                            단, 거부의 경우에는 교재(비매품) 및 혜택 수령이 제한됩니다.
+                        </p>
+                        <p>
+                            <input type="checkbox" id="agree" name="agree" class="agree_ck" value="1" required message="개인정보 활용에 동의해주세요." style="vertical-align:middle;"> <label for="agree">개인정보의 수집 및 이용에 동의합니다. (필수)</label><br/>
+                            <input type="checkbox" id="ac_stat" name="ac_stat" class="agree_ck" value="Y" message="개인정보 활용에 동의해주세요." style="vertical-align:middle;"> <label for="ac_stat">이벤트/할인/(광고성)정보 안내에 대한 동의 (선택)</label><br/>
+                            <input type="checkbox" id="preregi" name="pre_regi" class="agree_ck" value="Y" style="vertical-align:middle;">
+                            <label for="preregi">2020년 1,2월 무료예약에 신청하는 것에 동의합니다.(선택)</label><br/>
+                        </p>
+                    </div>
+                </div>
+                <div class="pop_bg"></div>
+            </div>
+        </form>
+    </div>
+
+
+
+<!-- 3번  -->
+<!-- 게임 영상 화면 -->
+
+  <div class="viewvideo">
+    <img src="https://image.hackers.ac/img/event/2019/game/v2/auto_video.gif" alt=""/>
+    <div class="pub_vid_box" 
+      m-id="m01"
+      m-url="https://cdndown.hackers.com/oap/mp4/191022_Academia_Winter_offgame.mp4"
+      m-option=""
+      m-volume="50"
+      m-type="mp4"
+      >
+        <div id="m01"></div>
+    </div>
+
+    <input type="hidden" name="u" value="<?= $_GET['u'] ?>">
+    <input type="hidden" name="ans_idx" value="<?= $_GET['ans_idx'] ?>">
+    <input type="hidden" name="game_idx" value="<?= $idx ?>">
+    <input type="hidden" name="next_url" value="<?= $next_url ?>">
+    <input type="hidden" name="logger" value="<?= $logger ?>">
+
+    <div class="video_btn">
+      <input class="replay" type="button" value="영상 다시보기">
+      <input class="playgame" type="button" value="게임 시작하기">
+    </div>
+
+  </div>
+
+
+<!-- 4?  -->
+<!-- ?? ?? ? ?? ??  -->
+<div class="gameview">
+    <input type="hidden" name="mode" value="<?= $mode ?>">
+    <input type="hidden" name="ans_idx" value="<?= $ans_idx ?>">
+    <input type="hidden" name="g_idx" value="<?= $idx ?>">
+    <input type="hidden" name="next_url" value="<?= $next_url ?>&ans=<?= $ans_idx ?>&g_idx=<?= $idx ?>">
+    <div class="ready_wrap">
+        <img src="https://image.hackers.ac/img/event/2019/game/v2/game_ready.jpg" alt="" />
+        <p class="ready_img"><img src="https://image.hackers.ac/img/event/2019/game/v2/ready_text.png" alt="" /></p>
+    </div>
+
+    <div class="game_wrap" style="display: none;">
+        <div class="game_ready">
+            <p class="ready_text"><img src="https://image.hackers.ac/img/event/2019/game/v2/ready01.png" alt="" /></p>
+        </div>
+        <div class="top_times">
+            <img src="https://image.hackers.ac/img/event/2019/game/v2/top_time.png" alt="" />
+            <span class="game_text">1단계</span>
+            <div class="game_times">
+                <span class="time_sec">15</span> : <span class="txt_speed">00</span>
+            </div>
+            <div class="time_bar">
+                <p></p>
+            </div>
+            <div class="game_score">
+               <span class="score1" id="score1"></span>
+            </div>
+        </div>
+        <div class="game_view">
+            <div class="border_left"></div>
+            <div class="border_right"></div>
+            <div class="border_top"></div>
+            <p class="game_x"><img src="https://image.hackers.ac/img/event/2019/game/v2/game_x.png" alt="" /></p>
+            <p class="game_o"><img src="https://image.hackers.ac/img/event/2019/game/v2/game_o.png" alt="" /></p>
+            <div class="quiz_wrap">
+                <ul class="quiz">
+                    <!--  -->
+                            <li value="13"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea13_img.png">
+                        <input type="hidden" name="13" value="13">
+                    </li>
+                            <li value="11"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea11_img.png">
+                        <input type="hidden" name="11" value="11">
+                    </li>
+                            <li value="15"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea15_img.png">
+                        <input type="hidden" name="15" value="15">
+                    </li>
+                            <li value="1"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea01_img.png">
+                        <input type="hidden" name="1" value="1">
+                    </li>
+                            <li value="5"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea05_img.png">
+                        <input type="hidden" name="5" value="5">
+                    </li>
+                            <li value="7"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea07_img.png">
+                        <input type="hidden" name="7" value="7">
+                    </li>
+                            <li value="3"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea03_img.png">
+                        <input type="hidden" name="3" value="3">
+                    </li>
+                            <li value="9"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea09_img.png">
+                        <input type="hidden" name="9" value="9">
+                    </li>
+                                    <li value="1"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea01_txt.png">
+                        <input type="hidden" name="1" value="1">
+                    </li>
+                            <li value="7"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea07_txt.png">
+                        <input type="hidden" name="7" value="7">
+                    </li>
+                            <li value="9"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea09_txt.png">
+                        <input type="hidden" name="9" value="9">
+                    </li>
+                            <li value="15"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea15_txt.png">
+                        <input type="hidden" name="15" value="15">
+                    </li>
+                            <li value="13"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea13_txt.png">
+                        <input type="hidden" name="13" value="13">
+                    </li>
+                            <li value="5"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea05_txt.png">
+                        <input type="hidden" name="5" value="5">
+                    </li>
+                            <li value="3"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea03_txt.png">
+                        <input type="hidden" name="3" value="3">
+                    </li>
+                            <li value="11"><img src="http://image.hackers.ac/img/event/2019/game/v2/tea_icon/tea11_txt.png">
+                        <input type="hidden" name="11" value="11">
+                    </li>
+                        </ul>
+            </div>
+            <div class="finish_pop">
+                <div class="pop_img1">
+                    <img src="https://image.hackers.ac/img/event/2019/game/v2/finish_pop.png" alt="" />
+                    <span><img src="https://image.hackers.ac/img/event/2019/game/v2/game_clear.png" alt="" /></span>
+                    <div class="game_score"><span class="score1"></span></div>
+                </div>
+                <a class="touch_btn" href="javascript:" title=""><img src="https://image.hackers.ac/img/event/2019/game/v2/touch_btn.png" alt="" /></a>
+                <p class="count_radius cur_right">
+                    <span class="radius1"></span>
+                    <span class="radius2"></span>
+                    <span class="radius3"></span>
+                    <img class="cursor_left" src="https://image.hackers.ac/img/event/2018/game/v1/cursor_right.png" alt="" />
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="result_wrap">
+    <!-- 점수별 해택이미지 -->
+    <img src="https://image.hackers.ac/img/event/2019/game/v2/gift_img4.jpg" alt="" />
+    <!-- //점수별 해택이미지 -->
+
+    <span class="score_text"><span>990</span>점</span> <!-- 결과점수 -->
+</div>
+
+</div>
+</body>
+</html>
+
+<script>
+var leftTopPos      = 0;
+var rightTopPos     = 0;
+var borderHeight    = 0;
+var borderTopPos    = 0;
+var scores          = 30; //기본 30점 부터 시작
+var playStep        = 1;
+var maxStep         = 3;
+var point           = 0;
+var bonusPoint      = 0;
+var anumts          = 12; // 카운트 다운 12초
+var totalTime       = 0;
+var chkSelectWordIdx= {};
+
+$(document).ready(function() {
+
+    $('.startBtn').click(function(){
+        $("#wraps > div").removeClass("on");
+        $(".join_box").addClass("on");
+    });
+
+    $('#regist_submit_btn').click(function(){
+        $("#wraps > div").removeClass("on");
+        $(".viewvideo").addClass("on");
+    });
+
+     // 게임 플레이
+     $(".playgame").click(function () { 
+        $("#wraps > div").removeClass("on");
+        $(".gameview").addClass("on");
+        playGame(); 
+    });
+
+    $(".touch_btn").click(function() { 
+        //location.href = $("input[name='next_url']").val();
+        $("#wraps > div").removeClass("on");
+        $(".result_wrap").addClass("on");
+     });
+
+
+    $('.pub_vid_box').click();
+
+    $(".game_score .score1").text(scores);
+
+    // 팝업창 닫기
+    $(".pop_clbtn, .pop_bg").click(function() { $(".pop_wrap").css("display", "none"); });
+
+    // 팝업창 열기
+    $(".leBtn").click(function() { $(".pop_wrap").css("display", "block"); });
+
+    // 모두동의 유효성
+    $(".check_all").click(function() {
+        var chkValue = $(this).is(":checked");
+        $(".agree_ck").prop("checked", chkValue);
+        $(".check_all").prop("checked", chkValue);
+    });
+    $(".agree_ck").click(function() {
+        ($(".agree_ck:checked").length === $(".agree_ck").length) ? $(".check_all").prop("checked", true) : $(".check_all").prop("checked", false);
+    });
+
+    // 연락처 확인
+    $("input[name='phone1'], input[name='phone2'], input[name='phone3']").keyup(function() {
+        var regExp = /[^0-9]/gi;
+        var chkLen = ($(this).attr("name") === "phone1") ? 3 : 4;
+
+        if (regExp.test($(this).val())) {
+            $(this).val($(this).val().replace(regExp, ""));
+            $(this).focus();
+            return false;
+        }
+
+        if ($(this).val().length === chkLen) {
+            ($(this).attr("name") !== "phone3") ? $(this).next().focus() : $("#email1").focus();
+        }
+        else if ($(this).val().length > chkLen) {
+            $(this).val($(this).val().substr(0, 4));
+            ($(this).attr("name") !== "phone3") ? $(this).next().focus() : $("#email1").focus();
+        }
+    });
+
+    $("select[name='email2']").change(function() { $("#email3").val($(this).val()); });
+
+   
+
+    // 영상 리플레이
+    $(".replay").click(function () { replay(); })
+
+    // 정보 입력
+    //$("#regist_submit_btn").click(function() { chkRegist(); });
+
+    // 게임 시작하기
+    function playGame(){
+        //location.href = $("input[name='next_url']").val() + "&ans_idx=" + $("input[name='ans_idx']").val();
+
+        /* 게임 진행 스크립트 */
+    // $(".ready_wrap > img").load(function() {
+        
+            setTimeout(function() {
+                $(".ready_wrap").hide();
+                $(".game_ex").show();
+                setTimeout(function() { $(".game_ex").addClass("anist") }, 2000);
+                $(".game_eximg").css({"display":"block"});
+                nextStep(1);
+            }, 2500);
+        //});
+    }
+    
+
+
+    function nextStep(step)
+    {
+        var img_trans_num = 1;
+        var Img_interval = null;
+        if (step === 1)
+        {
+            $(".game_wrap").show();
+            getGamePlayData();
+            $(".game_ready").show();
+            Img_interval = setInterval(function(){
+                if ( img_trans_num < 5 ){
+                    $(".ready_text img").attr("src", "https://image.hackers.ac/img/event/2019/game/v2/ready0"+img_trans_num+".png")
+                    img_trans_num+=1;
+                } else {
+                    img_trans_num=1;
+                    $(".game_ready").css("display","none");
+                    clearInterval(Img_interval);
+                    timerCount();
+                }
+            }, 700);
+        }
+    }
+
+    /* 게임 진행 스크립트 */
+
+    // 게임 문제 풀기
+    $(document).on("click", ".quiz li", function () {
+        var chkSelectorClass = $(this).attr("class");
+        if ($(this).is("[class]")) {
+            if (chkSelectorClass.indexOf("on") !== -1) {
+                $(this).removeClass("on"); // 이미 클릭한 버튼을 클릭할 경우
+                return false;
+            }
+        }
+       
+        var chkSelectedSelector = $(".quiz li[class*='on']");
+        if (chkSelectedSelector.length === 0) { //하나선택
+            $(this).addClass("on");
+            return false;
+        } 
+        
+        if (chkSelectedSelector.length > 1) { //두개선택
+            $(this).removeClass("on");
+        } else {
+            var chkIndex = chkSelectedSelector.index();
+            
+            if (chkSelectedSelector.attr("value") === $(this).attr("value"))
+            { // 동일한 값을 가진 버튼을 클릭할 경우 (정답)
+                $(this).addClass("on");
+
+                var tmpChkWordIdx = $("input[name='" + $(this).attr("value") + "']").val();
+
+                // $(".quiz li.on").append("<img src='https://image.hackers.ac/img/event/2019/game/v2/game_great.png' alt=''>").stop().animate({"display":"none"},500,function() {
+                //     if (!$(".quiz li.on").is(":animated")) clearPlay();
+                // });
+
+                $(".quiz li.on").append("<img src='https://image.hackers.ac/img/event/2019/game/v2/game_great.png' alt=''>").stop().fadeOut(function(){
+                    if (!$(".quiz li.on").is(":animated")) clearPlay();
+                });
+                $(".game_o").stop().css({"display" : "block", "opacity" : 1}).animate({"opacity" : 0}, 500);
+
+                $(".score1").text(scores += point);
+                //chkSelectWordIdx[playStep]['success'] += (chkSelectWordIdx[playStep]['success']) ? "," + tmpChkWordIdx : tmpChkWordIdx;
+                
+                //console.log(chkSelectWordIdx);
+            }
+            else { // 다른 값을 가진 버튼을 클릭할 경우 (오답)
+
+                $(this).addClass("on");
+                $(".quiz li.on").append("<img src='https://image.hackers.ac/img/event/2019/game/v2/game_no.png' class='game_no' alt=''>").stop();
+                $(".quiz li.on img.game_no").animate({"opacity" : 0},500,function() {
+                    if (!$(".quiz li.on img.game_no").is(":animated")) clearPlay();
+                });
+                $(".quiz li").removeClass("on");
+                
+                $(".game_x").stop().css({"display" : "block", "opacity" : 1}).animate({"opacity" : 0}, 500);
+            }
+        }
+    });
+});
+
+
+// 영상 다시보기
+function replay(){
+    video_stop();
+    $(".viewvideo > div.pub_vid_box").click();
+    return false;
+}
+
+// 정보입력하기
+function chkRegist()
+{
+    /*var regExpName = /[^a-zA-Zㄱ-ㅎ가-힝]/gi;
+
+    if (!$("#name").val()) {
+        alert("이름을 입력해주세요.");
+        $("#name").focus();
+        return false;
+    }
+
+    if (regExpName.test($("#name").val())) {
+        alert("사용할 수 없는 이름입니다.(특수문자, 숫자 사용불가)");
+        $("#name").val($("#name").val().replace(regExpName, ""));
+        $("#name").focus();
+        return false;
+    }
+
+    if (!$("input[name='phone1']").val() || !$("input[name='phone2']").val() || !$("input[name='phone3']").val()) {
+        alert("연락처를 입력해주세요.");
+        return false;
+    }
+
+    if (!$("#email1").val() || !$("#email3").val()) {
+        alert("이메일을 입력해주세요.");
+        return false;
+    }
+
+    if (!$("#grade").val()) {
+        alert("학년을 선택해주세요.");
+        $("#grade").focus();
+        return false;
+    }
+
+    if (!$("#category").val()) {
+        alert("관심어학을 선택해주세요.");
+        $("#category").focus();
+        return false;
+    }
+
+    if (!$("#agree").is(":checked")) {
+        alert($("#agree").attr("message"));
+        return false;
+    }
+
+    $.ajax({
+        type    : "POST",
+        url     : "/app/game2/setGameApplyRegist",
+        data    : $("form").serializeArray(),
+        success : function(data) {
+            data = JSON.parse(data);
+            if (data.status) {
+                alert(data.result.msg);
+                location.href = $("input[name='next_url']").val() + "&ans_idx=" + data.result.ans_idx;
+            }
+            else {
+                alert(data.reason);
+            }
+        }
+    });*/
+}
+
+// 게임 진행 데이터 가져오기
+function getGamePlayData()
+{
+    totalTime += (anumts-parseInt($(".time_sec").text()));
+
+    if (maxStep < playStep) {
+        //setGamePlayData();
+        clearPopup();
+        return false;
+    }
+
+    /*$.ajax({
+        type    : "POST",
+        url     : "/app/game2/getGamePlayData",
+        data    : {"step_position" : playStep, "mode" : $("input[name='mode']").val()},
+        success : function(data) {
+            data = JSON.parse(data);
+            if (data.status)
+            console.log(data);
+            {
+                var infoData = data.result.info;
+                if (playStep === 1) $(".game_wrap .game_score .scroe2").text(infoData.total_point);
+                $(".game_wrap .game_text").text(infoData.step_position+"단계 남은시간");
+                $(".game_wrap .game_times .time_sec").text(infoData.limit_time);
+
+                anumts      = infoData.limit_time;
+                point       = parseInt(infoData.point);
+                bonusPoint  = parseInt(infoData.bonus_point);
+                maxStep     = infoData.max_step;
+
+                chkSelectWordIdx[playStep] = {"word" : "", "success" : ""};
+                chkSelectWordIdx[playStep]['word'] += infoData.word_idxs;
+
+                setGamePlayView(data.result.list);
+            }
+        }
+    });*/
+}
+
+// 게임 진행 화면 가져오기
+function setGamePlayView(list)
+{
+    $.ajax({
+        type    : "POST",
+        url     : "/app/game2/setGamePlayView",
+        data    : {"list" : list},
+        success : function(data) {
+            data = JSON.parse(data);
+            if (data.status) $(".game_view").html(data.reason);
+        }
+    });
+}
+
+// 게임 등록 후 결과 가져오기
+function setGamePlayData()
+{
+    var wordIdxs = "", resultIndex = "";
+    for (var step in chkSelectWordIdx) {
+        var chkData = chkSelectWordIdx[step];
+        wordIdxs    += (wordIdxs) ? "|" + chkData['word'] : chkData['word'];
+        resultIndex += (resultIndex) ? "|" + chkData['success'] : chkData['success'];
+    }
+
+    $.ajax({
+        type    : "POST",
+        url     : "/app/game2/setGamePlayData",
+        data    : {"point" : $("#score1").text(), "total_time" : totalTime, "ans_idx" : $("input[name='ans_idx']").val(), "word_idxs" : wordIdxs, "result" : resultIndex, "mode" : $("input[name='mode']").val(), "g_idx" : $("input[name='g_idx']").val()},
+        success : function(data) {
+            data = JSON.parse(data);
+            if (data.status) clearPopup(data.result);
+        }
+    });
+}
+
+function clearPlay()
+{
+    $(".quiz li.on").removeClass("on").addClass("hide");
+    
+    if ($(".quiz li:not(.hide)").length <= 0) {
+        // $(".bonus").children("span").eq(0).text("보너스 " + bonusPoint + "점");
+        // $(".bonus").animate({"opacity" : 1}, 100, function() { $(".bonus").animate({"opacity" : 0}, 600)}); // 보너스 점수
+        $(".score1").text(scores);
+        clearTimer();
+        if (playStep > maxStep) setGamePlayData();
+    }
+}
+
+// 결과 팝업창
+function clearPopup(param)
+{
+    clearInterval(speedTxt);
+    clearInterval(timeCount);
+    $(".finish_pop").css("display", "block");
+    $(".pop_img1 span > img").attr("src", param.img_url);
+    $(".pop_img1 .game_score .score1").text(param.point);
+}
+
+// 결과 혜택 창
+function gift_pop(){
+    $(".gift_pop_wrap").css({"display":"block"})
+}
+//결과 혜택 창 닫기
+function pop_cl2(){
+    $(".gift_pop_wrap").css({"display":"none"})
+}
+
+//오답노트 창 오픈
+function note_pop(){
+    $(".gift_pop_wrap").css({"display":"none"})
+    $(".my_note_wrap").css({"display":"block"})
+}
+//오답노트창 닫기
+function pop_cl3(){
+    $(".my_note_wrap").css({"display":"none"})
+}
+/* 타이머 스크립트 */
+var speedTxt, timeCount;
+
+/* 카운트 다운 */
+function timerCount()
+{
+    var chkAnumts   = anumts;
+    var speed       = 60;
+    var chkSpeed    = 0;
+
+    /* 초 빠르게 가기 */
+    speedTxt = setInterval(function() {
+        if (chkSpeed === 0) chkSpeed = speed;
+        (chkSpeed < 10) ? $(".txt_speed").text("0" + chkSpeed) : $(".txt_speed").text(chkSpeed);
+        chkSpeed--;
+    }, 1);
+    /* 초 빠르게 가기 */
+
+    timeCount =	setInterval(function() {
+        if (chkAnumts <= 0) { clearTimer(); }
+        $(".time_sec").text(chkAnumts--);
+    }, 1000);
+}
+
+function clearTimer()
+{
+    $(".txt_speed").text("00");
+
+    playStep++;
+    getGamePlayData();
+
+    clearInterval(speedTxt);
+    clearInterval(timeCount);
+    if(playStep < 4){
+        if(playStep ==2){
+            $(".ready_text img").attr("src","https://image.hackers.ac/img/event/2019/game/v2/step2.png")
+        }else if(playStep==3){
+            $(".ready_text img").attr("src","https://image.hackers.ac/img/event/2019/game/v2/step3.png")
+        }
+        $(".game_ready").css({"display":"block"}).animate({"opacity":1},1000,function(){
+            $(".game_ready").animate({"opacity":"0"},1000,function(){
+                $(".game_ready").css({"display":"none"})
+                timerCount();
+            })
+        })
+
+    }
+
+}
+/* 카운트 다운 */
+/* 타이머 스크립트 */
+</script>

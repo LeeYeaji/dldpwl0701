@@ -539,7 +539,7 @@ div.line9 span {
 	height: 25px;
 }
 
-.introLeft table tr:last-child{
+.introLeft table tr:nth-child(8){
 	height: 125px;
 	line-height: 25px;
 }
@@ -994,7 +994,7 @@ h2{width:100%;margin:100px 0 50px 0;}
 .divRight h4{background:url('../images/icon_sun.png') no-repeat;padding-left:40px;background-size:30px 30px;height:30px;font-size:1.5vw;}
 .divRight p{padding:15px 0 0 40px;word-break: keep-all;}
 .divRight p.p_sub_title{color:#888;padding-top:0;}
-.divRight p.link a{color:#0d92d7;text-decoration: underline;background:url('../images/icon_link.png') no-repeat left center;padding-left:25px;background-size:15px 15px;word-break: break-all;}
+.link a{color:#0d92d7;text-decoration: underline;background:url('../images/icon_link.png') no-repeat left center;padding-left:25px;background-size:15px 15px;word-break: break-all;}
 
 /* 미디어쿼리 */
 
